@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174">
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -106,64 +106,73 @@
         <Class IRI="http://webprotege.stanford.edu/Tors"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/R7TkrU3XJGpRVxgcHQiKnau"/>
+        <ObjectProperty IRI="#fa_Exerc"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/R9qpXTVgLXHo57uIUoclWvU"/>
+        <ObjectProperty IRI="#te_CondFis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RBP0KcCOnw4QVKMlGIZLaTS"/>
+        <ObjectProperty IRI="#te_HabPers"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RBny8NqSaFINpxI4WbMviaH"/>
+        <ObjectProperty IRI="#te_Obj"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RCVz9jeBdYyJrvzmtazO7w3"/>
+        <ObjectProperty IRI="#te_Salut"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/R0bCLKoz5VJ27o0sMZAtW6"/>
+        <DataProperty IRI="#Alcada"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/R69FApigsF8L3FW6Li0Zoq"/>
+        <DataProperty IRI="#Cansanci"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8J4TiFzaWeRRifdtZvLtau"/>
+        <DataProperty IRI="#Duracio"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8RwhDhb6SbZ0CTELAxPFjK"/>
+        <DataProperty IRI="#DuracioMax"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8UfyBjSkRSvAqwztkLklO6"/>
+        <DataProperty IRI="#DuracioMin"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8fVdn8WQ3c5oKvnctRHaIW"/>
+        <DataProperty IRI="#Edat"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RB4LbQ0wA3D3PWTbT6hAUoF"/>
+        <DataProperty IRI="#Fatiga_Muscular"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBTAlsx3JBpEWBbBYbXoZoy"/>
+        <DataProperty IRI="#Frequencia"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBde7TRhbQpkmX1LxBbWJY"/>
+        <DataProperty IRI="#IMC"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBnx9oTCtVa6A9LCwNhLi4h"/>
+        <DataProperty IRI="#Mareig"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RC3384Wam13PvGAWoLktA81"/>
+        <DataProperty IRI="#Nom"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCAJWOAlblXstf54DmB3bAD"/>
+        <DataProperty IRI="#Pes"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCKAuKSS9zMm8qsp3NO47lZ"/>
+        <DataProperty IRI="#RepsMax"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCWrAbQa52l0FcEPO9tkO5Q"/>
+        <DataProperty IRI="#RepsMin"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://webprotege.stanford.edu/RFQH0f2zeBjwNaifNRGDXN"/>
+        <DataProperty IRI="#bpm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#psMax"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#psMin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kcal/min"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="http://webprotege.stanford.edu/Abdomen"/>
@@ -262,247 +271,283 @@
         <Class IRI="http://webprotege.stanford.edu/Musculs"/>
     </SubClassOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/R7TkrU3XJGpRVxgcHQiKnau"/>
+        <ObjectProperty IRI="#fa_Exerc"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/R9qpXTVgLXHo57uIUoclWvU"/>
+        <ObjectProperty IRI="#te_CondFis"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RBP0KcCOnw4QVKMlGIZLaTS"/>
+        <ObjectProperty IRI="#te_HabPers"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RBny8NqSaFINpxI4WbMviaH"/>
+        <ObjectProperty IRI="#te_Obj"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RCVz9jeBdYyJrvzmtazO7w3"/>
+        <ObjectProperty IRI="#te_Salut"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/R7TkrU3XJGpRVxgcHQiKnau"/>
+        <ObjectProperty IRI="#fa_Exerc"/>
         <Class IRI="http://webprotege.stanford.edu/Persona"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/R9qpXTVgLXHo57uIUoclWvU"/>
+        <ObjectProperty IRI="#te_CondFis"/>
         <Class IRI="http://webprotege.stanford.edu/Persona"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RBP0KcCOnw4QVKMlGIZLaTS"/>
+        <ObjectProperty IRI="#te_HabPers"/>
         <Class IRI="http://webprotege.stanford.edu/Persona"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RBny8NqSaFINpxI4WbMviaH"/>
+        <ObjectProperty IRI="#te_Obj"/>
         <Class IRI="http://webprotege.stanford.edu/Persona"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RCVz9jeBdYyJrvzmtazO7w3"/>
+        <ObjectProperty IRI="#te_Salut"/>
         <Class IRI="http://webprotege.stanford.edu/Persona"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/R7TkrU3XJGpRVxgcHQiKnau"/>
+        <ObjectProperty IRI="#fa_Exerc"/>
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/R9qpXTVgLXHo57uIUoclWvU"/>
+        <ObjectProperty IRI="#te_CondFis"/>
+        <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#te_HabPers"/>
+        <Class IRI="http://webprotege.stanford.edu/Habits_Personals"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#te_Obj"/>
+        <Class IRI="http://webprotege.stanford.edu/Objectius"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#te_Salut"/>
         <Class IRI="http://webprotege.stanford.edu/Salut"/>
     </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RBP0KcCOnw4QVKMlGIZLaTS"/>
-        <Class IRI="http://webprotege.stanford.edu/Objectius"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RBny8NqSaFINpxI4WbMviaH"/>
-        <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://webprotege.stanford.edu/RCVz9jeBdYyJrvzmtazO7w3"/>
-        <Class IRI="http://webprotege.stanford.edu/Habits_Personals"/>
-    </ObjectPropertyRange>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/R0bCLKoz5VJ27o0sMZAtW6"/>
+        <DataProperty IRI="#Alcada"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/R69FApigsF8L3FW6Li0Zoq"/>
+        <DataProperty IRI="#Cansanci"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8J4TiFzaWeRRifdtZvLtau"/>
+        <DataProperty IRI="#Duracio"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8RwhDhb6SbZ0CTELAxPFjK"/>
+        <DataProperty IRI="#DuracioMax"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8UfyBjSkRSvAqwztkLklO6"/>
+        <DataProperty IRI="#DuracioMin"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8fVdn8WQ3c5oKvnctRHaIW"/>
+        <DataProperty IRI="#Edat"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RB4LbQ0wA3D3PWTbT6hAUoF"/>
+        <DataProperty IRI="#Fatiga_Muscular"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBTAlsx3JBpEWBbBYbXoZoy"/>
+        <DataProperty IRI="#Frequencia"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBde7TRhbQpkmX1LxBbWJY"/>
+        <DataProperty IRI="#IMC"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBnx9oTCtVa6A9LCwNhLi4h"/>
+        <DataProperty IRI="#Mareig"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RC3384Wam13PvGAWoLktA81"/>
+        <DataProperty IRI="#Nom"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCAJWOAlblXstf54DmB3bAD"/>
+        <DataProperty IRI="#Pes"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCKAuKSS9zMm8qsp3NO47lZ"/>
+        <DataProperty IRI="#RepsMax"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCWrAbQa52l0FcEPO9tkO5Q"/>
+        <DataProperty IRI="#RepsMin"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="http://webprotege.stanford.edu/RFQH0f2zeBjwNaifNRGDXN"/>
+        <DataProperty IRI="#bpm"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#psMax"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#psMin"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#kcal/min"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/R0bCLKoz5VJ27o0sMZAtW6"/>
+        <DataProperty IRI="#Alcada"/>
         <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/R69FApigsF8L3FW6Li0Zoq"/>
+        <DataProperty IRI="#Cansanci"/>
         <Class IRI="http://webprotege.stanford.edu/Parametres_Adicionals"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8J4TiFzaWeRRifdtZvLtau"/>
-        <Class IRI="http://webprotege.stanford.edu/Objectius"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8RwhDhb6SbZ0CTELAxPFjK"/>
+        <DataProperty IRI="#Duracio"/>
         <Class IRI="http://webprotege.stanford.edu/Habits_Personals"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8UfyBjSkRSvAqwztkLklO6"/>
-        <Class IRI="http://webprotege.stanford.edu/Parametres_Adicionals"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8fVdn8WQ3c5oKvnctRHaIW"/>
-        <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RB4LbQ0wA3D3PWTbT6hAUoF"/>
-        <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBTAlsx3JBpEWBbBYbXoZoy"/>
+        <DataProperty IRI="#DuracioMax"/>
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBTAlsx3JBpEWBbBYbXoZoy"/>
+        <DataProperty IRI="#DuracioMin"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Edat"/>
+        <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Fatiga_Muscular"/>
+        <Class IRI="http://webprotege.stanford.edu/Parametres_Adicionals"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Frequencia"/>
         <Class IRI="http://webprotege.stanford.edu/Habits_Personals"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBTAlsx3JBpEWBbBYbXoZoy"/>
+        <DataProperty IRI="#IMC"/>
+        <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Mareig"/>
+        <Class IRI="http://webprotege.stanford.edu/Parametres_Adicionals"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Nom"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Nom"/>
         <Class IRI="http://webprotege.stanford.edu/Persona"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBde7TRhbQpkmX1LxBbWJY"/>
+        <DataProperty IRI="#Pes"/>
+        <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#RepsMax"/>
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBnx9oTCtVa6A9LCwNhLi4h"/>
+        <DataProperty IRI="#RepsMin"/>
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBnx9oTCtVa6A9LCwNhLi4h"/>
-        <Class IRI="http://webprotege.stanford.edu/Habits_Personals"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RC3384Wam13PvGAWoLktA81"/>
+        <DataProperty IRI="#bpm"/>
         <Class IRI="http://webprotege.stanford.edu/Parametres_Adicionals"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCAJWOAlblXstf54DmB3bAD"/>
-        <Class IRI="http://webprotege.stanford.edu/Parametres_Adicionals"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCKAuKSS9zMm8qsp3NO47lZ"/>
+        <DataProperty IRI="#psMax"/>
         <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCWrAbQa52l0FcEPO9tkO5Q"/>
+        <DataProperty IRI="#psMin"/>
         <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="http://webprotege.stanford.edu/RFQH0f2zeBjwNaifNRGDXN"/>
-        <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
+        <DataProperty IRI="#kcal/min"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/R0bCLKoz5VJ27o0sMZAtW6"/>
+        <DataProperty IRI="#Alcada"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/R69FApigsF8L3FW6Li0Zoq"/>
-        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8J4TiFzaWeRRifdtZvLtau"/>
-        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8UfyBjSkRSvAqwztkLklO6"/>
+        <DataProperty IRI="#Cansanci"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/R8fVdn8WQ3c5oKvnctRHaIW"/>
+        <DataProperty IRI="#Duracio"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/RB4LbQ0wA3D3PWTbT6hAUoF"/>
+        <DataProperty IRI="#DuracioMax"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBTAlsx3JBpEWBbBYbXoZoy"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/RBde7TRhbQpkmX1LxBbWJY"/>
+        <DataProperty IRI="#DuracioMin"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/RC3384Wam13PvGAWoLktA81"/>
+        <DataProperty IRI="#Edat"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Fatiga_Muscular"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCAJWOAlblXstf54DmB3bAD"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
+        <DataProperty IRI="#Frequencia"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCKAuKSS9zMm8qsp3NO47lZ"/>
+        <DataProperty IRI="#IMC"/>
         <Datatype abbreviatedIRI="xsd:double"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/RCWrAbQa52l0FcEPO9tkO5Q"/>
+        <DataProperty IRI="#Mareig"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Nom"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Pes"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#RepsMax"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://webprotege.stanford.edu/RFQH0f2zeBjwNaifNRGDXN"/>
+        <DataProperty IRI="#RepsMin"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#bpm"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#psMax"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#psMin"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kcal/min"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -528,7 +573,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/Braços</IRI>
-        <Literal xml:lang="ca">Braços</Literal>
+        <Literal xml:lang="ca">Bracos</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -613,7 +658,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/Musculació</IRI>
-        <Literal xml:lang="ca">Musculació</Literal>
+        <Literal xml:lang="ca">Musculacio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -644,106 +689,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/Posar-se_en_Forma</IRI>
         <Literal xml:lang="ca">Posar-se en Forma</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R0bCLKoz5VJ27o0sMZAtW6</IRI>
-        <Literal xml:lang="ca">Alçada</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R69FApigsF8L3FW6Li0Zoq</IRI>
-        <Literal xml:lang="ca">bpm</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R7TkrU3XJGpRVxgcHQiKnau</IRI>
-        <Literal xml:lang="ca">fa_Exercicis</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8J4TiFzaWeRRifdtZvLtau</IRI>
-        <Literal xml:lang="ca">Temps Diari</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8RwhDhb6SbZ0CTELAxPFjK</IRI>
-        <Literal xml:lang="ca">Freqüència</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8UfyBjSkRSvAqwztkLklO6</IRI>
-        <Literal xml:lang="ca">Cansanci</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8fVdn8WQ3c5oKvnctRHaIW</IRI>
-        <Literal xml:lang="ca">Edat</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R9qpXTVgLXHo57uIUoclWvU</IRI>
-        <Literal xml:lang="ca">te_Salut</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RB4LbQ0wA3D3PWTbT6hAUoF</IRI>
-        <Literal xml:lang="ca">Pes</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBP0KcCOnw4QVKMlGIZLaTS</IRI>
-        <Literal xml:lang="ca">te_Objectiu</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBTAlsx3JBpEWBbBYbXoZoy</IRI>
-        <Literal xml:lang="ca">Nom</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBde7TRhbQpkmX1LxBbWJY</IRI>
-        <Literal xml:lang="ca">cal/min</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBnx9oTCtVa6A9LCwNhLi4h</IRI>
-        <Literal xml:lang="ca">Duració</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBny8NqSaFINpxI4WbMviaH</IRI>
-        <Literal xml:lang="ca">te_CondFis</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RC3384Wam13PvGAWoLktA81</IRI>
-        <Literal xml:lang="ca">Fatiga Muscular</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RCAJWOAlblXstf54DmB3bAD</IRI>
-        <Literal xml:lang="ca">Mareig</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RCKAuKSS9zMm8qsp3NO47lZ</IRI>
-        <Literal xml:lang="ca">IMC</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RCVz9jeBdYyJrvzmtazO7w3</IRI>
-        <Literal xml:lang="ca">te_Hàbits</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RCWrAbQa52l0FcEPO9tkO5Q</IRI>
-        <Literal xml:lang="ca">psMax</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RFQH0f2zeBjwNaifNRGDXN</IRI>
-        <Literal xml:lang="ca">psMin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
