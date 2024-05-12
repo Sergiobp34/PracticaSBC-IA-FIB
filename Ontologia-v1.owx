@@ -106,7 +106,13 @@
         <Class IRI="http://webprotege.stanford.edu/Tors"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#fa_Exerc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#serveix_Obj"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#te_CondFis"/>
@@ -119,6 +125,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#te_Salut"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#treballa_Musc"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Alcada"/>
@@ -164,6 +173,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#bpm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#informesSalut"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#psMax"/>
@@ -271,7 +283,15 @@
         <Class IRI="http://webprotege.stanford.edu/Musculs"/>
     </SubClassOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#fa_Exerc"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#serveix_Obj"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -290,9 +310,21 @@
         <ObjectProperty IRI="#te_Salut"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#fa_Exerc"/>
         <Class IRI="http://webprotege.stanford.edu/Persona"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#te_CondFis"/>
@@ -310,9 +342,21 @@
         <ObjectProperty IRI="#te_Salut"/>
         <Class IRI="http://webprotege.stanford.edu/Persona"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#fa_Exerc"/>
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <Class IRI="http://webprotege.stanford.edu/Objectius"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#te_CondFis"/>
@@ -329,6 +373,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#te_Salut"/>
         <Class IRI="http://webprotege.stanford.edu/Salut"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#Alcada"/>
@@ -388,6 +436,10 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#bpm"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#informesSalut"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -465,6 +517,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#bpm"/>
         <Class IRI="http://webprotege.stanford.edu/Parametres_Adicionals"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#informesSalut"/>
+        <Class IRI="http://webprotege.stanford.edu/Salut"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#psMax"/>
@@ -537,6 +593,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#bpm"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#informesSalut"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#psMax"/>
