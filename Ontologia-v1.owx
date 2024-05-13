@@ -186,6 +186,18 @@
     <Declaration>
         <DataProperty IRI="#kcal/min"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bicicleta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cinta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Eliptica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rem"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="http://webprotege.stanford.edu/Abdomen"/>
         <Class IRI="http://webprotege.stanford.edu/Musculs"/>
@@ -282,6 +294,47 @@
         <Class IRI="http://webprotege.stanford.edu/Tors"/>
         <Class IRI="http://webprotege.stanford.edu/Musculs"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
+        <NamedIndividual IRI="#Cinta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
+        <NamedIndividual IRI="#Eliptica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
+        <NamedIndividual IRI="#Rem"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#complementa_Exerc"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
