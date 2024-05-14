@@ -190,6 +190,9 @@
         <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Bicicleta"/>
     </Declaration>
     <Declaration>
@@ -202,13 +205,49 @@
         <NamedIndividual IRI="#Curl_de_Biceps"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Elevacio_Lateral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Eliptica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_Abdominal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Bessons"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Biceps"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Biceps_Femoral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Deltoides"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Dorsals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Pectorals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Quadriceps"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Triceps"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
@@ -350,6 +389,10 @@
         <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <NamedIndividual IRI="#Bicicleta"/>
     </ClassAssertion>
@@ -367,15 +410,63 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
         <NamedIndividual IRI="#Elevacio_Lateral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <NamedIndividual IRI="#Eliptica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_Abdominal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Bessons"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Biceps"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Biceps_Femoral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Deltoides"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Dorsals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Pectorals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Quadriceps"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Triceps"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
@@ -452,6 +543,31 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#RepsMin"/>
         <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">8</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
