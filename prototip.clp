@@ -439,7 +439,7 @@
   (printout t "" crlf)
   (printout t "Escriba los índices de sus respuestas separados por un espacio: ")
   (bind ?entrada (readline))
-  (bind ?indices_respuesta (str-explode ?entrada))
+  (bind ?indices_respuesta (explode$ ?entrada))
   (bind $?resultado (create$))
   (progn$ (?indice ?indices_respuesta)
     (if (= ?indice 0) then
@@ -447,7 +447,7 @@
       (return ?resultado)
     )
     (if (and (integerp ?indice) (and (> ?indice 0) (<= ?indice (length$ ?lista_elem))))
-      then (if (not (member ?indice ?resultado))
+      then (if (not (member$ ?indice ?resultado))
         then (bind ?resultado (insert$ ?resultado (+ (length$ ?resultado) 1) ?indice))
       )
     )
@@ -462,29 +462,19 @@
 ; template para recolectar los datos del evento
 (deftemplate MAIN::datos_evento ;
   (slot edat (type INTEGER)) ; guarda la edad del cliente
-  (slot numero_comensales (type INTEGER)) ;
-  (slot precio_min (type FLOAT)) ;
-  (slot precio_max (type FLOAT)) ;
-  (multislot restricciones (type INSTANCE)) ; guarda las restricciones alimentarias
-  (multislot ingredientes_prohibidos (type INSTANCE)) ;
-  (multislot preferencias (type INSTANCE)) ; guarda los estilos que quiere el cliente
-  (slot bebida_alcoholica (type SYMBOL)(default FALSE)) ; guarda si se quieren bebidas alcoholicas o no
-  (slot bebida_por_platos (type SYMBOL)(default FALSE)) ; guarda si se quiere una bebida por plato o solo una para toda la comida
-  (slot temporada_actual (type INSTANCE)) ; guarda la temporada en la que se realiza el evento
+  (slot pes (type FLOAT)) ; guarda el peso del cliente
+  (slot alcada (type FLOAT)) ; guarda la altura del cliente
+  (slot psMax (type FLOAT)) ; guarda la pressió sanguinia máxima que puede soportar el cliente
+  (slot psMin (type FLOAT)) ; guarda la pressió sanguinia mínima que puede soportar el cliente
 )
 
 ; hechos para respetar el orden de las preguntas hechas al cliente, a medida que
 ; hacemos las preguntas vamos poniendo su respectivo hecho representativo a TRUE
 (deffacts recogida_datos_evento::preparacion "Establece hechos para poder recoger los datos del evento"
-  (numero_comensales FALSE)
-  (precio_min FALSE)
-  (precio_max FALSE)
-  (restricciones_alimentarias FALSE)
-  (alergias_alimentarias FALSE)
-  (preferencias_alimentarias FALSE)
-  (bebida_por_platos FALSE)
-  (bebida_alcoholica FALSE)
-  (temporada FALSE)
+  (pes FALSE)
+  (alcada FALSE)
+  (psMax FALSE)
+  (psMin FALSE)
 )
 
 ; - Quina edat té?
@@ -498,177 +488,52 @@
   (assert (datos_evento (edat ?respuesta)))
 )
 
-; - Cuantos comensales habran en el evento?
+; - Quin pes té?
 ;   # (se espera un número)
-(defrule recogida_datos_evento::numero_comensales "Indica el numero de comensales presentes en el evento"
-  ?fact <- (numero_comensales FALSE)
+(defrule recogida_datos_evento::pes "Indiqui el seu pes"
+  ?fact <- (pes FALSE)
   ?datos_evento <- (datos_evento)
   =>
-  (bind ?respuesta (pregunta_numerica "¿Cuántos comensales habrá en el evento?" 1 500))
+  (bind ?respuesta (pregunta_numerica "Quin pes té?" 40 150))
   (retract ?fact)
-  (assert (numero_comensales TRUE))
-  (modify ?datos_evento (numero_comensales ?respuesta))
+  (assert (pes TRUE))
+  (modify ?datos_evento (pes ?respuesta))
 )
 
-; - Indique su presupuesto minimo:
+; - Quina alçada té?
 ;   # (se espera un número)
-(defrule recogida_datos_evento::precio_min "Indica precio mínimo del menú"
-  ?fact <- (precio_min FALSE)
+(defrule recogida_datos_evento::alcada "Indiqui la seva alçada"
+  ?fact <- (alcada FALSE)
   ?datos_evento <- (datos_evento)
   =>
-  (bind ?respuesta (pregunta_numerica "¿Cuál será el precio mínimo del menú?" 5 80))
+  (bind ?respuesta (pregunta_numerica "Quina alçada té?" 50 240))
   (retract ?fact)
-  (assert (precio_min TRUE))
-  (modify ?datos_evento (precio_min ?respuesta))
+  (assert (alcada TRUE))
+  (modify ?datos_evento (alcada ?respuesta))
 )
 
-; - Indique su presupuesto maximo:
+; - Quina és la seva pressió sanguinea màxima?
 ;   # (se espera un número)
-(defrule recogida_datos_evento::precio_max "Indica precio máximo del menú"
-  ?fact <- (precio_max FALSE)
-  ?datos_evento <- (datos_evento(precio_min ?precio_min))
-  =>
-  (bind ?respuesta (pregunta_numerica "¿Cuál será el precio máximo del menú?" ?precio_min 100))
-  (retract ?fact)
-  (assert (precio_max TRUE))
-  (modify ?datos_evento (precio_max ?respuesta))
-)
-
-; - Qué restricciones alimentarias hay?
-;   1. Vegeteriano
-;   2. Vegano
-;   3. Intolerante a la lactosa
-;   4. Intolerancia al gluten
-(defrule recogida_datos_evento::restricciones_alimentarias "Indica que restricciones alimentarias hay"
-  ?fact <- (restricciones_alimentarias FALSE)
+(defrule recogida_datos_evento::psMax "Indiqui la seva pressió sanguinea màxima"
+  ?fact <- (psMax FALSE)
   ?datos_evento <- (datos_evento)
   =>
-  (bind ?restricciones (find-all-instances ((?inst RestriccionAlimentaria)) TRUE ))
-  (bind $?posibles_respuestas (create$ ))
-  (loop-for-count (?i 1 (length$ $?restricciones)) do
-    (bind ?i_restriccion (nth$ ?i ?restricciones))
-    (bind ?i_respuesta (send ?i_restriccion get-Nombre))
-    (bind $?posibles_respuestas (insert$ $?posibles_respuestas (+ (length$ $?posibles_respuestas) 1) ?i_respuesta))
-  )
-
-  (bind ?choice (pregunta_multi_choice "¿Qué restricciones alimentarias hay?" $?posibles_respuestas))
-
-  (bind $?respuesta (create$))
-  (loop-for-count (?i 1 (length$ ?choice)) do
-    (bind ?index (nth$ ?i ?choice))
-    (bind ?i_choice (nth$ ?index ?restricciones))
-    (bind $?respuesta (insert$ $?respuesta (+ (length$ $?respuesta) 1) ?i_choice))
-  )
+  (bind ?respuesta (pregunta_numerica "Quina és la seva pressió sanguinea màxima? (en mmHg)" 90 140))
   (retract ?fact)
-  (assert (restricciones_alimentarias TRUE))
-  (modify ?datos_evento (restricciones $?respuesta))
+  (assert (psMax TRUE))
+  (modify ?datos_evento (psMax ?respuesta))
 )
 
-; - ¿Entre los miembros del grupo hay alguien que tenga alergia o deteste algun ingrediente concreto?
-;   1. Si
-;   2. No
-;   [Solo en caso afirmativo de la anterior pregunta]
-; - Marque, de entre todos los ingredientes de nuestros platos, quales no pueden aparecer en el menu.
-;   [Lista de ingredientes].
-(defrule recogida_datos_evento::alergias_alimentarias "Indica si deben prohibirse alimentos"
-  ?fact <- (alergias_alimentarias FALSE)
-  ?datos_evento <- (datos_evento)
+; - Quina és la seva pressió sanguinea mínima?
+;   # (se espera un número)
+(defrule recogida_datos_evento::psMin "Indiqui la seva pressió sanguinea mínima"
+  ?fact <- (psMin FALSE)
+  ?datos_evento <- (datos_evento(psMax ?psMax))
   =>
-  (bind ?si_no (pregunta_si_no "¿Entre los miembros del grupo hay alguien que tenga alergia o deteste algún ingrediente concreto?"))
-  (bind $?respuesta (create$ ))
-  (if ?si_no then
-    (bind ?ingredientes (find-all-instances ((?inst Ingrediente)) TRUE))
-    (bind $?respuestas (create$ ))
-    (loop-for-count (?i 1 (length$ $?ingredientes)) do
-      (bind ?i_ingrediente (nth$ ?i ?ingredientes))
-      (bind ?i_nom (send ?i_ingrediente get-Nombre))
-      (bind $?respuestas(insert$ $?respuestas (+ (length$ $?respuestas) 1) ?i_nom))
-    )
-
-    (bind ?escogido (pregunta_multi_choice "Selecciona los ingredientes que no toleras: " $?respuestas))
-    (loop-for-count (?i 1 (length$ ?escogido)) do
-      (bind ?curr-index (nth$ ?i ?escogido))
-      (bind ?curr-ingredientes (nth$ ?curr-index ?ingredientes))
-      (bind $?respuesta(insert$ $?respuesta (+ (length$ $?respuesta) 1) ?curr-ingredientes))
-    )
-  )
+  (bind ?respuesta (pregunta_numerica "Quina és la seva pressió sanguinea mínima? (en mmHg)" 60 90))
   (retract ?fact)
-  (assert (alergias_alimentarias TRUE))
-  (modify ?datos_evento (ingredientes_prohibidos $?respuesta))
-)
-
-; - Alguna preferencia respecto al tipo de platos? (elegir solo 1 opción??)
-;   1. Clasicos
-;   2. Modernos
-;   3. Regionales
-;   4. Sibaritas
-(defrule recogida_datos_evento::preferencias_alimentarias "Indica la preferencia del estilo de plato"
-  ?fact <- (preferencias_alimentarias FALSE)
-  ?datos_evento <- (datos_evento)
-  =>
-  (bind ?preferencias (find-all-instances ((?inst Preferencia)) TRUE ))
-  (bind $?posibles_respuestas (create$ ))
-  (loop-for-count (?i 1 (length$ $?preferencias)) do
-    (bind ?i_preferencia (nth$ ?i ?preferencias))
-    (bind ?i_respuesta (send ?i_preferencia get-Nombre))
-    (bind $?posibles_respuestas (insert$ $?posibles_respuestas (+ (length$ $?posibles_respuestas) 1) ?i_respuesta))
-  )
-  (bind ?choice (pregunta_multi_choice "¿Tiene alguna preferencia respecto al estilo de los platos?" $?posibles_respuestas))
-  (bind $?respuesta (create$ ))
-  (loop-for-count (?i 1 (length$ ?choice)) do
-    (bind ?index (nth$ ?i ?choice))
-    (bind ?i_choice (nth$ ?index ?preferencias))
-    (bind $?respuesta (insert$ $?respuesta (+ (length$ $?respuesta) 1) ?i_choice))
-  )
-  (retract ?fact)
-  (assert (preferencias_alimentarias TRUE))
-  (modify ?datos_evento (preferencias $?respuesta))
-)
-
-; - Quieres una bebida por cada plato? (s/n)
-(defrule recogida_datos_evento::bebida_por_plato "Indica si el menú debe considerar una bebida para cada plato o una comuna para todos"
-  ?fact <- (bebida_por_platos FALSE)
-  ?datos_evento <- (datos_evento)
-  =>
-  (bind ?respuesta (pregunta_si_no "¿Desea que el menú incorpore una bebida individual para cada plato?"))
-  (retract ?fact)
-  (assert (bebida_por_platos TRUE))
-  (modify ?datos_evento (bebida_por_platos ?respuesta))
-)
-
-
-; - Quieres bebidas alcoholicas? (s/n)
-(defrule recogida_datos_evento::bebida_alcoholica "Indica si el menú puede tener o no bebidas alcoholicas"
-  ?fact <- (bebida_alcoholica FALSE)
-  ?datos_evento <- (datos_evento)
-  =>
-  (bind ?respuesta (pregunta_si_no "¿El menú propuesto puede contener bebidas alcohólicas?"))
-  (retract ?fact)
-  (assert (bebida_alcoholica TRUE))
-  (modify ?datos_evento (bebida_alcoholica ?respuesta))
-)
-
-; - ¿Para que epoca desea hacer la reserva?
-;   1. Invierno
-;   2. Primavera
-;   3. Verano
-;   4. Otoño
-(defrule recogida_datos_evento::temporada_actual "Indica la temporada para la cual se hace la reserva"
-  ?fact <- (temporada FALSE)
-  ?datos_evento <- (datos_evento)
-  =>
-  (bind ?temporadas (find-all-instances ((?inst Temporada)) TRUE ))
-  (bind $?posibles_respuestas (create$ ))
-  (loop-for-count (?i 1 (length$ $?temporadas)) do
-    (bind ?i_temporada (nth$ ?i ?temporadas))
-    (bind ?i_respuesta (send ?i_temporada get-Nombre))
-    (bind $?posibles_respuestas (insert$ $?posibles_respuestas (+ (length$ $?posibles_respuestas) 1) ?i_respuesta))
-  )
-  (bind ?choice (pregunta_single_choice "¿Para qué temporada del año desea hacer la reserva en Rico Rico?" $?posibles_respuestas))
-  (bind ?respuesta (nth$ ?choice ?temporadas))
-  (retract ?fact)
-  (assert (temporada TRUE))
-  (modify ?datos_evento (temporada_actual ?respuesta))
+  (assert (psMin TRUE))
+  (modify ?datos_evento (psMin ?respuesta))
 )
 
 ; una vez hemos acabado de hacer las preguntas, pasamos a analizar los datos,
@@ -676,15 +541,10 @@
 
 (defrule recogida_datos_evento::cambio_a_modulo_analisis "Una vez hechas todas las preguntas pasamos al modulo de analisis de los datos"
   (edat_preguntada TRUE)
-  (numero_comensales TRUE)
-  (precio_min TRUE)
-  (precio_max TRUE)
-  (restricciones_alimentarias TRUE)
-  (alergias_alimentarias TRUE)
-  (preferencias_alimentarias TRUE)
-  (bebida_por_platos TRUE)
-  (bebida_alcoholica TRUE)
-  (temporada TRUE)
+  (pes TRUE)
+  (alcada TRUE)
+  (psMax TRUE)
+  (psMin TRUE)
   =>
   (focus analisis_datos)
 )
