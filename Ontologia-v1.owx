@@ -683,6 +683,81 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Eliptica"/>
         <NamedIndividual IRI="#Baixar_Pes"/>
     </ObjectPropertyAssertion>
@@ -698,6 +773,21 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Natacio"/>
         <NamedIndividual IRI="#Baixar_Pes"/>
     </ObjectPropertyAssertion>
@@ -709,6 +799,51 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
         <NamedIndividual IRI="#Posar-se_en_Forma"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
