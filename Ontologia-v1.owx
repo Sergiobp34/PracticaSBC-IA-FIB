@@ -773,6 +773,106 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
         <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
     </DataPropertyAssertion>
@@ -795,6 +895,31 @@
         <DataProperty IRI="#kcal/min"/>
         <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
@@ -898,6 +1023,31 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
         <NamedIndividual IRI="#Mountain_Climbers_x10"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
     </DataPropertyAssertion>
@@ -995,6 +1145,81 @@
         <DataProperty IRI="#kcal/min"/>
         <NamedIndividual IRI="#Planxa_Lateral"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
