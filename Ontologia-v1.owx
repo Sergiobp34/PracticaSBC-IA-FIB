@@ -106,6 +106,9 @@
         <Class IRI="http://webprotege.stanford.edu/Tors"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Equilibris"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#complementa_Exerc"/>
     </Declaration>
     <Declaration>
@@ -190,7 +193,13 @@
         <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Bicicleta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Burpees_x10"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Cinta"/>
@@ -199,10 +208,67 @@
         <NamedIndividual IRI="#Crunches_x10"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dominades_Australianes_x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dominades_en_Pronacio_x5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dominades_en_Supinacio_x5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Eliptica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Esquats_Bulgars_x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Esquats_x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_Abdominal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Bessons"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Biceps"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Biceps_Femoral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Deltoides"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Dorsals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Pectorals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Quadriceps"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estirament_de_Triceps"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
@@ -214,7 +280,16 @@
         <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Mountain_Climbers_x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Natacio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Penjar-se_en_Barra"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Planxa"/>
@@ -223,7 +298,46 @@
         <NamedIndividual IRI="#Planxa_Lateral"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Rem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Saltar_a_la_Corda"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salts_Aerobics"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Twists_Russos_x10"/>
@@ -324,13 +438,25 @@
         <Class IRI="http://webprotege.stanford.edu/Tors"/>
         <Class IRI="http://webprotege.stanford.edu/Musculs"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equilibris"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
+    </SubClassOf>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <NamedIndividual IRI="#Bicicleta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
+        <NamedIndividual IRI="#Burpees_x10"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
@@ -341,12 +467,88 @@
         <NamedIndividual IRI="#Crunches_x10"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Dominades_Australianes_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Dominades_en_Pronacio_x5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Dominades_en_Supinacio_x5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <NamedIndividual IRI="#Eliptica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Esquats_Bulgars_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Esquats_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_Abdominal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Bessons"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Biceps"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Biceps_Femoral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Deltoides"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Dorsals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Pectorals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Quadriceps"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
+        <NamedIndividual IRI="#Estirament_de_Triceps"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
@@ -361,8 +563,20 @@
         <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Mountain_Climbers_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
+        <NamedIndividual IRI="#Natacio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Penjar-se_en_Barra"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
@@ -373,13 +587,115 @@
         <NamedIndividual IRI="#Planxa_Lateral"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Press_de_Banca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <NamedIndividual IRI="#Rem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Saltar_a_la_Corda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Salts_Aerobics"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Twists_Russos_x10"/>
     </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">8</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
         <NamedIndividual IRI="#Bicicleta"/>
@@ -432,6 +748,56 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
         <NamedIndividual IRI="#Eliptica"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">30</Literal>
     </DataPropertyAssertion>
@@ -457,6 +823,181 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
         <NamedIndividual IRI="#Rem"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">20</Literal>
     </DataPropertyAssertion>
@@ -479,6 +1020,31 @@
         <DataProperty IRI="#kcal/min"/>
         <NamedIndividual IRI="#Rem"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMax"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DuracioMin"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMax"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#RepsMin"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kcal/min"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">7</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#complementa_Exerc"/>
