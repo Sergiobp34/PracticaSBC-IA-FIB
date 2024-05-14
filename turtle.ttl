@@ -1,0 +1,486 @@
+@prefix : <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#> .
+
+<urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#complementa_Exerc
+:complementa_Exerc rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
+                   rdfs:range <http://webprotege.stanford.edu/Exercicis> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#fa_Exerc
+:fa_Exerc rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain <http://webprotege.stanford.edu/Persona> ;
+          rdfs:range <http://webprotege.stanford.edu/Exercicis> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#serveix_Obj
+:serveix_Obj rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
+             rdfs:range <http://webprotege.stanford.edu/Objectius> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#te_CondFis
+:te_CondFis rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain <http://webprotege.stanford.edu/Persona> ;
+            rdfs:range <http://webprotege.stanford.edu/Condicio_Fisica> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#te_HabPers
+:te_HabPers rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain <http://webprotege.stanford.edu/Persona> ;
+            rdfs:range <http://webprotege.stanford.edu/Habits_Personals> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#te_Obj
+:te_Obj rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain <http://webprotege.stanford.edu/Persona> ;
+        rdfs:range <http://webprotege.stanford.edu/Objectius> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#te_Salut
+:te_Salut rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain <http://webprotege.stanford.edu/Persona> ;
+          rdfs:range <http://webprotege.stanford.edu/Salut> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#treballa_Musc
+:treballa_Musc rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
+               rdfs:range <http://webprotege.stanford.edu/Musculs> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Alcada
+:Alcada rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
+        rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Cansanci
+:Cansanci rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain <http://webprotege.stanford.edu/Parametres_Adicionals> ;
+          rdfs:range xsd:boolean .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Duracio
+:Duracio rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain <http://webprotege.stanford.edu/Habits_Personals> ;
+         rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#DuracioMax
+:DuracioMax rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
+            rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#DuracioMin
+:DuracioMin rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
+            rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Edat
+:Edat rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
+      rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Fatiga_Muscular
+:Fatiga_Muscular rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain <http://webprotege.stanford.edu/Parametres_Adicionals> ;
+                 rdfs:range xsd:boolean .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Frequencia
+:Frequencia rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <http://webprotege.stanford.edu/Habits_Personals> ;
+            rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#IMC
+:IMC rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf owl:topDataProperty ;
+     rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
+     rdfs:range xsd:double .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Mareig
+:Mareig rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain <http://webprotege.stanford.edu/Parametres_Adicionals> ;
+        rdfs:range xsd:boolean .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Nom
+:Nom rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf owl:topDataProperty ;
+     rdfs:domain <http://webprotege.stanford.edu/Exercicis> ,
+                 <http://webprotege.stanford.edu/Persona> ;
+     rdfs:range xsd:string .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Pes
+:Pes rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf owl:topDataProperty ;
+     rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
+     rdfs:range xsd:double .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#RepsMax
+:RepsMax rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
+         rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#RepsMin
+:RepsMin rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
+         rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#bpm
+:bpm rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf owl:topDataProperty ;
+     rdfs:domain <http://webprotege.stanford.edu/Parametres_Adicionals> ;
+     rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#informesSalut
+:informesSalut rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain <http://webprotege.stanford.edu/Salut> ;
+               rdfs:range xsd:string .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#psMax
+:psMax rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
+       rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#psMin
+:psMin rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
+       rdfs:range xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min
+<urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                        rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
+                                                                        rdfs:range xsd:positiveInteger .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/Abdomen
+<http://webprotege.stanford.edu/Abdomen> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
+                                         rdfs:label "Abdomen"@ca .
+
+
+###  http://webprotege.stanford.edu/Amb_Aparells
+<http://webprotege.stanford.edu/Amb_Aparells> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/Exercicis> ;
+                                              rdfs:label "Amb Aparells"@ca .
+
+
+###  http://webprotege.stanford.edu/Amb_Peses
+<http://webprotege.stanford.edu/Amb_Peses> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/Exercicis> ;
+                                           rdfs:label "Amb Peses"@ca .
+
+
+###  http://webprotege.stanford.edu/Baixar_de_Pes
+<http://webprotege.stanford.edu/Baixar_de_Pes> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
+                                               rdfs:label "Baixar de Pes"@ca .
+
+
+###  http://webprotege.stanford.edu/Braços
+<http://webprotege.stanford.edu/Braços> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
+                                        rdfs:label "Bracos"@ca .
+
+
+###  http://webprotege.stanford.edu/Cames
+<http://webprotege.stanford.edu/Cames> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
+                                       rdfs:label "Cames"@ca .
+
+
+###  http://webprotege.stanford.edu/Condicio_Fisica
+<http://webprotege.stanford.edu/Condicio_Fisica> rdf:type owl:Class ;
+                                                 rdfs:label "Condició Física"@ca .
+
+
+###  http://webprotege.stanford.edu/De_Terra
+<http://webprotege.stanford.edu/De_Terra> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://webprotege.stanford.edu/Exercicis> ;
+                                          rdfs:label "De Terra"@ca .
+
+
+###  http://webprotege.stanford.edu/Desplaçament
+<http://webprotege.stanford.edu/Desplaçament> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/LLeure> ;
+                                              rdfs:label "Desplaçament"@ca .
+
+
+###  http://webprotege.stanford.edu/Dieta
+<http://webprotege.stanford.edu/Dieta> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://webprotege.stanford.edu/Salut> ;
+                                       rdfs:label "Dieta"@ca .
+
+
+###  http://webprotege.stanford.edu/Domestic
+<http://webprotege.stanford.edu/Domestic> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://webprotege.stanford.edu/LLeure> ;
+                                          rdfs:label "Domèstic"@ca .
+
+
+###  http://webprotege.stanford.edu/Equilibri
+<http://webprotege.stanford.edu/Equilibri> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
+                                           rdfs:label "Equilibri"@ca .
+
+
+###  http://webprotege.stanford.edu/Esquena
+<http://webprotege.stanford.edu/Esquena> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
+                                         rdfs:label "Esquena"@ca .
+
+
+###  http://webprotege.stanford.edu/Estatic
+<http://webprotege.stanford.edu/Estatic> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://webprotege.stanford.edu/LLeure> ;
+                                         rdfs:label "Estàtic"@ca .
+
+
+###  http://webprotege.stanford.edu/Estiraments
+<http://webprotege.stanford.edu/Estiraments> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://webprotege.stanford.edu/Exercicis> ;
+                                             rdfs:label "Estiraments"@ca .
+
+
+###  http://webprotege.stanford.edu/Exercicis
+<http://webprotege.stanford.edu/Exercicis> rdf:type owl:Class ;
+                                           rdfs:label "Exercicis"@ca .
+
+
+###  http://webprotege.stanford.edu/Flexibilitat
+<http://webprotege.stanford.edu/Flexibilitat> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
+                                              rdfs:label "Flexibilitat"@ca .
+
+
+###  http://webprotege.stanford.edu/Habits_Personals
+<http://webprotege.stanford.edu/Habits_Personals> rdf:type owl:Class ;
+                                                  rdfs:label "Hàbits Personals"@ca .
+
+
+###  http://webprotege.stanford.edu/LLeure
+<http://webprotege.stanford.edu/LLeure> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://webprotege.stanford.edu/Habits_Personals> ;
+                                        rdfs:label "Lleure"@ca .
+
+
+###  http://webprotege.stanford.edu/Laborals
+<http://webprotege.stanford.edu/Laborals> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://webprotege.stanford.edu/Habits_Personals> ;
+                                          rdfs:label "Laborals"@ca .
+
+
+###  http://webprotege.stanford.edu/Manteniment
+<http://webprotege.stanford.edu/Manteniment> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
+                                             rdfs:label "Manteniment"@ca .
+
+
+###  http://webprotege.stanford.edu/Musculació
+<http://webprotege.stanford.edu/Musculació> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
+                                            rdfs:label "Musculacio"@ca .
+
+
+###  http://webprotege.stanford.edu/Musculoesqueletics
+<http://webprotege.stanford.edu/Musculoesqueletics> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://webprotege.stanford.edu/Salut> ;
+                                                    rdfs:label "Musculoesquelètics"@ca .
+
+
+###  http://webprotege.stanford.edu/Musculs
+<http://webprotege.stanford.edu/Musculs> rdf:type owl:Class ;
+                                         rdfs:label "Musculs"@ca .
+
+
+###  http://webprotege.stanford.edu/Objectius
+<http://webprotege.stanford.edu/Objectius> rdf:type owl:Class ;
+                                           rdfs:label "Objectius"@ca .
+
+
+###  http://webprotege.stanford.edu/Parametres_Adicionals
+<http://webprotege.stanford.edu/Parametres_Adicionals> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/Condicio_Fisica> ;
+                                                       rdfs:label "Parametres Addicionals"@ca .
+
+
+###  http://webprotege.stanford.edu/Persona
+<http://webprotege.stanford.edu/Persona> rdf:type owl:Class ;
+                                         rdfs:label "Persona"@ca .
+
+
+###  http://webprotege.stanford.edu/Posar-se_en_Forma
+<http://webprotege.stanford.edu/Posar-se_en_Forma> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
+                                                   rdfs:label "Posar-se en Forma"@ca .
+
+
+###  http://webprotege.stanford.edu/Salut
+<http://webprotege.stanford.edu/Salut> rdf:type owl:Class ;
+                                       rdfs:label "Salut"@ca .
+
+
+###  http://webprotege.stanford.edu/Sense_Peses
+<http://webprotege.stanford.edu/Sense_Peses> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://webprotege.stanford.edu/Exercicis> ;
+                                             rdfs:label "Sense Peses"@ca .
+
+
+###  http://webprotege.stanford.edu/Tors
+<http://webprotege.stanford.edu/Tors> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
+                                      rdfs:label "Tors"@ca .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Abdominals_Bicicleta_x10
+:Abdominals_Bicicleta_x10 rdf:type owl:NamedIndividual ,
+                                   <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Bicicleta
+:Bicicleta rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/Amb_Aparells> ;
+           :DuracioMax "40"^^xsd:positiveInteger ;
+           :DuracioMin "20"^^xsd:positiveInteger ;
+           :RepsMax "1"^^xsd:positiveInteger ;
+           :RepsMin "1"^^xsd:positiveInteger ;
+           <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "7"^^xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Cinta
+:Cinta rdf:type owl:NamedIndividual ,
+                <http://webprotege.stanford.edu/Amb_Aparells> ;
+       :DuracioMax "30"^^xsd:positiveInteger ;
+       :DuracioMin "5"^^xsd:positiveInteger ;
+       :RepsMax "1"^^xsd:positiveInteger ;
+       :RepsMin "1"^^xsd:positiveInteger ;
+       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "9"^^xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Crunches_x10
+:Crunches_x10 rdf:type owl:NamedIndividual ,
+                       <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Elevacio_de_Cames_x10
+:Elevacio_de_Cames_x10 rdf:type owl:NamedIndividual ,
+                                <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Eliptica
+:Eliptica rdf:type owl:NamedIndividual ,
+                   <http://webprotege.stanford.edu/Amb_Aparells> ;
+          :DuracioMax "30"^^xsd:positiveInteger ;
+          :DuracioMin "10"^^xsd:positiveInteger ;
+          :RepsMax "1"^^xsd:positiveInteger ;
+          :RepsMin "1"^^xsd:positiveInteger ;
+          <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "8"^^xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Flexions_al_Pla_x10
+:Flexions_al_Pla_x10 rdf:type owl:NamedIndividual ,
+                              <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Flexions_amb_Inclinacio_Negativa_x10
+:Flexions_amb_Inclinacio_Negativa_x10 rdf:type owl:NamedIndividual ,
+                                               <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Flexions_amb_Inclinacio_x10
+:Flexions_amb_Inclinacio_x10 rdf:type owl:NamedIndividual ,
+                                      <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Mountain_Climbers_x10
+:Mountain_Climbers_x10 rdf:type owl:NamedIndividual ,
+                                <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Planxa
+:Planxa rdf:type owl:NamedIndividual ,
+                 <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Planxa_Lateral
+:Planxa_Lateral rdf:type owl:NamedIndividual ,
+                         <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Rem
+:Rem rdf:type owl:NamedIndividual ,
+              <http://webprotege.stanford.edu/Amb_Aparells> ;
+     :DuracioMax "20"^^xsd:positiveInteger ;
+     :DuracioMin "5"^^xsd:positiveInteger ;
+     :RepsMax "1"^^xsd:positiveInteger ;
+     :RepsMin "1"^^xsd:positiveInteger ;
+     <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "12"^^xsd:positiveInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Twists_Russos_x10
+:Twists_Russos_x10 rdf:type owl:NamedIndividual ,
+                            <http://webprotege.stanford.edu/De_Terra> .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
