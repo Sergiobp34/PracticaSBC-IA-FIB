@@ -106,6 +106,9 @@
         <Class IRI="http://webprotege.stanford.edu/Tors"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Equilibris"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#complementa_Exerc"/>
     </Declaration>
     <Declaration>
@@ -196,6 +199,9 @@
         <NamedIndividual IRI="#Bicicleta"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Burpees_x10"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Cinta"/>
     </Declaration>
     <Declaration>
@@ -206,6 +212,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dominades_Australianes_x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dominades_en_Pronacio_x5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dominades_en_Supinacio_x5"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Elevacio_Lateral"/>
@@ -221,6 +236,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Eliptica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Esquats_Bulgars_x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Esquats_x10"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Estirament_Abdominal"/>
@@ -268,10 +289,37 @@
         <NamedIndividual IRI="#Natacio"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Penjar-se_en_Barra"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Planxa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Planxa_Lateral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Press_de_Banca"/>
@@ -284,6 +332,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Rem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Saltar_a_la_Corda"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salts_Aerobics"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Twists_Russos_x10"/>
@@ -384,6 +438,10 @@
         <Class IRI="http://webprotege.stanford.edu/Tors"/>
         <Class IRI="http://webprotege.stanford.edu/Musculs"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equilibris"/>
+        <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
+    </SubClassOf>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
@@ -395,6 +453,10 @@
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <NamedIndividual IRI="#Bicicleta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
+        <NamedIndividual IRI="#Burpees_x10"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
@@ -411,6 +473,18 @@
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
         <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Dominades_Australianes_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Dominades_en_Pronacio_x5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Dominades_en_Supinacio_x5"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
@@ -431,6 +505,14 @@
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <NamedIndividual IRI="#Eliptica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Esquats_Bulgars_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Esquats_x10"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
@@ -493,12 +575,48 @@
         <NamedIndividual IRI="#Natacio"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Penjar-se_en_Barra"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Planxa"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Planxa_Lateral"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equilibris"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
@@ -515,6 +633,14 @@
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <NamedIndividual IRI="#Rem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Saltar_a_la_Corda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
+        <NamedIndividual IRI="#Salts_Aerobics"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
