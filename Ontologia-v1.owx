@@ -1317,6 +1317,331 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+        <NamedIndividual IRI="#Flexibilitat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+        <NamedIndividual IRI="#Flexibilitat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_de_la_Muntanya"/>
+        <NamedIndividual IRI="#Tors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Postura_de_Aguila"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Flexibilitat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+        <NamedIndividual IRI="#Tors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Postura_de_Arbre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Flexibilitat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Postura_del_Ballari"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Flexibilitat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+        <NamedIndividual IRI="#Tors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+        <NamedIndividual IRI="#Postura_del_Corb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+        <NamedIndividual IRI="#Postura_del_Guerrer_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Postura_del_Pao"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
         <NamedIndividual IRI="#Press_de_Banca"/>
         <NamedIndividual IRI="#Elevacio_Lateral"/>
     </ObjectPropertyAssertion>
