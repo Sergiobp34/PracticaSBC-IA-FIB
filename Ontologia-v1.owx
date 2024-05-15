@@ -13,19 +13,10 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/Abdomen"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/Braços"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/Cames"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://webprotege.stanford.edu/Condicio_Fisica"/>
@@ -41,9 +32,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://webprotege.stanford.edu/Domestic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/Esquena"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://webprotege.stanford.edu/Estatic"/>
@@ -83,9 +71,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/Tors"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Equilibris"/>
@@ -172,6 +157,9 @@
         <DataProperty IRI="#kcal/min"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Abdomen"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
     </Declaration>
     <Declaration>
@@ -184,7 +172,13 @@
         <NamedIndividual IRI="#Bicicleta"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Bracos"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Burpees_x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cames"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Cinta"/>
@@ -230,6 +224,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Esquats_x10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Esquena"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Estirament_Abdominal"/>
@@ -340,12 +337,11 @@
         <NamedIndividual IRI="#Salts_Aerobics"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Tors"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Twists_Russos_x10"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/Abdomen"/>
-        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
@@ -353,14 +349,6 @@
     <SubClassOf>
         <Class IRI="http://webprotege.stanford.edu/Amb_Peses"/>
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/Braços"/>
-        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/Cames"/>
-        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
@@ -377,10 +365,6 @@
     <SubClassOf>
         <Class IRI="http://webprotege.stanford.edu/Domestic"/>
         <Class IRI="http://webprotege.stanford.edu/LLeure"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/Esquena"/>
-        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://webprotege.stanford.edu/Estatic"/>
@@ -411,13 +395,13 @@
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/Tors"/>
-        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Equilibris"/>
         <Class IRI="http://webprotege.stanford.edu/Exercicis"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
@@ -435,8 +419,16 @@
         <NamedIndividual IRI="#Bicicleta"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Burpees_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
+        <NamedIndividual IRI="#Cames"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Amb_Aparells"/>
@@ -497,6 +489,10 @@
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Sense_Peses"/>
         <NamedIndividual IRI="#Esquats_x10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
+        <NamedIndividual IRI="#Esquena"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Estiraments"/>
@@ -643,6 +639,10 @@
         <NamedIndividual IRI="#Salts_Aerobics"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://webprotege.stanford.edu/Musculs"/>
+        <NamedIndividual IRI="#Tors"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Twists_Russos_x10"/>
     </ClassAssertion>
@@ -650,6 +650,21 @@
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Baixar_Pes"/>
         <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <NamedIndividual IRI="#Esquats_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
@@ -665,6 +680,36 @@
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Bicicleta"/>
         <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+        <NamedIndividual IRI="#Tors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Cinta"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Cinta"/>
+        <NamedIndividual IRI="#Esquats_x10"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
@@ -682,6 +727,11 @@
         <NamedIndividual IRI="#Manteniment"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Cinta"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Curl_de_Biceps"/>
         <NamedIndividual IRI="#Manteniment"/>
@@ -757,6 +807,16 @@
         <NamedIndividual IRI="#Posar-se_en_Forma"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Eliptica"/>
+        <NamedIndividual IRI="#Elevacio_de_Bessons"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Eliptica"/>
+        <NamedIndividual IRI="#Saltar_a_la_Corda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Eliptica"/>
         <NamedIndividual IRI="#Baixar_Pes"/>
@@ -770,6 +830,11 @@
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Eliptica"/>
         <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Eliptica"/>
+        <NamedIndividual IRI="#Cames"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
@@ -787,6 +852,21 @@
         <NamedIndividual IRI="#Posar-se_en_Forma"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Esquats_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Natacio"/>
         <NamedIndividual IRI="#Baixar_Pes"/>
@@ -800,6 +880,31 @@
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Natacio"/>
         <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Natacio"/>
+        <NamedIndividual IRI="#Tors"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
@@ -847,6 +952,21 @@
         <NamedIndividual IRI="#Posar-se_en_Forma"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Rem"/>
+        <NamedIndividual IRI="#Lat_Pulldown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Rem"/>
+        <NamedIndividual IRI="#Press_de_Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Rem"/>
+        <NamedIndividual IRI="#Salts_Aerobics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Rem"/>
         <NamedIndividual IRI="#Baixar_Pes"/>
@@ -860,6 +980,31 @@
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Rem"/>
         <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Rem"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Rem"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Rem"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Rem"/>
+        <NamedIndividual IRI="#Esquena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Rem"/>
+        <NamedIndividual IRI="#Tors"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
@@ -2518,11 +2663,6 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/Abdomen</IRI>
-        <Literal xml:lang="ca">Abdomen</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/Amb_Aparells</IRI>
         <Literal xml:lang="ca">Amb Aparells</Literal>
     </AnnotationAssertion>
@@ -2530,16 +2670,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/Amb_Peses</IRI>
         <Literal xml:lang="ca">Amb Peses</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/Braços</IRI>
-        <Literal xml:lang="ca">Bracos</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/Cames</IRI>
-        <Literal xml:lang="ca">Cames</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2565,11 +2695,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/Domestic</IRI>
         <Literal xml:lang="ca">Domèstic</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/Esquena</IRI>
-        <Literal xml:lang="ca">Esquena</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2635,11 +2760,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://webprotege.stanford.edu/Sense_Peses</IRI>
         <Literal xml:lang="ca">Sense Peses</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/Tors</IRI>
-        <Literal xml:lang="ca">Tors</Literal>
     </AnnotationAssertion>
 </Ontology>
 
