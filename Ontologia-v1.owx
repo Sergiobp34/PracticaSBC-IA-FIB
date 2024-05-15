@@ -160,9 +160,6 @@
         <NamedIndividual IRI="#Abdomen"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
     </Declaration>
     <Declaration>
@@ -173,9 +170,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Bracos"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Burpees_x10"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Cames"/>
@@ -272,9 +266,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Manteniment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Musculacio"/>
@@ -404,10 +395,6 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
-        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
         <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -421,10 +408,6 @@
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Musculs"/>
         <NamedIndividual IRI="#Bracos"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
-        <NamedIndividual IRI="#Burpees_x10"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Musculs"/>
@@ -555,10 +538,6 @@
         <NamedIndividual IRI="#Manteniment"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://webprotege.stanford.edu/De_Terra"/>
-        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="http://webprotege.stanford.edu/Objectius"/>
         <NamedIndividual IRI="#Musculacio"/>
     </ClassAssertion>
@@ -647,6 +626,36 @@
         <NamedIndividual IRI="#Twists_Russos_x10"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <NamedIndividual IRI="#Dominades_en_Pronacio_x5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#serveix_Obj"/>
         <NamedIndividual IRI="#Baixar_Pes"/>
         <NamedIndividual IRI="#Manteniment"/>
@@ -729,6 +738,46 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#treballa_Musc"/>
         <NamedIndividual IRI="#Cinta"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <NamedIndividual IRI="#Estirament_Abdominal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Crunches_x10"/>
         <NamedIndividual IRI="#Cames"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -873,6 +922,41 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <NamedIndividual IRI="#Estirament_Abdominal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+        <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
         <NamedIndividual IRI="#Elevacio_de_Quadriceps"/>
         <NamedIndividual IRI="#Curl_de_Biceps_Femoral"/>
     </ObjectPropertyAssertion>
@@ -930,6 +1014,126 @@
         <ObjectProperty IRI="#treballa_Musc"/>
         <NamedIndividual IRI="#Eliptica"/>
         <NamedIndividual IRI="#Cames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <NamedIndividual IRI="#Bicicleta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <NamedIndividual IRI="#Dominades_Australianes_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <NamedIndividual IRI="#Elevacio_Lateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Flexions_al_Pla_x10"/>
+        <NamedIndividual IRI="#Tors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <NamedIndividual IRI="#Estirament_de_Pectorals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+        <NamedIndividual IRI="#Tors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <NamedIndividual IRI="#Estirament_de_Pectorals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_Negativa_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <NamedIndividual IRI="#Natacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <NamedIndividual IRI="#Posar-se_en_Forma"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Flexions_amb_Inclinacio_x10"/>
+        <NamedIndividual IRI="#Tors"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#complementa_Exerc"/>
@@ -1030,6 +1234,86 @@
         <ObjectProperty IRI="#treballa_Musc"/>
         <NamedIndividual IRI="#Natacio"/>
         <NamedIndividual IRI="#Tors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <NamedIndividual IRI="#Curl_de_Biceps"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <NamedIndividual IRI="#Elevacio_de_Cames_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Planxa"/>
+        <NamedIndividual IRI="#Bracos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <NamedIndividual IRI="#Postura_de_la_Mitja_Lluna"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <NamedIndividual IRI="#Press_de_Banca_Inclinat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <NamedIndividual IRI="#Equilibri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+        <NamedIndividual IRI="#Bracos"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#complementa_Exerc"/>
@@ -1196,31 +1480,36 @@
         <NamedIndividual IRI="#Rem"/>
         <NamedIndividual IRI="#Tors"/>
     </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#DuracioMax"/>
-        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#DuracioMin"/>
-        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RepsMax"/>
-        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RepsMin"/>
-        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#kcal/min"/>
-        <NamedIndividual IRI="#Abdominals_Bicicleta_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</Literal>
-    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <NamedIndividual IRI="#Dominades_en_Supinacio_x5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <NamedIndividual IRI="#Planxa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#complementa_Exerc"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <NamedIndividual IRI="#Planxa_Lateral"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <NamedIndividual IRI="#Manteniment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#serveix_Obj"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <NamedIndividual IRI="#Musculacio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treballa_Musc"/>
+        <NamedIndividual IRI="#Twists_Russos_x10"/>
+        <NamedIndividual IRI="#Abdomen"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
         <NamedIndividual IRI="#Abdominals_Tisora_x10"/>
@@ -1270,31 +1559,6 @@
         <DataProperty IRI="#kcal/min"/>
         <NamedIndividual IRI="#Bicicleta"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">7</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#DuracioMax"/>
-        <NamedIndividual IRI="#Burpees_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#DuracioMin"/>
-        <NamedIndividual IRI="#Burpees_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RepsMax"/>
-        <NamedIndividual IRI="#Burpees_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RepsMin"/>
-        <NamedIndividual IRI="#Burpees_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#kcal/min"/>
-        <NamedIndividual IRI="#Burpees_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
@@ -1970,31 +2234,6 @@
         <DataProperty IRI="#kcal/min"/>
         <NamedIndividual IRI="#Lat_Pulldown"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#DuracioMax"/>
-        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#DuracioMin"/>
-        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RepsMax"/>
-        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RepsMin"/>
-        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#kcal/min"/>
-        <NamedIndividual IRI="#Mountain_Climbers_x10"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#DuracioMax"/>
