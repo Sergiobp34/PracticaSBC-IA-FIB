@@ -75,6 +75,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Alcada
 :Alcada rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty ;
+        rdf:type owl:FunctionalProperty ;
         rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
         rdfs:range xsd:positiveInteger .
 
@@ -82,6 +83,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Cansanci
 :Cansanci rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
+          rdf:type owl:FunctionalProperty ;
           rdfs:domain <http://webprotege.stanford.edu/Parametres_Adicionals> ;
           rdfs:range xsd:boolean .
 
@@ -89,6 +91,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Duracio
 :Duracio rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty ;
+         rdf:type owl:FunctionalProperty ;
          rdfs:domain <http://webprotege.stanford.edu/Habits_Personals> ;
          rdfs:range xsd:positiveInteger .
 
@@ -96,6 +99,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#DuracioMax
 :DuracioMax rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
             rdfs:range xsd:positiveInteger .
 
@@ -103,6 +107,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#DuracioMin
 :DuracioMin rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
             rdfs:range xsd:positiveInteger .
 
@@ -110,6 +115,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Edat
 :Edat rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
+      rdf:type owl:FunctionalProperty ;
       rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
       rdfs:range xsd:positiveInteger .
 
@@ -117,6 +123,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Fatiga_Muscular
 :Fatiga_Muscular rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
+                 rdf:type owl:FunctionalProperty ;
                  rdfs:domain <http://webprotege.stanford.edu/Parametres_Adicionals> ;
                  rdfs:range xsd:boolean .
 
@@ -124,6 +131,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Frequencia
 :Frequencia rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain <http://webprotege.stanford.edu/Habits_Personals> ;
             rdfs:range xsd:positiveInteger .
 
@@ -131,6 +139,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#IMC
 :IMC rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf owl:topDataProperty ;
+     rdf:type owl:FunctionalProperty ;
      rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
      rdfs:range xsd:double .
 
@@ -138,6 +147,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Mareig
 :Mareig rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty ;
+        rdf:type owl:FunctionalProperty ;
         rdfs:domain <http://webprotege.stanford.edu/Parametres_Adicionals> ;
         rdfs:range xsd:boolean .
 
@@ -145,6 +155,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Nom
 :Nom rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf owl:topDataProperty ;
+     rdf:type owl:FunctionalProperty ;
      rdfs:domain <http://webprotege.stanford.edu/Exercicis> ,
                  <http://webprotege.stanford.edu/Persona> ;
      rdfs:range xsd:string .
@@ -153,6 +164,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Pes
 :Pes rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf owl:topDataProperty ;
+     rdf:type owl:FunctionalProperty ;
      rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
      rdfs:range xsd:double .
 
@@ -160,6 +172,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#RepsMax
 :RepsMax rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty ;
+         rdf:type owl:FunctionalProperty ;
          rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
          rdfs:range xsd:positiveInteger .
 
@@ -167,6 +180,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#RepsMin
 :RepsMin rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty ;
+         rdf:type owl:FunctionalProperty ;
          rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
          rdfs:range xsd:positiveInteger .
 
@@ -174,6 +188,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#bpm
 :bpm rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf owl:topDataProperty ;
+     rdf:type owl:FunctionalProperty ;
      rdfs:domain <http://webprotege.stanford.edu/Parametres_Adicionals> ;
      rdfs:range xsd:positiveInteger .
 
@@ -181,6 +196,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#informesSalut
 :informesSalut rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
+               rdf:type owl:FunctionalProperty ;
                rdfs:domain <http://webprotege.stanford.edu/Salut> ;
                rdfs:range xsd:string .
 
@@ -188,6 +204,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#psMax
 :psMax rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
+       rdf:type owl:FunctionalProperty ;
        rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
        rdfs:range xsd:positiveInteger .
 
@@ -195,6 +212,7 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#psMin
 :psMin rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
+       rdf:type owl:FunctionalProperty ;
        rdfs:domain <http://webprotege.stanford.edu/Condicio_Fisica> ;
        rdfs:range xsd:positiveInteger .
 
@@ -202,19 +220,14 @@
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min
 <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> rdf:type owl:DatatypeProperty ;
                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                        rdf:type owl:FunctionalProperty ;
                                                                         rdfs:domain <http://webprotege.stanford.edu/Exercicis> ;
-                                                                        rdfs:range xsd:positiveInteger .
+                                                                        rdfs:range xsd:nonNegativeInteger .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://webprotege.stanford.edu/Abdomen
-<http://webprotege.stanford.edu/Abdomen> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
-                                         rdfs:label "Abdomen"@ca .
-
 
 ###  http://webprotege.stanford.edu/Amb_Aparells
 <http://webprotege.stanford.edu/Amb_Aparells> rdf:type owl:Class ;
@@ -226,24 +239,6 @@
 <http://webprotege.stanford.edu/Amb_Peses> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://webprotege.stanford.edu/Exercicis> ;
                                            rdfs:label "Amb Peses"@ca .
-
-
-###  http://webprotege.stanford.edu/Baixar_de_Pes
-<http://webprotege.stanford.edu/Baixar_de_Pes> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
-                                               rdfs:label "Baixar de Pes"@ca .
-
-
-###  http://webprotege.stanford.edu/Braços
-<http://webprotege.stanford.edu/Braços> rdf:type owl:Class ;
-                                        rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
-                                        rdfs:label "Bracos"@ca .
-
-
-###  http://webprotege.stanford.edu/Cames
-<http://webprotege.stanford.edu/Cames> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
-                                       rdfs:label "Cames"@ca .
 
 
 ###  http://webprotege.stanford.edu/Condicio_Fisica
@@ -275,18 +270,6 @@
                                           rdfs:label "Domèstic"@ca .
 
 
-###  http://webprotege.stanford.edu/Equilibri
-<http://webprotege.stanford.edu/Equilibri> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
-                                           rdfs:label "Equilibri"@ca .
-
-
-###  http://webprotege.stanford.edu/Esquena
-<http://webprotege.stanford.edu/Esquena> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
-                                         rdfs:label "Esquena"@ca .
-
-
 ###  http://webprotege.stanford.edu/Estatic
 <http://webprotege.stanford.edu/Estatic> rdf:type owl:Class ;
                                          rdfs:subClassOf <http://webprotege.stanford.edu/LLeure> ;
@@ -304,12 +287,6 @@
                                            rdfs:label "Exercicis"@ca .
 
 
-###  http://webprotege.stanford.edu/Flexibilitat
-<http://webprotege.stanford.edu/Flexibilitat> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
-                                              rdfs:label "Flexibilitat"@ca .
-
-
 ###  http://webprotege.stanford.edu/Habits_Personals
 <http://webprotege.stanford.edu/Habits_Personals> rdf:type owl:Class ;
                                                   rdfs:label "Hàbits Personals"@ca .
@@ -325,18 +302,6 @@
 <http://webprotege.stanford.edu/Laborals> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://webprotege.stanford.edu/Habits_Personals> ;
                                           rdfs:label "Laborals"@ca .
-
-
-###  http://webprotege.stanford.edu/Manteniment
-<http://webprotege.stanford.edu/Manteniment> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
-                                             rdfs:label "Manteniment"@ca .
-
-
-###  http://webprotege.stanford.edu/Musculació
-<http://webprotege.stanford.edu/Musculació> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
-                                            rdfs:label "Musculacio"@ca .
 
 
 ###  http://webprotege.stanford.edu/Musculoesqueletics
@@ -366,12 +331,6 @@
                                          rdfs:label "Persona"@ca .
 
 
-###  http://webprotege.stanford.edu/Posar-se_en_Forma
-<http://webprotege.stanford.edu/Posar-se_en_Forma> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://webprotege.stanford.edu/Objectius> ;
-                                                   rdfs:label "Posar-se en Forma"@ca .
-
-
 ###  http://webprotege.stanford.edu/Salut
 <http://webprotege.stanford.edu/Salut> rdf:type owl:Class ;
                                        rdfs:label "Salut"@ca .
@@ -383,104 +342,908 @@
                                              rdfs:label "Sense Peses"@ca .
 
 
-###  http://webprotege.stanford.edu/Tors
-<http://webprotege.stanford.edu/Tors> rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://webprotege.stanford.edu/Musculs> ;
-                                      rdfs:label "Tors"@ca .
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Equilibris
+:Equilibris rdf:type owl:Class ;
+            rdfs:subClassOf <http://webprotege.stanford.edu/Exercicis> .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Abdominals_Bicicleta_x10
-:Abdominals_Bicicleta_x10 rdf:type owl:NamedIndividual ,
-                                   <http://webprotege.stanford.edu/De_Terra> .
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Abdomen
+:Abdomen rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/Musculs> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Abdominals_Tisora_x10
+:Abdominals_Tisora_x10 rdf:type owl:NamedIndividual ,
+                                <http://webprotege.stanford.edu/De_Terra> ;
+                       :complementa_Exerc :Dominades_en_Pronacio_x5 ,
+                                          :Elevacio_de_Cames_x10 ;
+                       :serveix_Obj :Manteniment ,
+                                    :Musculacio ,
+                                    :Posar-se_en_Forma ;
+                       :treballa_Musc :Abdomen ;
+                       :DuracioMax "1"^^xsd:positiveInteger ;
+                       :DuracioMin "1"^^xsd:positiveInteger ;
+                       :RepsMax "10"^^xsd:positiveInteger ;
+                       :RepsMin "1"^^xsd:positiveInteger ;
+                       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "8"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Baixar_Pes
+:Baixar_Pes rdf:type owl:NamedIndividual ,
+                     <http://webprotege.stanford.edu/Objectius> ;
+            :serveix_Obj :Manteniment .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Bicicleta
 :Bicicleta rdf:type owl:NamedIndividual ,
                     <http://webprotege.stanford.edu/Amb_Aparells> ;
+           :complementa_Exerc :Crunches_x10 ,
+                              :Esquats_x10 ,
+                              :Flexions_al_Pla_x10 ;
+           :serveix_Obj :Baixar_Pes ,
+                        :Manteniment ,
+                        :Posar-se_en_Forma ;
+           :treballa_Musc :Abdomen ,
+                          :Bracos ,
+                          :Cames ,
+                          :Tors ;
            :DuracioMax "40"^^xsd:positiveInteger ;
            :DuracioMin "20"^^xsd:positiveInteger ;
            :RepsMax "1"^^xsd:positiveInteger ;
            :RepsMin "1"^^xsd:positiveInteger ;
-           <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "7"^^xsd:positiveInteger .
+           <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "7"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Bracos
+:Bracos rdf:type owl:NamedIndividual ,
+                 <http://webprotege.stanford.edu/Musculs> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Cames
+:Cames rdf:type owl:NamedIndividual ,
+                <http://webprotege.stanford.edu/Musculs> .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Cinta
 :Cinta rdf:type owl:NamedIndividual ,
                 <http://webprotege.stanford.edu/Amb_Aparells> ;
+       :complementa_Exerc :Elevacio_de_Bessons ,
+                          :Esquats_x10 ;
+       :serveix_Obj :Baixar_Pes ,
+                    :Posar-se_en_Forma ;
+       :te_Obj :Manteniment ;
+       :treballa_Musc :Cames ;
        :DuracioMax "30"^^xsd:positiveInteger ;
        :DuracioMin "5"^^xsd:positiveInteger ;
        :RepsMax "1"^^xsd:positiveInteger ;
        :RepsMin "1"^^xsd:positiveInteger ;
-       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "9"^^xsd:positiveInteger .
+       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "9"^^xsd:nonNegativeInteger .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Crunches_x10
 :Crunches_x10 rdf:type owl:NamedIndividual ,
-                       <http://webprotege.stanford.edu/De_Terra> .
+                       <http://webprotege.stanford.edu/De_Terra> ;
+              :complementa_Exerc :Bicicleta ,
+                                 :Elevacio_de_Cames_x10 ,
+                                 :Estirament_Abdominal ;
+              :serveix_Obj :Manteniment ,
+                           :Musculacio ,
+                           :Posar-se_en_Forma ;
+              :treballa_Musc :Abdomen ,
+                             :Cames ;
+              :DuracioMax "1"^^xsd:positiveInteger ;
+              :DuracioMin "10"^^xsd:positiveInteger ;
+              :RepsMax "10"^^xsd:positiveInteger ;
+              :RepsMin "1"^^xsd:positiveInteger ;
+              <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "7"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Curl_de_Biceps
+:Curl_de_Biceps rdf:type owl:NamedIndividual ,
+                         <http://webprotege.stanford.edu/Amb_Peses> ;
+                :complementa_Exerc :Estirament_de_Biceps ,
+                                   :Lat_Pulldown ,
+                                   :Planxa ;
+                :serveix_Obj :Manteniment ,
+                             :Musculacio ,
+                             :Posar-se_en_Forma ;
+                :treballa_Musc :Bracos ;
+                :DuracioMax "5"^^xsd:positiveInteger ;
+                :DuracioMin "1"^^xsd:positiveInteger ;
+                :RepsMax "5"^^xsd:positiveInteger ;
+                :RepsMin "1"^^xsd:positiveInteger ;
+                <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "4"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Curl_de_Biceps_Femoral
+:Curl_de_Biceps_Femoral rdf:type owl:NamedIndividual ,
+                                 <http://webprotege.stanford.edu/Amb_Peses> ;
+                        :complementa_Exerc :Elevacio_de_Quadriceps ,
+                                           :Estirament_de_Biceps_Femoral ,
+                                           :Press_de_Cames ;
+                        :serveix_Obj :Manteniment ,
+                                     :Musculacio ,
+                                     :Posar-se_en_Forma ;
+                        :treballa_Musc :Cames ;
+                        :DuracioMax "5"^^xsd:positiveInteger ;
+                        :DuracioMin "1"^^xsd:positiveInteger ;
+                        :RepsMax "5"^^xsd:positiveInteger ;
+                        :RepsMin "1"^^xsd:positiveInteger ;
+                        <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "4"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Dominades_Australianes_x10
+:Dominades_Australianes_x10 rdf:type owl:NamedIndividual ,
+                                     <http://webprotege.stanford.edu/Sense_Peses> ;
+                            :complementa_Exerc :Estirament_de_Dorsals ,
+                                               :Flexions_al_Pla_x10 ,
+                                               :Lat_Pulldown ;
+                            :serveix_Obj :Manteniment ,
+                                         :Musculacio ,
+                                         :Posar-se_en_Forma ;
+                            :treballa_Musc :Bracos ,
+                                           :Esquena ,
+                                           :Tors ;
+                            :DuracioMax "1"^^xsd:positiveInteger ;
+                            :DuracioMin "1"^^xsd:positiveInteger ;
+                            :RepsMax "10"^^xsd:positiveInteger ;
+                            :RepsMin "1"^^xsd:positiveInteger ;
+                            <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "6"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Dominades_en_Pronacio_x5
+:Dominades_en_Pronacio_x5 rdf:type owl:NamedIndividual ,
+                                   <http://webprotege.stanford.edu/Sense_Peses> ;
+                          :complementa_Exerc :Abdominals_Tisora_x10 ,
+                                             :Dominades_en_Supinacio_x5 ,
+                                             :Estirament_de_Triceps ;
+                          :serveix_Obj :Manteniment ,
+                                       :Musculacio ,
+                                       :Posar-se_en_Forma ;
+                          :treballa_Musc :Abdomen ,
+                                         :Bracos ,
+                                         :Esquena ,
+                                         :Tors ;
+                          :DuracioMax "1"^^xsd:positiveInteger ;
+                          :DuracioMin "1"^^xsd:positiveInteger ;
+                          :RepsMax "10"^^xsd:positiveInteger ;
+                          :RepsMin "1"^^xsd:positiveInteger ;
+                          <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "8"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Dominades_en_Supinacio_x5
+:Dominades_en_Supinacio_x5 rdf:type owl:NamedIndividual ,
+                                    <http://webprotege.stanford.edu/Sense_Peses> ;
+                           :complementa_Exerc :Dominades_en_Pronacio_x5 ,
+                                              :Estirament_de_Triceps ,
+                                              :Twists_Russos_x10 ;
+                           :serveix_Obj :Manteniment ,
+                                        :Musculacio ,
+                                        :Posar-se_en_Forma ;
+                           :treballa_Musc :Abdomen ,
+                                          :Bracos ,
+                                          :Esquena ,
+                                          :Tors ;
+                           :DuracioMax "1"^^xsd:positiveInteger ;
+                           :DuracioMin "1"^^xsd:positiveInteger ;
+                           :RepsMax "10"^^xsd:positiveInteger ;
+                           :RepsMin "1"^^xsd:positiveInteger ;
+                           <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "8"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Elevacio_Lateral
+:Elevacio_Lateral rdf:type owl:NamedIndividual ,
+                           <http://webprotege.stanford.edu/Amb_Peses> ;
+                  :complementa_Exerc :Flexions_al_Pla_x10 ,
+                                     :Natacio ,
+                                     :Press_de_Banca ;
+                  :serveix_Obj :Manteniment ,
+                               :Musculacio ,
+                               :Posar-se_en_Forma ;
+                  :treballa_Musc :Bracos ;
+                  :DuracioMax "5"^^xsd:positiveInteger ;
+                  :DuracioMin "1"^^xsd:positiveInteger ;
+                  :RepsMax "5"^^xsd:positiveInteger ;
+                  :RepsMin "1"^^xsd:positiveInteger ;
+                  <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "4"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Elevacio_de_Bessons
+:Elevacio_de_Bessons rdf:type owl:NamedIndividual ,
+                              <http://webprotege.stanford.edu/Amb_Peses> ;
+                     :complementa_Exerc :Cinta ,
+                                        :Eliptica ,
+                                        :Postura_de_Arbre ;
+                     :serveix_Obj :Manteniment ,
+                                  :Musculacio ,
+                                  :Posar-se_en_Forma ;
+                     :treballa_Musc :Cames ;
+                     :DuracioMax "5"^^xsd:positiveInteger ;
+                     :DuracioMin "1"^^xsd:positiveInteger ;
+                     :RepsMax "5"^^xsd:positiveInteger ;
+                     :RepsMin "1"^^xsd:positiveInteger ;
+                     <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "4"^^xsd:nonNegativeInteger .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Elevacio_de_Cames_x10
 :Elevacio_de_Cames_x10 rdf:type owl:NamedIndividual ,
-                                <http://webprotege.stanford.edu/De_Terra> .
+                                <http://webprotege.stanford.edu/De_Terra> ;
+                       :complementa_Exerc :Abdominals_Tisora_x10 ,
+                                          :Estirament_Abdominal ;
+                       :serveix_Obj :Manteniment ,
+                                    :Musculacio ,
+                                    :Posar-se_en_Forma ;
+                       :treballa_Musc :Abdomen ,
+                                      :Cames ;
+                       :DuracioMax "1"^^xsd:positiveInteger ;
+                       :DuracioMin "1"^^xsd:positiveInteger ;
+                       :RepsMax "10"^^xsd:positiveInteger ;
+                       :RepsMin "1"^^xsd:positiveInteger ;
+                       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "5"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Elevacio_de_Quadriceps
+:Elevacio_de_Quadriceps rdf:type owl:NamedIndividual ,
+                                 <http://webprotege.stanford.edu/Amb_Peses> ;
+                        :complementa_Exerc :Curl_de_Biceps_Femoral ,
+                                           :Estirament_de_Quadriceps ;
+                        :serveix_Obj :Manteniment ,
+                                     :Musculacio ,
+                                     :Posar-se_en_Forma ;
+                        :treballa_Musc :Cames ;
+                        :DuracioMax "5"^^xsd:positiveInteger ;
+                        :DuracioMin "1"^^xsd:positiveInteger ;
+                        :RepsMax "5"^^xsd:positiveInteger ;
+                        :RepsMin "1"^^xsd:positiveInteger ;
+                        <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "4"^^xsd:nonNegativeInteger .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Eliptica
 :Eliptica rdf:type owl:NamedIndividual ,
                    <http://webprotege.stanford.edu/Amb_Aparells> ;
+          :complementa_Exerc :Elevacio_de_Bessons ,
+                             :Saltar_a_la_Corda ;
+          :serveix_Obj :Baixar_Pes ,
+                       :Manteniment ,
+                       :Posar-se_en_Forma ;
+          :treballa_Musc :Cames ;
           :DuracioMax "30"^^xsd:positiveInteger ;
           :DuracioMin "10"^^xsd:positiveInteger ;
           :RepsMax "1"^^xsd:positiveInteger ;
           :RepsMin "1"^^xsd:positiveInteger ;
-          <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "8"^^xsd:positiveInteger .
+          <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "8"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Equilibri
+:Equilibri rdf:type owl:NamedIndividual ,
+                    <http://webprotege.stanford.edu/Objectius> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Esquats_Bulgars_x10
+:Esquats_Bulgars_x10 rdf:type owl:NamedIndividual ,
+                              <http://webprotege.stanford.edu/Sense_Peses> ;
+                     :complementa_Exerc :Esquats_x10 ,
+                                        :Penjar-se_en_Barra ;
+                     :serveix_Obj :Manteniment ,
+                                  :Musculacio ,
+                                  :Posar-se_en_Forma ;
+                     :treballa_Musc :Cames ,
+                                    :Esquena ;
+                     :DuracioMax "1"^^xsd:positiveInteger ;
+                     :DuracioMin "1"^^xsd:positiveInteger ;
+                     :RepsMax "10"^^xsd:positiveInteger ;
+                     :RepsMin "1"^^xsd:positiveInteger ;
+                     <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "6"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Esquats_x10
+:Esquats_x10 rdf:type owl:NamedIndividual ,
+                      <http://webprotege.stanford.edu/Sense_Peses> ;
+             :complementa_Exerc :Bicicleta ,
+                                :Cinta ,
+                                :Natacio ;
+             :serveix_Obj :Manteniment ,
+                          :Musculacio ,
+                          :Posar-se_en_Forma ;
+             :treballa_Musc :Cames ,
+                            :Esquena ;
+             :DuracioMax "1"^^xsd:positiveInteger ;
+             :DuracioMin "1"^^xsd:positiveInteger ;
+             :RepsMax "10"^^xsd:positiveInteger ;
+             :RepsMin "1"^^xsd:positiveInteger ;
+             <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "5"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Esquena
+:Esquena rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/Musculs> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_Abdominal
+:Estirament_Abdominal rdf:type owl:NamedIndividual ,
+                               <http://webprotege.stanford.edu/Estiraments> ;
+                      :complementa_Exerc :Crunches_x10 ,
+                                         :Elevacio_de_Cames_x10 ,
+                                         :Saltar_a_la_Corda ;
+                      :serveix_Obj :Flexibilitat ,
+                                   :Posar-se_en_Forma ;
+                      :treballa_Musc :Abdomen ;
+                      :DuracioMax "1"^^xsd:positiveInteger ;
+                      :DuracioMin "1"^^xsd:positiveInteger ;
+                      :RepsMax "10"^^xsd:positiveInteger ;
+                      :RepsMin "1"^^xsd:positiveInteger ;
+                      <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_de_Bessons
+:Estirament_de_Bessons rdf:type owl:NamedIndividual ,
+                                <http://webprotege.stanford.edu/Estiraments> ;
+                       :complementa_Exerc :Elevacio_de_Bessons ,
+                                          :Estirament_de_Biceps_Femoral ;
+                       :serveix_Obj :Flexibilitat ,
+                                    :Posar-se_en_Forma ;
+                       :treballa_Musc :Cames ;
+                       :DuracioMax "1"^^xsd:positiveInteger ;
+                       :DuracioMin "1"^^xsd:positiveInteger ;
+                       :RepsMax "10"^^xsd:positiveInteger ;
+                       :RepsMin "1"^^xsd:positiveInteger ;
+                       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_de_Biceps
+:Estirament_de_Biceps rdf:type owl:NamedIndividual ,
+                               <http://webprotege.stanford.edu/Estiraments> ;
+                      :complementa_Exerc :Curl_de_Biceps ,
+                                         :Estirament_de_Triceps ;
+                      :serveix_Obj :Flexibilitat ,
+                                   :Posar-se_en_Forma ;
+                      :treballa_Musc :Bracos ;
+                      :DuracioMax "1"^^xsd:positiveInteger ;
+                      :DuracioMin "1"^^xsd:positiveInteger ;
+                      :RepsMax "10"^^xsd:positiveInteger ;
+                      :RepsMin "1"^^xsd:positiveInteger ;
+                      <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_de_Biceps_Femoral
+:Estirament_de_Biceps_Femoral rdf:type owl:NamedIndividual ,
+                                       <http://webprotege.stanford.edu/Estiraments> ;
+                              :complementa_Exerc :Curl_de_Biceps_Femoral ,
+                                                 :Estirament_de_Bessons ,
+                                                 :Estirament_de_Quadriceps ;
+                              :serveix_Obj :Flexibilitat ,
+                                           :Posar-se_en_Forma ;
+                              :treballa_Musc :Cames ;
+                              :DuracioMax "10"^^xsd:positiveInteger ;
+                              :DuracioMin "1"^^xsd:positiveInteger ;
+                              :RepsMax "10"^^xsd:positiveInteger ;
+                              :RepsMin "1"^^xsd:positiveInteger ;
+                              <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_de_Deltoides
+:Estirament_de_Deltoides rdf:type owl:NamedIndividual ,
+                                  <http://webprotege.stanford.edu/Estiraments> ;
+                         :complementa_Exerc :Estirament_de_Dorsals ;
+                         :serveix_Obj :Flexibilitat ,
+                                      :Posar-se_en_Forma ;
+                         :treballa_Musc :Esquena ;
+                         :DuracioMax "1"^^xsd:positiveInteger ;
+                         :DuracioMin "1"^^xsd:positiveInteger ;
+                         :RepsMax "10"^^xsd:positiveInteger ;
+                         :RepsMin "1"^^xsd:positiveInteger ;
+                         <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_de_Dorsals
+:Estirament_de_Dorsals rdf:type owl:NamedIndividual ,
+                                <http://webprotege.stanford.edu/Estiraments> ;
+                       :complementa_Exerc :Dominades_Australianes_x10 ,
+                                          :Estirament_de_Deltoides ;
+                       :serveix_Obj :Flexibilitat ,
+                                    :Posar-se_en_Forma ;
+                       :treballa_Musc :Esquena ;
+                       :DuracioMax "1"^^xsd:positiveInteger ;
+                       :DuracioMin "1"^^xsd:positiveInteger ;
+                       :RepsMax "10"^^xsd:positiveInteger ;
+                       :RepsMin "1"^^xsd:positiveInteger ;
+                       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_de_Pectorals
+:Estirament_de_Pectorals rdf:type owl:NamedIndividual ,
+                                  <http://webprotege.stanford.edu/Estiraments> ;
+                         :complementa_Exerc :Flexions_amb_Inclinacio_Negativa_x10 ,
+                                            :Flexions_amb_Inclinacio_x10 ;
+                         :serveix_Obj :Flexibilitat ,
+                                      :Posar-se_en_Forma ;
+                         :treballa_Musc :Tors ;
+                         :DuracioMax "1"^^xsd:positiveInteger ;
+                         :DuracioMin "1"^^xsd:positiveInteger ;
+                         :RepsMax "10"^^xsd:positiveInteger ;
+                         :RepsMin "1"^^xsd:positiveInteger ;
+                         <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_de_Quadriceps
+:Estirament_de_Quadriceps rdf:type owl:NamedIndividual ,
+                                   <http://webprotege.stanford.edu/Estiraments> ;
+                          :complementa_Exerc :Elevacio_de_Quadriceps ,
+                                             :Estirament_de_Quadriceps ;
+                          :serveix_Obj :Flexibilitat ,
+                                       :Posar-se_en_Forma ;
+                          :treballa_Musc :Cames ;
+                          :DuracioMax "1"^^xsd:positiveInteger ;
+                          :DuracioMin "1"^^xsd:positiveInteger ;
+                          :RepsMax "10"^^xsd:positiveInteger ;
+                          :RepsMin "1"^^xsd:positiveInteger ;
+                          <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Estirament_de_Triceps
+:Estirament_de_Triceps rdf:type owl:NamedIndividual ,
+                                <http://webprotege.stanford.edu/Estiraments> ;
+                       :complementa_Exerc :Dominades_en_Pronacio_x5 ,
+                                          :Estirament_de_Biceps ;
+                       :serveix_Obj :Flexibilitat ,
+                                    :Posar-se_en_Forma ;
+                       :treballa_Musc :Bracos ;
+                       :DuracioMax "1"^^xsd:positiveInteger ;
+                       :DuracioMin "1"^^xsd:positiveInteger ;
+                       :RepsMax "10"^^xsd:positiveInteger ;
+                       :RepsMin "1"^^xsd:positiveInteger ;
+                       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Flexibilitat
+:Flexibilitat rdf:type owl:NamedIndividual ,
+                       <http://webprotege.stanford.edu/Objectius> .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Flexions_al_Pla_x10
 :Flexions_al_Pla_x10 rdf:type owl:NamedIndividual ,
-                              <http://webprotege.stanford.edu/De_Terra> .
+                              <http://webprotege.stanford.edu/De_Terra> ;
+                     :complementa_Exerc :Bicicleta ,
+                                        :Dominades_Australianes_x10 ,
+                                        :Elevacio_Lateral ;
+                     :serveix_Obj :Manteniment ,
+                                  :Musculacio ,
+                                  :Posar-se_en_Forma ;
+                     :treballa_Musc :Bracos ,
+                                    :Tors ;
+                     :DuracioMax "1"^^xsd:positiveInteger ;
+                     :DuracioMin "1"^^xsd:positiveInteger ;
+                     :RepsMax "10"^^xsd:positiveInteger ;
+                     :RepsMin "1"^^xsd:positiveInteger ;
+                     <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "8"^^xsd:nonNegativeInteger .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Flexions_amb_Inclinacio_Negativa_x10
 :Flexions_amb_Inclinacio_Negativa_x10 rdf:type owl:NamedIndividual ,
-                                               <http://webprotege.stanford.edu/De_Terra> .
+                                               <http://webprotege.stanford.edu/De_Terra> ;
+                                      :complementa_Exerc :Estirament_de_Pectorals ,
+                                                         :Flexions_amb_Inclinacio_x10 ,
+                                                         :Press_de_Banca_Inclinat ;
+                                      :serveix_Obj :Manteniment ,
+                                                   :Musculacio ,
+                                                   :Posar-se_en_Forma ;
+                                      :treballa_Musc :Bracos ,
+                                                     :Tors ;
+                                      :DuracioMax "1"^^xsd:positiveInteger ;
+                                      :DuracioMin "1"^^xsd:positiveInteger ;
+                                      :RepsMax "10"^^xsd:positiveInteger ;
+                                      :RepsMin "1"^^xsd:positiveInteger ;
+                                      <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "10"^^xsd:nonNegativeInteger .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Flexions_amb_Inclinacio_x10
 :Flexions_amb_Inclinacio_x10 rdf:type owl:NamedIndividual ,
-                                      <http://webprotege.stanford.edu/De_Terra> .
+                                      <http://webprotege.stanford.edu/De_Terra> ;
+                             :complementa_Exerc :Estirament_de_Pectorals ,
+                                                :Flexions_amb_Inclinacio_Negativa_x10 ,
+                                                :Natacio ;
+                             :serveix_Obj :Manteniment ,
+                                          :Musculacio ,
+                                          :Posar-se_en_Forma ;
+                             :treballa_Musc :Bracos ,
+                                            :Tors ;
+                             :DuracioMax "1"^^xsd:positiveInteger ;
+                             :DuracioMin "1"^^xsd:positiveInteger ;
+                             :RepsMax "10"^^xsd:positiveInteger ;
+                             :RepsMin "1"^^xsd:positiveInteger ;
+                             <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "6"^^xsd:nonNegativeInteger .
 
 
-###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Mountain_Climbers_x10
-:Mountain_Climbers_x10 rdf:type owl:NamedIndividual ,
-                                <http://webprotege.stanford.edu/De_Terra> .
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Lat_Pulldown
+:Lat_Pulldown rdf:type owl:NamedIndividual ,
+                       <http://webprotege.stanford.edu/Amb_Peses> ;
+              :complementa_Exerc :Curl_de_Biceps ,
+                                 :Dominades_Australianes_x10 ,
+                                 :Rem ;
+              :serveix_Obj :Manteniment ,
+                           :Musculacio ,
+                           :Posar-se_en_Forma ;
+              :treballa_Musc :Bracos ,
+                             :Esquena ,
+                             :Tors ;
+              :DuracioMax "5"^^xsd:positiveInteger ;
+              :DuracioMin "1"^^xsd:positiveInteger ;
+              :RepsMax "5"^^xsd:positiveInteger ;
+              :RepsMin "1"^^xsd:positiveInteger ;
+              <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "4"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Manteniment
+:Manteniment rdf:type owl:NamedIndividual ,
+                      <http://webprotege.stanford.edu/Objectius> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Musculacio
+:Musculacio rdf:type owl:NamedIndividual ,
+                     <http://webprotege.stanford.edu/Objectius> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Natacio
+:Natacio rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/Amb_Aparells> ;
+         :complementa_Exerc :Elevacio_Lateral ,
+                            :Esquats_x10 ,
+                            :Flexions_amb_Inclinacio_x10 ;
+         :serveix_Obj :Baixar_Pes ,
+                      :Manteniment ,
+                      :Posar-se_en_Forma ;
+         :treballa_Musc :Abdomen ,
+                        :Bracos ,
+                        :Cames ,
+                        :Esquena ,
+                        :Tors ;
+         :DuracioMax "60"^^xsd:positiveInteger ;
+         :DuracioMin "20"^^xsd:positiveInteger ;
+         :RepsMax "1"^^xsd:positiveInteger ;
+         :RepsMin "1"^^xsd:positiveInteger ;
+         <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "11"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Penjar-se_en_Barra
+:Penjar-se_en_Barra rdf:type owl:NamedIndividual ,
+                             <http://webprotege.stanford.edu/Sense_Peses> ;
+                    :complementa_Exerc :Esquats_Bulgars_x10 ,
+                                       :Press_de_Banca ,
+                                       :Salts_Aerobics ;
+                    :serveix_Obj :Manteniment ,
+                                 :Musculacio ,
+                                 :Posar-se_en_Forma ;
+                    :treballa_Musc :Abdomen ,
+                                   :Bracos ,
+                                   :Esquena ,
+                                   :Tors ;
+                    :DuracioMax "5"^^xsd:positiveInteger ;
+                    :DuracioMin "1"^^xsd:positiveInteger ;
+                    :RepsMax "10"^^xsd:positiveInteger ;
+                    :RepsMin "1"^^xsd:positiveInteger ;
+                    <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "2"^^xsd:nonNegativeInteger .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Planxa
 :Planxa rdf:type owl:NamedIndividual ,
-                 <http://webprotege.stanford.edu/De_Terra> .
+                 <http://webprotege.stanford.edu/De_Terra> ;
+        :complementa_Exerc :Curl_de_Biceps ,
+                           :Elevacio_de_Cames_x10 ,
+                           :Twists_Russos_x10 ;
+        :serveix_Obj :Equilibri ,
+                     :Manteniment ,
+                     :Musculacio ;
+        :treballa_Musc :Abdomen ,
+                       :Bracos ;
+        :DuracioMax "2"^^xsd:positiveInteger ;
+        :DuracioMin "1"^^xsd:positiveInteger ;
+        :RepsMax "5"^^xsd:positiveInteger ;
+        :RepsMin "1"^^xsd:positiveInteger ;
+        <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "3"^^xsd:nonNegativeInteger .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Planxa_Lateral
 :Planxa_Lateral rdf:type owl:NamedIndividual ,
-                         <http://webprotege.stanford.edu/De_Terra> .
+                         <http://webprotege.stanford.edu/De_Terra> ;
+                :complementa_Exerc :Postura_de_la_Mitja_Lluna ,
+                                   :Press_de_Banca_Inclinat ,
+                                   :Twists_Russos_x10 ;
+                :serveix_Obj :Equilibri ,
+                             :Manteniment ,
+                             :Musculacio ;
+                :treballa_Musc :Abdomen ,
+                               :Bracos ;
+                :DuracioMax "2"^^xsd:positiveInteger ;
+                :DuracioMin "1"^^xsd:positiveInteger ;
+                :RepsMax "4"^^xsd:positiveInteger ;
+                :RepsMin "2"^^xsd:positiveInteger ;
+                <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "3"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Posar-se_en_Forma
+:Posar-se_en_Forma rdf:type owl:NamedIndividual ,
+                            <http://webprotege.stanford.edu/Objectius> .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Postura_de_Aguila
+:Postura_de_Aguila rdf:type owl:NamedIndividual ,
+                            :Equilibris ;
+                   :complementa_Exerc :Postura_de_Arbre ,
+                                      :Postura_de_la_Muntanya ,
+                                      :Postura_del_Ballari ;
+                   :serveix_Obj :Equilibri ,
+                                :Flexibilitat ;
+                   :treballa_Musc :Bracos ,
+                                  :Cames ,
+                                  :Esquena ;
+                   :DuracioMax "5"^^xsd:positiveInteger ;
+                   :DuracioMin "1"^^xsd:positiveInteger ;
+                   :RepsMax "4"^^xsd:positiveInteger ;
+                   :RepsMin "2"^^xsd:positiveInteger ;
+                   <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Postura_de_Arbre
+:Postura_de_Arbre rdf:type owl:NamedIndividual ,
+                           :Equilibris ;
+                  :complementa_Exerc :Elevacio_de_Bessons ,
+                                     :Postura_de_Aguila ,
+                                     :Postura_del_Corb ;
+                  :serveix_Obj :Equilibri ;
+                  :treballa_Musc :Bracos ,
+                                 :Cames ,
+                                 :Esquena ;
+                  :DuracioMax "5"^^xsd:positiveInteger ;
+                  :DuracioMin "1"^^xsd:positiveInteger ;
+                  :RepsMax "4"^^xsd:positiveInteger ;
+                  :RepsMin "2"^^xsd:positiveInteger ;
+                  <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Postura_de_la_Mitja_Lluna
+:Postura_de_la_Mitja_Lluna rdf:type owl:NamedIndividual ,
+                                    :Equilibris ;
+                           :complementa_Exerc :Planxa_Lateral ,
+                                              :Postura_de_la_Muntanya ,
+                                              :Postura_del_Pao ;
+                           :serveix_Obj :Equilibri ;
+                           :treballa_Musc :Abdomen ,
+                                          :Bracos ,
+                                          :Cames ,
+                                          :Esquena ;
+                           :DuracioMax "5"^^xsd:positiveInteger ;
+                           :DuracioMin "1"^^xsd:positiveInteger ;
+                           :RepsMax "4"^^xsd:positiveInteger ;
+                           :RepsMin "2"^^xsd:positiveInteger ;
+                           <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Postura_de_la_Muntanya
+:Postura_de_la_Muntanya rdf:type owl:NamedIndividual ,
+                                 :Equilibris ;
+                        :complementa_Exerc :Postura_de_Aguila ,
+                                           :Postura_de_la_Mitja_Lluna ;
+                        :serveix_Obj :Equilibri ,
+                                     :Flexibilitat ;
+                        :treballa_Musc :Bracos ,
+                                       :Esquena ,
+                                       :Tors ;
+                        :DuracioMax "5"^^xsd:positiveInteger ;
+                        :DuracioMin "1"^^xsd:positiveInteger ;
+                        :RepsMax "4"^^xsd:positiveInteger ;
+                        :RepsMin "2"^^xsd:positiveInteger ;
+                        <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Postura_del_Ballari
+:Postura_del_Ballari rdf:type owl:NamedIndividual ,
+                              :Equilibris ;
+                     :complementa_Exerc :Postura_de_Aguila ,
+                                        :Postura_del_Corb ,
+                                        :Postura_del_Guerrer_I ;
+                     :serveix_Obj :Equilibri ,
+                                  :Flexibilitat ;
+                     :treballa_Musc :Abdomen ,
+                                    :Bracos ,
+                                    :Cames ,
+                                    :Esquena ,
+                                    :Tors ;
+                     :DuracioMax "5"^^xsd:positiveInteger ;
+                     :RepsMax "4"^^xsd:positiveInteger ;
+                     :RepsMin "2"^^xsd:positiveInteger ;
+                     <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Postura_del_Corb
+:Postura_del_Corb rdf:type owl:NamedIndividual ,
+                           :Equilibris ;
+                  :complementa_Exerc :Postura_de_Arbre ,
+                                     :Postura_del_Ballari ,
+                                     :Postura_del_Pao ;
+                  :serveix_Obj :Equilibri ,
+                               :Flexibilitat ;
+                  :treballa_Musc :Abdomen ,
+                                 :Bracos ,
+                                 :Cames ,
+                                 :Esquena ;
+                  :DuracioMax "5"^^xsd:positiveInteger ;
+                  :DuracioMin "1"^^xsd:positiveInteger ;
+                  :RepsMax "4"^^xsd:positiveInteger ;
+                  :RepsMin "2"^^xsd:positiveInteger ;
+                  <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Postura_del_Guerrer_I
+:Postura_del_Guerrer_I rdf:type owl:NamedIndividual ,
+                                :Equilibris ;
+                       :complementa_Exerc :Postura_del_Ballari ,
+                                          :Postura_del_Pao ;
+                       :serveix_Obj :Equilibri ,
+                                    :Flexibilitat ;
+                       :treballa_Musc :Abdomen ,
+                                      :Bracos ,
+                                      :Cames ,
+                                      :Esquena ,
+                                      :Tors ;
+                       :DuracioMax "5"^^xsd:positiveInteger ;
+                       :DuracioMin "1"^^xsd:positiveInteger ;
+                       :RepsMax "4"^^xsd:positiveInteger ;
+                       :RepsMin "2"^^xsd:positiveInteger ;
+                       <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Postura_del_Pao
+:Postura_del_Pao rdf:type owl:NamedIndividual ,
+                          :Equilibris ;
+                 :complementa_Exerc :Postura_de_la_Mitja_Lluna ,
+                                    :Postura_del_Corb ,
+                                    :Postura_del_Guerrer_I ;
+                 :serveix_Obj :Equilibri ;
+                 :treballa_Musc :Bracos ,
+                                :Cames ,
+                                :Esquena ;
+                 :DuracioMax "5"^^xsd:positiveInteger ;
+                 :DuracioMin "1"^^xsd:positiveInteger ;
+                 :RepsMax "4"^^xsd:positiveInteger ;
+                 :RepsMin "2"^^xsd:positiveInteger ;
+                 <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "0"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Press_de_Banca
+:Press_de_Banca rdf:type owl:NamedIndividual ,
+                         <http://webprotege.stanford.edu/Amb_Peses> ;
+                :complementa_Exerc :Elevacio_Lateral ,
+                                   :Penjar-se_en_Barra ,
+                                   :Press_de_Banca_Inclinat ;
+                :serveix_Obj :Manteniment ,
+                             :Musculacio ,
+                             :Posar-se_en_Forma ;
+                :treballa_Musc :Bracos ,
+                               :Tors ;
+                :DuracioMax "5"^^xsd:positiveInteger ;
+                :DuracioMin "1"^^xsd:positiveInteger ;
+                :RepsMax "5"^^xsd:positiveInteger ;
+                :RepsMin "1"^^xsd:positiveInteger ;
+                <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "4"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Press_de_Banca_Inclinat
+:Press_de_Banca_Inclinat rdf:type owl:NamedIndividual ,
+                                  <http://webprotege.stanford.edu/Amb_Peses> ;
+                         :complementa_Exerc :Flexions_amb_Inclinacio_Negativa_x10 ,
+                                            :Planxa_Lateral ,
+                                            :Press_de_Banca ;
+                         :serveix_Obj :Manteniment ,
+                                      :Musculacio ,
+                                      :Posar-se_en_Forma ;
+                         :treballa_Musc :Bracos ,
+                                        :Tors ;
+                         :DuracioMax "5"^^xsd:positiveInteger ;
+                         :DuracioMin "1"^^xsd:positiveInteger ;
+                         :RepsMax "5"^^xsd:positiveInteger ;
+                         :RepsMin "1"^^xsd:positiveInteger ;
+                         <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "4"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Press_de_Cames
+:Press_de_Cames rdf:type owl:NamedIndividual ,
+                         <http://webprotege.stanford.edu/Amb_Peses> ;
+                :complementa_Exerc :Curl_de_Biceps_Femoral ,
+                                   :Rem ;
+                :serveix_Obj :Manteniment ,
+                             :Musculacio ,
+                             :Posar-se_en_Forma ;
+                :treballa_Musc :Cames ;
+                :DuracioMax "5"^^xsd:positiveInteger ;
+                :DuracioMin "1"^^xsd:positiveInteger ;
+                :RepsMax "5"^^xsd:positiveInteger ;
+                :RepsMin "1"^^xsd:positiveInteger ;
+                <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "5"^^xsd:nonNegativeInteger .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Rem
 :Rem rdf:type owl:NamedIndividual ,
               <http://webprotege.stanford.edu/Amb_Aparells> ;
+     :complementa_Exerc :Lat_Pulldown ,
+                        :Press_de_Cames ,
+                        :Salts_Aerobics ;
+     :serveix_Obj :Baixar_Pes ,
+                  :Manteniment ,
+                  :Posar-se_en_Forma ;
+     :treballa_Musc :Abdomen ,
+                    :Bracos ,
+                    :Cames ,
+                    :Esquena ,
+                    :Tors ;
      :DuracioMax "20"^^xsd:positiveInteger ;
      :DuracioMin "5"^^xsd:positiveInteger ;
      :RepsMax "1"^^xsd:positiveInteger ;
      :RepsMin "1"^^xsd:positiveInteger ;
-     <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "12"^^xsd:positiveInteger .
+     <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "12"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Saltar_a_la_Corda
+:Saltar_a_la_Corda rdf:type owl:NamedIndividual ,
+                            <http://webprotege.stanford.edu/Sense_Peses> ;
+                   :complementa_Exerc :Eliptica ,
+                                      :Estirament_Abdominal ,
+                                      :Salts_Aerobics ;
+                   :serveix_Obj :Baixar_Pes ,
+                                :Manteniment ,
+                                :Posar-se_en_Forma ;
+                   :treballa_Musc :Abdomen ,
+                                  :Bracos ,
+                                  :Cames ;
+                   :DuracioMax "5"^^xsd:positiveInteger ;
+                   :DuracioMin "1"^^xsd:positiveInteger ;
+                   :RepsMax "5"^^xsd:positiveInteger ;
+                   :RepsMin "1"^^xsd:positiveInteger ;
+                   <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "11"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Salts_Aerobics
+:Salts_Aerobics rdf:type owl:NamedIndividual ,
+                         <http://webprotege.stanford.edu/Sense_Peses> ;
+                :complementa_Exerc :Penjar-se_en_Barra ,
+                                   :Rem ,
+                                   :Saltar_a_la_Corda ;
+                :serveix_Obj :Baixar_Pes ,
+                             :Manteniment ,
+                             :Posar-se_en_Forma ;
+                :treballa_Musc :Abdomen ,
+                               :Bracos ,
+                               :Cames ,
+                               :Esquena ;
+                :DuracioMax "5"^^xsd:positiveInteger ;
+                :DuracioMin "1"^^xsd:positiveInteger ;
+                :RepsMax "5"^^xsd:positiveInteger ;
+                :RepsMin "1"^^xsd:positiveInteger ;
+                <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "10"^^xsd:nonNegativeInteger .
+
+
+###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Tors
+:Tors rdf:type owl:NamedIndividual ,
+               <http://webprotege.stanford.edu/Musculs> .
 
 
 ###  urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#Twists_Russos_x10
 :Twists_Russos_x10 rdf:type owl:NamedIndividual ,
-                            <http://webprotege.stanford.edu/De_Terra> .
+                            <http://webprotege.stanford.edu/De_Terra> ;
+                   :complementa_Exerc :Dominades_en_Supinacio_x5 ,
+                                      :Planxa ,
+                                      :Planxa_Lateral ;
+                   :serveix_Obj :Manteniment ,
+                                :Musculacio ;
+                   :treballa_Musc :Abdomen ;
+                   :DuracioMax "1"^^xsd:positiveInteger ;
+                   :DuracioMin "1"^^xsd:positiveInteger ;
+                   :RepsMax "10"^^xsd:positiveInteger ;
+                   :RepsMin "1"^^xsd:positiveInteger ;
+                   <urn:webprotege:ontology:b2a12fea-33c4-43b4-8547-deb74b52a174#kcal/min> "7"^^xsd:nonNegativeInteger .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
