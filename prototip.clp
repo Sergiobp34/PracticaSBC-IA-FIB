@@ -1001,26 +1001,51 @@
 ; #########################################
 
 (deftemplate objectiu
-    (slot objectiu))
+    (slot valor))
 
 (defrule generacion_resultados::escull_objectiu_edat
     ?f <- (datos_evento (edat ?edad))
     =>
     (if (and (>= ?edad 16) (<= ?edad 30)) then
-        (assert (objectiu (objectiu "Musculacio")))
+        (assert (objectiu (valor "Musculacio")))
     else if (and (> ?edad 30) (<= ?edad 50)) then
-        (assert (objectiu (objectiu "Posar-se_en_Forma")))
+        (assert (objectiu (valor "Posar-se_en_Forma")))
     else if (and (> ?edad 50) (<= ?edad 100)) then
-        (assert (objectiu (objectiu "Manteniment")))
+        (assert (objectiu (valor "Manteniment")))
     )
 )
 
+(deffunction member-sublist (?objectiu ?serveix_Obj)
+    (foreach ?lista ?serveix_Obj
+        (if (member$ ?objectiu ?lista) then (return TRUE)))
+    (return FALSE)
+)
+
+
 (defrule generacion_resultados::recomanacio_simple
-    ?object <- (objectiu (objectiu ?objectiu))
-    ?exercici <- (object (is-a Exercicis)
-        (Nom ?nom)
-        (serveix_Obj $?serveix_Obj&:(member$ ?objectiu ?serveix_Obj))
+    ?objecte <- (objectiu (valor ?objectiu))
+    ?exercici <- (object (is-a ?class&:(or (eq ?class Exercicis) (subclassp ?class Exercicis)))
+        (serveix_Obj $?serveix_Obj)
+    )
+    (test (member$ ?objectiu $?serveix_Obj))
+    =>
+    (bind ?nom (instance-name ?exercici))
+    (printout t "Recomanació d'exercici: " ?nom crlf)
+)
+
+
+(defrule debug-objectiu
+    ?objecte <- (objectiu (valor ?objectiu))
+    =>
+    (printout t "Objectiu valor: " ?objectiu crlf)
+)
+
+(defrule debug-exercici
+    ?exercici <- (object (is-a ?class&:(or (eq ?class Exercicis) (subclassp ?class Exercicis)))
+        (serveix_Obj $?serveix_Obj)
     )
     =>
-    (printout t "Recomanació d'exercici: " ?nom crlf)
+    (bind ?nom (instance-name ?exercici))
+    (printout t "Exercici Nom: " ?nom crlf)
+    (printout t "Serveix Objectius: " $?serveix_Obj crlf)
 )
