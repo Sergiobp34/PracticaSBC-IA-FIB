@@ -1016,36 +1016,24 @@
 )
 
 (deffunction member-sublist (?objectiu ?serveix_Obj)
-    (foreach ?lista ?serveix_Obj
-        (if (member$ ?objectiu ?lista) then (return TRUE)))
-    (return FALSE)
+    (bind ?found FALSE)
+    (foreach ?sublist ?serveix_Obj
+        (printout t "Intentar comparar " ?sublist " i " ?objectiu " falla." crlf)
+        ; Comparació falla per algun motiu que no sabem
+        (if (eq ?objectiu ?sublist) then
+            (bind ?found TRUE)
+        )
+    )
+    (return ?found)
 )
-
 
 (defrule generacion_resultados::recomanacio_simple
     ?objecte <- (objectiu (valor ?objectiu))
     ?exercici <- (object (is-a ?class&:(or (eq ?class Exercicis) (subclassp ?class Exercicis)))
         (serveix_Obj $?serveix_Obj)
     )
-    (test (member$ ?objectiu $?serveix_Obj))
+    (test (member-sublist ?objectiu $?serveix_Obj))
     =>
     (bind ?nom (instance-name ?exercici))
     (printout t "Recomanació d'exercici: " ?nom crlf)
-)
-
-
-(defrule debug-objectiu
-    ?objecte <- (objectiu (valor ?objectiu))
-    =>
-    (printout t "Objectiu valor: " ?objectiu crlf)
-)
-
-(defrule debug-exercici
-    ?exercici <- (object (is-a ?class&:(or (eq ?class Exercicis) (subclassp ?class Exercicis)))
-        (serveix_Obj $?serveix_Obj)
-    )
-    =>
-    (bind ?nom (instance-name ?exercici))
-    (printout t "Exercici Nom: " ?nom crlf)
-    (printout t "Serveix Objectius: " $?serveix_Obj crlf)
 )
