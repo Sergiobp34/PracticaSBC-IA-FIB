@@ -986,3 +986,41 @@
   =>
   (focus analisis_datos)
 )
+
+; #########################################
+; ########## ANALISIS DE DATOS ############
+; #########################################
+
+(defrule analisis_datos::cambio_a_modulo_generacion_resultados "Una vez hecho el analisis pasamos al modulo de generacion de resultados"
+  =>
+  (focus generacion_resultados)
+)
+
+; #########################################
+; #### GENERACION DE RESULTADOS ###########
+; #########################################
+
+(deftemplate objectiu
+    (slot objectiu))
+
+(defrule generacion_resultados::escull_objectiu_edat
+    ?f <- (datos_evento (edat ?edad))
+    =>
+    (if (and (>= ?edad 16) (<= ?edad 30)) then
+        (assert (objectiu (objectiu "Musculacio")))
+    else if (and (> ?edad 30) (<= ?edad 50)) then
+        (assert (objectiu (objectiu "Posar-se_en_Forma")))
+    else if (and (> ?edad 50) (<= ?edad 100)) then
+        (assert (objectiu (objectiu "Manteniment")))
+    )
+)
+
+(defrule generacion_resultados::recomanacio_simple
+    ?object <- (objectiu (objectiu ?objectiu))
+    ?exercici <- (object (is-a Exercicis)
+        (Nom ?nom)
+        (serveix_Obj $?serveix_Obj&:(member$ ?objectiu ?serveix_Obj))
+    )
+    =>
+    (printout t "Recomanació d'exercici: " ?nom crlf)
+)
