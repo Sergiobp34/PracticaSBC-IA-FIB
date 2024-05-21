@@ -112,7 +112,7 @@
     (pattern-match reactive)
 )
 
-(defclass Despla�ament
+(defclass Desplacament
     (is-a LLeure)
     (role concrete)
     (pattern-match reactive)
@@ -776,3 +776,221 @@
     )
 
 )
+
+;;; #########################################
+;;; ######### DECLARACIO DE MODULS ##########
+;;; #########################################
+
+
+    (defglobal ?*lista-opciones* = (create$ ))
+
+    (defmodule MAIN (export ?ALL))
+    
+    (defmodule preguntes
+	(import MAIN ?ALL)
+	(export ?ALL)
+    )
+
+    (defmodule recomanacions 
+    (import preguntes ?ALL)
+    (import MAIN ?ALL) 
+    (export ?ALL)
+    )
+
+    (defmodule imprimir
+    (import recomanacions ?ALL)
+    (import preguntes ?ALL) 
+    (import MAIN ?ALL) 
+    (export ?ALL)
+    )
+
+
+;;; #########################################
+;;; ####### DECLARACIO DE TEMPLATES #########
+;;; #########################################
+
+    (deftemplate MAIN::lector_data
+	(slot edat (type INTEGER)(default -1)) ;edat de la persona
+        (slot pes (type INTEGER)(default -1)) ;pes de la persona
+	(slot alcada (type INTEGER)(default -1)) ;alçada de la persona
+ 	(slot imc (type FLOAT)) ;imc de la persona
+	(slot psMax (type INTEGER)(default -1)) ;presió sanguinea màxima de la persona
+	(slot psMin (type INTEGER)(default -1)) ;presió sanguinea mínima de la persona
+	(slot parAd (type STRING)(default "FALSE")) ;informació sobre si la persona vol calcular paràmetres adicionals
+	(slot bpm (type INTEGER)(default -1)) ;polsacions per minut de la persona
+	(slot cansanci (type STRING)(default "NO")) ;sensació de cansanci de la persona
+	(slot mareig (type STRING)(default "NO")) ;sensació de mareig de la persona
+	(slot fatiga (type STRING)(default "NO")) ;sensació de fatiga muscular de la persona
+	(slot objectiu (type STRING)) ;objectiu de la persona
+	(slot temps (type INTEGER)) ;temps d'entrenament per dia de la persona
+	(slot intensitat (type INTEGER)) ;intensitat dels exercicis de la persona
+    )
+
+
+
+(defrule MAIN::initialRule "Regla inicial"
+	(declare (salience 10))
+	=>
+  	(printout t"         I'M NO COUCH POTATO t'arregla la vida         " crlf)
+	(printout t"----------------------------------------------------------" crlf)
+  	(printout t crlf)
+	(printout t"Benvolgut client, respongui les preguntes i li generem un programa d'entrenament setmanal." crlf)
+	(printout t crlf)
+	(assert (lector_data))
+	(focus imprimir)
+	(focus recomanacions)
+	(focus preguntes)
+)
+
+;;;Condició Física
+
+    (defrule preguntes::obtenir-edat "Pregunta la edat de la persona"
+	?g <- (lector_data(edat ?edat))
+	(test (< ?edat 0))
+	=>
+	(printout t "Quina és la seva edat?" crlf)
+    	(bind ?num (read))
+    	(while (not(and (>= ?num 16) (<= ?num 100))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 16 i 100. Quina és la seva edat?" crlf)
+    		(bind ?num (read))
+    	)
+    	(modify ?g (edat ?num))
+    )
+
+    (defrule preguntes::obtenir-pes "Obté el pes de la pesona"
+	?g <- (lector_data(pes ?pes))
+	(test (< ?pes 0))
+	=>
+	(printout t "Quin és el seu pes?" crlf)
+    	(bind ?num (read))
+    	(while (not(and (>= ?num 40) (<= ?num 150))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 40 i 150. Quin és el seu pes?" crlf)
+    		(bind ?num (read))
+    	)
+    	(modify ?g (pes ?num))
+    )
+
+    (defrule preguntes::obtenir-alcada "Obté l'alçada de la pesona"
+	?g <- (lector_data(alcada ?alcada))
+	(test (< ?alcada 0))
+	=>
+	(printout t "Quina és la seva alçada?" crlf)
+    	(bind ?num (read))
+    	(while (not(and (>= ?num 140) (<= ?num 230))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 140 i 230. Quina és la seva alçada?" crlf)
+    		(bind ?num (read))
+    	)
+    	(modify ?g (alcada ?num))
+    )
+
+    (defrule preguntes::obtenir-psMax "Obté la presió màxima de la pesona"
+	?g <- (lector_data(psMax ?psMax))
+	(test (< ?psMax 0))
+	=>
+	(printout t "Quin és la seva presió sanguinea màxima?" crlf)
+    	(bind ?num (read))
+    	(while (not(and (>= ?num 110) (<= ?num 150))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 110 i 150. Quina és la seva sanguinea màxima?" crlf)
+    		(bind ?num (read))
+    	)
+    	(modify ?g (psMax ?num))
+    )
+
+    (defrule preguntes::obtenir-psMin "Obté la presió mínima de la pesona"
+	?g <- (lector_data(psMin ?psMin))
+	(test (< ?psMin 0))
+	=>
+	(printout t "Quin és la seva presió sanguinea mínima?" crlf)
+    	(bind ?num (read))
+    	(while (not(and (>= ?num 60) (<= ?num 90))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 60 i 90. Quina és la seva sanguinea mínima?" crlf)
+    		(bind ?num (read))
+    	)
+    	(modify ?g (psMin ?num))
+    )
+
+    (defrule preguntes::obtenir-parAd "Obté si la persona vol fer una prova física per donar informaciò adicional sobre la seva condició física"
+   	?g <- (lector_data (parAd "FALSE"))
+   	=>
+   	(printout t "Vol fer una prova física adicional per ampliar la informació sobre la seva condició física? (SI/NO)" crlf)
+    	(bind ?text (read))
+    	(if (or (eq (str-compare ?text "SI") 0) 
+       	    	(eq (str-compare ?text "Si") 0) 
+           	(eq (str-compare ?text "si") 0)) then
+       		(modify ?g (parAd "TRUE"))
+       	 	(printout t "Ha decidit proporcionar informació adicional sobre la seva condició física." crlf)
+		(printout t crlf)
+    	else
+        	(printout t "No ha decidit proporcionar informació adicional sobre la seva condició física." crlf)
+    	)
+    )
+
+    (defrule preguntes::obtenir-bpm "Obté les polsacions per minut de la persona"
+   	?g <- (lector_data (parAd "TRUE"))
+   	=>
+   	(printout t "Enhorabona per realitzar la prova física extra!" crlf)
+	(printout t "Quines han estat les seves polsacions per minut" crlf)
+    	(bind ?num (read))
+    	(while (not(and (>= ?num 100) (<= ?num 150))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 100 i 150. Quines han estat les seves polsacions per minut?" crlf)
+    		(bind ?num (read))
+    	)
+    	(modify ?g (bpm ?num))
+	(modify ?g (parAd "true"))
+	
+    )
+
+    (defrule preguntes::obtenir-cansanci "Obté si la persona està cansada"
+   	?g <- (lector_data (parAd "true"))
+   	=>
+	(printout t "Es nota cansat desprès de fer la prova?" crlf)
+    	(bind ?text (read))
+    	(if (or (eq (str-compare ?text "SI") 0) 
+       	    	(eq (str-compare ?text "Si") 0) 
+           	(eq (str-compare ?text "si") 0)) then
+       		(modify ?g (cansanci "SI"))
+	)
+	(modify ?g (parAd "True"))
+    )
+
+    (defrule preguntes::obtenir-mareig "Obté si la persona està marejada"
+   	?g <- (lector_data (parAd "True"))
+   	=>
+	(printout t "Es nota cansat desprès de fer la prova?" crlf)
+    	(bind ?text (read))
+    	(if (or (eq (str-compare ?text "SI") 0) 
+       	    	(eq (str-compare ?text "Si") 0) 
+           	(eq (str-compare ?text "si") 0)) then
+       		(modify ?g (mareig "SI"))
+
+	)
+	(modify ?g (parAd "CERT"))
+    )
+
+    (defrule preguntes::obtenir-fatiga "Obté si la persona està fatigada muscularment"
+   	?g <- (lector_data (parAd "CERT"))
+   	=>
+	(printout t "Es nota fatiga muscular desprès de fer la prova?" crlf)
+    	(bind ?text (read))
+    	(if (or (eq (str-compare ?text "SI") 0) 
+       	    	(eq (str-compare ?text "Si") 0) 
+           	(eq (str-compare ?text "si") 0)) then
+       		(modify ?g (fatiga "SI"))
+	)
+	(modify ?g (parAd "cert"))
+    )
+
+;;;Objectius
+
+    (defrule preguntes::obtenir-objectiu "Obté l'objectiu de la persona"
+    	=>
+    	(printout t "Quin és el seu objectiu" crlf)
+    	(bind ?text (read))
+    	(assert (lector_data (objectiu ?text)))
+    )
+
+
+
+
+
+
