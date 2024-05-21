@@ -821,8 +821,9 @@
 	(slot cansanci (type STRING)(default "NO")) ;sensació de cansanci de la persona
 	(slot mareig (type STRING)(default "NO")) ;sensació de mareig de la persona
 	(slot fatiga (type STRING)(default "NO")) ;sensació de fatiga muscular de la persona
-	(slot objectiu (type STRING)) ;objectiu de la persona
-	(slot temps (type INTEGER)) ;temps d'entrenament per dia de la persona
+	(slot objectiu (type STRING)(default "null")) ;objectiu de la persona
+	(slot gMusc (type STRING)(default "null")) ;grup muscular de la persona en cas que l'objectiu sigui musculacio
+	(slot temps (type INTEGER)(default 0)) ;temps d'entrenament per dia de la persona
 	(slot intensitat (type INTEGER)) ;intensitat dels exercicis de la persona
     )
 
@@ -921,7 +922,9 @@
        	 	(printout t "Ha decidit proporcionar informació adicional sobre la seva condició física." crlf)
 		(printout t crlf)
     	else
-        	(printout t "No ha decidit proporcionar informació adicional sobre la seva condició física." crlf)
+		(modify ?g (parAd "null"))
+        	(printout t "Ha decidit no proporcionar informació adicional sobre la seva condició física." crlf)
+		(printout t crlf)
     	)
     )
 
@@ -982,12 +985,74 @@
 
 ;;;Objectius
 
-    (defrule preguntes::obtenir-objectiu "Obté l'objectiu de la persona"
-    	=>
-    	(printout t "Quin és el seu objectiu" crlf)
-    	(bind ?text (read))
-    	(assert (lector_data (objectiu ?text)))
+(defrule preguntes::obtenir-objectiu "Obté l'objectiu de la persona"
+    ?g <- (lector_data (objectiu "null"))
+    =>
+    (printout t "Selecciona el teu objectiu" crlf)
+    (printout t "1- Manteniment" crlf)
+    (printout t "2- Posar-se en forma" crlf)
+    (printout t "3- Baixar de pes" crlf)
+    (printout t "4- Flexibilitat" crlf)
+    (printout t "5- Equilibri" crlf)
+    (printout t "6- Musculació" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 6))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 6. Selecciona el teu objectiu" crlf)
+        (bind ?num (read))
     )
+    (switch ?num
+        (case 1 then (modify ?g (objectiu "Manteniment")))
+        (case 2 then (modify ?g (objectiu "Posar-se_en_Forma")))
+        (case 3 then (modify ?g (objectiu "Baixar_Pes")))
+        (case 4 then (modify ?g (objectiu "Flexibilitat")))
+        (case 5 then (modify ?g (objectiu "Equilibri")))
+        (case 6 then (modify ?g (objectiu "Musculacio")))
+        (default (printout t "Opció no vàlida." crlf))
+    )
+
+	(modify ?g (temps -1))
+)
+
+    (defrule preguntes::obtenir-gMusc "Obté el grup muscular que vol treballar la persona, si es que aquesta ha escollit Musculació"
+    ?g <- (lector_data (objectiu "Musculacio") (gMusc "null"))
+    =>
+    (printout t "Has triat l'objectiu de Musculació. En quin grup voldries enfocar-te?" crlf)
+    (printout t "1- Abdomen" crlf)
+    (printout t "2- Braços" crlf)
+    (printout t "3- Cames" crlf)
+    (printout t "4- Esquena" crlf)
+    (printout t "5- Tors" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 5))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 5. Selecciona el teu grup muscular a treballar" crlf)
+        (bind ?num (read))
+    )
+    (switch ?num
+        (case 1 then (modify ?g (gMusc "Abdomen")))
+        (case 2 then (modify ?g (gMusc "Bracos")))
+        (case 3 then (modify ?g (gMusc "Cames")))
+        (case 4 then (modify ?g (gMusc "Esquena")))
+        (case 5 then (modify ?g (gMusc "Tors")))
+        (default (printout t "Opció no vàlida." crlf))
+    )
+    )
+
+(defrule preguntes::obtenir-temps "Obté el temps de la rutina d'entrenament que vol dedicar-hi la persona"
+	?g <- (lector_data(temps ?temps))
+	(test (< ?temps 0))
+	=>    
+    (printout t "Quant de temps vol dedicar a la seva rutina?" crlf)
+    (bind ?num (read))
+    (while (not (>= ?num 30)) do 
+        (printout t "La rutina no pot ser inferior a 30min al dia. Quant de temps vol dedicar a la seva rutina?" crlf)
+        (bind ?num (read))
+    )
+    (modify ?g (temps ?num))
+)
+
+
+
+
 
 
 
