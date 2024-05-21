@@ -825,6 +825,10 @@
 	(slot gMusc (type STRING)(default "null")) ;grup muscular de la persona en cas que l'objectiu sigui musculacio
 	(slot temps (type INTEGER)(default 0)) ;temps d'entrenament per dia de la persona
 	(slot intensitat (type INTEGER)) ;intensitat dels exercicis de la persona
+	(slot salut (type STRING)(default "ok")) ;informa sobre si la salut de la persona està bé
+	(slot lesio (type STRING)(default "ok")) ;informa sobre si la persona te lesions
+	(slot dieta (type STRING)(default "ok")) ;informa sobre si la persona te problemes amb la dieta
+	(slot lMusc (type STRING)(default "null")) ;informa sobre quin grup muscular té lesionada una persona
     )
 
 
@@ -1051,7 +1055,10 @@
 )
 
 
+;;;Salut
 
+
+;;;Hàbits
 
 
 
