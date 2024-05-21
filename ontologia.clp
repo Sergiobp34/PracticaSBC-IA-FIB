@@ -963,7 +963,7 @@
     (defrule preguntes::obtenir-mareig "Obté si la persona està marejada"
    	?g <- (lector_data (parAd "True"))
    	=>
-	(printout t "Es nota cansat desprès de fer la prova?" crlf)
+	(printout t "Es nota marejat desprès de fer la prova?" crlf)
     	(bind ?text (read))
     	(if (or (eq (str-compare ?text "SI") 0) 
        	    	(eq (str-compare ?text "Si") 0) 
