@@ -825,7 +825,7 @@
 	(slot gMusc (type STRING)(default "null")) ;grup muscular de la persona en cas que l'objectiu sigui musculacio
 	(slot temps (type INTEGER)(default 0)) ;temps d'entrenament per dia de la persona
 	(slot intensitat (type INTEGER)) ;intensitat dels exercicis de la persona
-	(slot salut (type STRING)(default "ok")) ;informa sobre si la salut de la persona està bé
+	(slot salut (type STRING)(default "null")) ;informa sobre si la salut de la persona està bé
 	(slot lesio (type STRING)(default "ok")) ;informa sobre si la persona te lesions
 	(slot dieta (type STRING)(default "ok")) ;informa sobre si la persona te problemes amb la dieta
 	(slot lMusc (type STRING)(default "null")) ;informa sobre quin grup muscular té lesionada una persona
@@ -992,7 +992,7 @@
 (defrule preguntes::obtenir-objectiu "Obté l'objectiu de la persona"
     ?g <- (lector_data (objectiu "null"))
     =>
-    (printout t "Selecciona el teu objectiu" crlf)
+    (printout t "Seleccioni el seu objectiu" crlf)
     (printout t "1- Manteniment" crlf)
     (printout t "2- Posar-se en forma" crlf)
     (printout t "3- Baixar de pes" crlf)
@@ -1001,26 +1001,25 @@
     (printout t "6- Musculació" crlf)
     (bind ?num (read))
     (while (not (and (>= ?num 1) (<= ?num 6))) do 
-        (printout t "Sisplau, respongui entre els rangs de 1 i 6. Selecciona el teu objectiu" crlf)
+        (printout t "Sisplau, respongui entre els rangs de 1 i 6. Seleccioni el seu objectiu" crlf)
         (bind ?num (read))
     )
     (switch ?num
-        (case 1 then (modify ?g (objectiu "Manteniment")))
-        (case 2 then (modify ?g (objectiu "Posar-se_en_Forma")))
-        (case 3 then (modify ?g (objectiu "Baixar_Pes")))
-        (case 4 then (modify ?g (objectiu "Flexibilitat")))
-        (case 5 then (modify ?g (objectiu "Equilibri")))
+        (case 1 then (modify ?g (objectiu "Manteniment")(temps -1)))
+        (case 2 then (modify ?g (objectiu "Posar-se_en_Forma")(temps -1)))
+        (case 3 then (modify ?g (objectiu "Baixar_Pes")(temps -1)))
+        (case 4 then (modify ?g (objectiu "Flexibilitat")(temps -1)))
+        (case 5 then (modify ?g (objectiu "Equilibri")(temps -1)))
         (case 6 then (modify ?g (objectiu "Musculacio")))
         (default (printout t "Opció no vàlida." crlf))
     )
 
-	(modify ?g (temps -1))
 )
 
     (defrule preguntes::obtenir-gMusc "Obté el grup muscular que vol treballar la persona, si es que aquesta ha escollit Musculació"
     ?g <- (lector_data (objectiu "Musculacio") (gMusc "null"))
     =>
-    (printout t "Has triat l'objectiu de Musculació. En quin grup voldries enfocar-te?" crlf)
+    (printout t "Ha triat l'objectiu de Musculació. En quin grup voldria enfocar-se?" crlf)
     (printout t "1- Abdomen" crlf)
     (printout t "2- Braços" crlf)
     (printout t "3- Cames" crlf)
@@ -1028,7 +1027,7 @@
     (printout t "5- Tors" crlf)
     (bind ?num (read))
     (while (not (and (>= ?num 1) (<= ?num 5))) do 
-        (printout t "Sisplau, respongui entre els rangs de 1 i 5. Selecciona el teu grup muscular a treballar" crlf)
+        (printout t "Sisplau, respongui entre els rangs de 1 i 5. Seleccioni el seu grup muscular a treballar" crlf)
         (bind ?num (read))
     )
     (switch ?num
@@ -1039,6 +1038,7 @@
         (case 5 then (modify ?g (gMusc "Tors")))
         (default (printout t "Opció no vàlida." crlf))
     )
+	(modify ?g (temps -1))
     )
 
 (defrule preguntes::obtenir-temps "Obté el temps de la rutina d'entrenament que vol dedicar-hi la persona"
@@ -1052,10 +1052,88 @@
         (bind ?num (read))
     )
     (modify ?g (temps ?num))
+    (modify ?g (salut "ok"))
 )
 
 
 ;;;Salut
+
+(defrule preguntes::obtenir-salut "Obté si la persona té algun aspecte de salut a tenir en compte"
+    ?g <- (lector_data (salut "ok"))
+    =>
+    (printout t "Té algun aspecte de salut del que haguem d'estar conscernits?" crlf)
+    (bind ?text (read))
+    (if (or (eq (str-compare ?text "SI") 0) 
+             (eq (str-compare ?text "Si") 0) 
+             (eq (str-compare ?text "si") 0)) then
+        (modify ?g (salut "noOK"))     
+    else
+        (modify ?g (salut "OK"))
+    )
+)
+
+    (defrule preguntes::obtenir-tipusSalut "Obte quina condició de salut te la persona"
+    ?g <- (lector_data (salut "noOK"))
+    =>
+    (printout t "Quina d'aquestes condicions de salut pateix?" crlf)
+    (printout t "1- Condició Musculoesquelètica" crlf)
+    (printout t "2- Condició Dietètica" crlf)
+    (printout t "3- Totes les anteriors" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 3))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 3. Quina d'aquestes condicions de salut pateix?" crlf)
+        (bind ?num (read))
+    )
+    (switch ?num
+        (case 1 then (modify ?g (lesio "true")))
+        (case 2 then (modify ?g (dieta "true")))
+        (case 3 then (modify ?g (lesio "true")(dieta "true")))
+        (default (printout t "Opció no vàlida." crlf))
+    )
+	(modify ?g (salut "NOOK"))
+    )
+
+    (defrule preguntes::obtenir-lesio "Obté el grup muscular que la persona té lesionada"
+    ?g <- (lector_data (lesio "true"))
+    =>
+    (printout t "A quina regió muscular té la seva lesió?" crlf)
+    (printout t "1- Abdomen" crlf)
+    (printout t "2- Braços" crlf)
+    (printout t "3- Cames" crlf)
+    (printout t "4- Esquena" crlf)
+    (printout t "5- Tors" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 5))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 5. A quina regió muscular té la seva lesió?" crlf)
+        (bind ?num (read))
+    )
+    (switch ?num
+        (case 1 then (modify ?g (lesio "Abdomen")))
+        (case 2 then (modify ?g (lesio "Bracos")))
+        (case 3 then (modify ?g (lesio "Cames")))
+        (case 4 then (modify ?g (lesio "Esquena")))
+        (case 5 then (modify ?g (lesio "Tors")))
+        (default (printout t "Opció no vàlida." crlf))
+    )
+    )
+
+    (defrule preguntes::obtenir-dieta "Obté el grup muscular que la persona té lesionada"
+    ?g <- (lector_data (dieta "true"))
+    =>
+    (printout t "Quina condició dietètica té?" crlf)
+    (printout t "1- Menja en excès" crlf)
+    (printout t "2- Menja en deficiència" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 2))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 2. Quina condició dietètica té?" crlf)
+        (bind ?num (read))
+    )
+    (switch ?num
+        (case 1 then (modify ?g (dieta "surplus")))
+        (case 2 then (modify ?g (lesio "deficit")))
+        (default (printout t "Opció no vàlida." crlf))
+    )
+    )
 
 
 ;;;Hàbits
