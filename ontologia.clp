@@ -1319,13 +1319,35 @@
 
 
 
-;;; fes que descarti els exercicis que no interessen segons l'objectiu i les lesions
-;;; desprès mira de fer que la suma de els temps de cada exercici no difereixin massa del temps de la rutina d'entrenament de la persona (+/- 10%)
+;;; Descartar exercicis que no interessen segons objectiu i les lesions
+
+(deffunction erase-exercicis-by-objectiu (?objectiu)
+    (bind ?exercicis-to-erase
+    (find-all-instances ((?exercici Exercicis))
+        (not (member$ ?objectiu (send ?exercici get-Objectius)))))
+    (if (> (length$ ?exercicis-to-erase) 0)
+        then
+        (progn$ (?exercici ?exercicis-to-erase) (send ?exercici delete))
+    )
+)
+
+(deffunction erase-exercicis-by-lesio (?muscul) "muscul es el muscul o grup muscular que hem d'eliminar per la lesio"
+    (bind ?exercicis-to-erase
+    (find-all-instances ((?exercici Exercicis))
+        (member$ ?muscul (send ?exercici get-Musculs))))
+    (if (> (length$ ?exercicis-to-erase) 0)
+        then
+        (progn$ (?exercici ?exercicis-to-erase) (send ?exercici delete))
+    )
+)
+
+
+;;; suma dels temps dels exercicis restants i mirar si canvia molt respecte el que ens diu l'usuari (+/- 10%)
+
+;;; ATENCIO: si hi ha problema amb el temps crec que hauriem d'eliminar (com a criteri pensat ara mateix) els x exercicis
+;;; que fan que es pasi del temps, si es queda curt doncs o be li donem la rutina curta o be allarguem els temps dels exercicis
+
+
+
 ;;; si tens més temps aleshores pots implementar lo de la intensitat
-
-
-
-
-
-
 
