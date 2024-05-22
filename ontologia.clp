@@ -813,7 +813,7 @@
 	(slot edat (type INTEGER)(default -1)) ;edat de la persona
         (slot pes (type INTEGER)(default -1)) ;pes de la persona
 	(slot alcada (type INTEGER)(default -1)) ;alçada de la persona
- 	(slot imc (type FLOAT)) ;imc de la persona
+ 	(slot imc (type FLOAT)(default -1.0)) ;imc de la persona
 	(slot psMax (type INTEGER)(default -1)) ;presió sanguinea màxima de la persona
 	(slot psMin (type INTEGER)(default -1)) ;presió sanguinea mínima de la persona
 	(slot parAd (type STRING)(default "FALSE")) ;informació sobre si la persona vol calcular paràmetres adicionals
@@ -887,6 +887,16 @@
     	)
     	(modify ?g (alcada ?num))
     )
+
+(defrule preguntes::calcular-imc "Calcula el IMC de la persona"
+    ?g <- (lector_data (pes ?pes) (alcada ?alcada) (imc ?imc))
+    (test (and (> ?pes 0) (> ?alcada 0) (< ?imc 0)))
+    =>
+    (bind ?alcada-meters (/ ?alcada 100.0)) ; Convert height to meters
+    (bind ?imc (/ ?pes (* ?alcada-meters ?alcada-meters))) ; Calculate IMC
+    (modify ?g (imc ?imc))
+    (printout t "El seu IMC és " ?imc crlf)
+)
 
     (defrule preguntes::obtenir-psMax "Obté la presió màxima de la pesona"
 	?g <- (lector_data(psMax ?psMax))
@@ -1137,6 +1147,8 @@
 
 
 ;;;Hàbits
+
+
 
 
 
