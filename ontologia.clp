@@ -828,7 +828,16 @@
 	(slot salut (type STRING)(default "null")) ;informa sobre si la salut de la persona està bé
 	(slot lesio (type STRING)(default "ok")) ;informa sobre si la persona te lesions
 	(slot dieta (type STRING)(default "ok")) ;informa sobre si la persona te problemes amb la dieta
-	(slot lMusc (type STRING)(default "null")) ;informa sobre quin grup muscular té lesionada una persona
+	(slot habit (type STRING)) ;informa sobre quins habits tindrà la persona
+	(slot laboral (type STRING)(default "null")) ;informa sobre quins habits laborals tindrà la persona
+	(slot fLaboral (type INTEGER)(default -1)) ;informa sobre la freqüència¨de l'hàbit laboral
+	(slot estatic (type STRING)(default "null")) ;informa sobre quins habits estàtics tindrà la persona
+	(slot fEstatic (type INTEGER)(default -1)) ;informa sobre la freqüència¨dels habits estatics
+	(slot domestic (type STRING)(default "null")) ;informa sobre quins habits domèstics tindrà la persona
+	(slot fDomestic (type INTEGER)(default -1)) ;informa sobre la freqüència dels habits domèstics
+	(slot desplacament (type STRING)(default "null")) ;informa sobre quins desplaçaments fa la persona
+	(slot fDesplacament (type INTEGER)(default -1)) ;informa sobre la freqüència¨de l'hàbit de desplaçament
+	
     )
 
 
@@ -1079,6 +1088,7 @@
         (modify ?g (salut "noOK"))     
     else
         (modify ?g (salut "OK"))
+	(modify ?g (habit "on"))
     )
 )
 
@@ -1125,6 +1135,7 @@
         (case 5 then (modify ?g (lesio "Tors")))
         (default (printout t "Opció no vàlida." crlf))
     )
+    (modify ?g (habit "on"))
     )
 
     (defrule preguntes::obtenir-dieta "Obté el grup muscular que la persona té lesionada"
@@ -1143,12 +1154,57 @@
         (case 2 then (modify ?g (lesio "deficit")))
         (default (printout t "Opció no vàlida." crlf))
     )
+    (modify ?g (habit "on"))
     )
 
 
 ;;;Hàbits
 
+    (defrule preguntes::obtenir-laboral "Obte els hàbits laborals de la persona"
+    ?g <- (lector_data (habit "on"))
+    =>
+    (printout t "Quina d'aquestes activitats fa més a la feina?" crlf)
+    (printout t "1- Estar assegut" crlf)
+    (printout t "2- Estar de peu" crlf)
+    (printout t "3- Desplaçaments constants" crlf)
+    (printout t "4- Aixecament de pesos" crlf)
+    (printout t "5- Repetició de moviments" crlf)
+    (printout t "6- No treballa" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 6))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 6. Quina d'aquestes activitats fa més a la feina?" crlf)
+        (bind ?num (read))
+    )
+    (switch ?num
+        (case 1 then (modify ?g (laboral "SIT")))
+        (case 2 then (modify ?g (laboral "STAND")))
+        (case 3 then (modify ?g (laboral "MOVE")(dieta "true")))
+	(case 4 then (modify ?g (laboral "LIFT")))
+	(case 5 then (modify ?g (laboral "REPEAT")))
+	(case 6 then (modify ?g (laboral "null")))
+        (default (printout t "Opció no vàlida." crlf))
+    )
+	(modify ?g (habit "filling"))
+    )
 
+;;algo va malament en aquesta, passa-la pel chatgpt
+    (defrule preguntes::obtenir-fLaboral "Obté la freqüència d'activitat laboral de la persona"
+	?g <- (lector_data(laboral ?laboral))
+	(test (not (eq (?laboral "null"))))
+	=>
+	(printout t "Amb quina freqüència de hores/dia realitza dita activitat laboral?" crlf)
+    	(bind ?num (read))
+    	(while (not(and (>= ?num 1) (<= ?num 24))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 1 i 24. Amb quina freqüència de hores/dia realitza dita activitat laboral?" crlf)
+    		(bind ?num (read))
+    	)
+    	(modify ?g (fLaboral ?num))
+    )
+
+;;; copia les funcions per el estàtic domèstic i desplaçament, recorda variar la condició d'activació de les regles o tindràs problemes amb bucles
+;;; un cop tinguis lo de hàbits finiquitat, olvida't de la intensitat i fes que descarti els exercicis que no interessen segons l'objectiu i les lesions
+;;; desprès mira de fer que la suma de els temps de cada exercici no difereixin massa del temps de la rutina d'entrenament de la persona (+/- 10%)
+;;; si tens més temps aleshores pots implementar lo de la intensitat
 
 
 
