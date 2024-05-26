@@ -1603,14 +1603,25 @@
 )
 
 
-
-(defrule imprimir::imprimir "Print remaining exercises"
+(defrule imprimir::imprimir-rutina "Imprimeix els exercicis de la rutina de l'usuari"
    (declare (salience -100))
-   ?exercici <- (Exercicis)
+   (test (neq (length$ ?*llista-exercicis*) 0))
    =>
-   (printout t "Remaining exercise: " (fact-slot-value ?exercici Nom) crlf)
-   (retract ?exercici) ; Remove the printed exercise
+   (printout t "Aquesta es la seva rutina: " crlf)
+   (bind ?printNum (length$ ?*llista-exercicis*))
+   (loop-for-count (?i ?printNum)
+      (bind ?instance (nth$ (+ ?i 1) ?*llista-exercicis*))
+      (printout t "Exercici: " ?instance crlf)
+   )
 )
+
+(defrule imprimir::no-exercicis "No s'ha pogut trobar una rutina per a voste."
+   (declare (salience -100))
+   (test (eq (length$ ?*llista-exercicis*) 0))
+   =>
+   (printout t "No s'ha pogut trobar una rutina per a voste." crlf)
+)
+
 
 
 
