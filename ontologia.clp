@@ -1534,9 +1534,6 @@
 
 
    (modify ?g (habit "FINISH"))
-
-   ;; Print the updated intensitat
-   (printout t "La seva intensitat és de " ?intensitat crlf)
 )
 
 
@@ -1593,6 +1590,27 @@
             (send ?exercici delete))
     )
 )
+
+(defrule recomanacions::podar-llista-exercicis "Crea la lista de opciones"
+   (declare (salience 1))
+   ?g <- (lector_data (objectiu ?objectiu) (gMusc ?gMusc) (lesio ?lesio))
+   =>
+   (erase-exercicis-by-objectiu ?objectiu ?gMusc)
+   (erase-exercicis-by-lesio ?lesio)
+)
+
+
+
+(defrule imprimir::imprimir "Print remaining exercises"
+   (declare (salience -100))
+   ?exercici <- (Exercicis)
+   =>
+   (printout t "Remaining exercise: " (fact-slot-value ?exercici Nom) crlf)
+   (retract ?exercici) ; Remove the printed exercise
+)
+
+
+
 
 
 
