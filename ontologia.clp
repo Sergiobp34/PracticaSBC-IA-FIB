@@ -1557,7 +1557,8 @@
 
 ;;; Descartar exercicis que no interessen segons objectiu i les lesions
 
-(deffunction erase-exercicis-by-objectiu (?objectiu ?gMusc)
+(deffunction erase-exercicis-by-objectiu (?objectiu ?gMusc) "Elimina els exercicis basat en l'objectiu"
+    ;; If the objective is "Musculacio", find and delete exercises not working the specified muscle group
     (if (eq ?objectiu "Musculacio")
         then
         (bind ?exercicis-to-erase
@@ -1566,21 +1567,23 @@
         (if (> (length$ ?exercicis-to-erase) 0)
             then
             (progn$ (?exercici ?exercicis-to-erase)
-                (send ?exercici delete)))
-        else
-            (bind ?exercicis-to-erase
-                  (find-all-instances ((?exercici Exercicis))
-                                      (not (member$ ?objectiu (send ?exercici get-serveix_Obj)))))
-            (if (> (length$ ?exercicis-to-erase) 0)
-                then
-                (progn$ (?exercici ?exercicis-to-erase)
-                    (send ?exercici delete)))))
+                (send ?exercici delete))))
+
+    ;; Find and delete exercises not serving the specified objective
+    (bind ?exercicis-to-erase
+          (find-all-instances ((?exercici Exercicis))
+                              (not (member$ ?objectiu (send ?exercici get-serveix_Obj)))))
+    (if (> (length$ ?exercicis-to-erase) 0)
+        then
+        (progn$ (?exercici ?exercicis-to-erase)
+            (send ?exercici delete)))
+)
 
 
 
 
-(deffunction erase-exercicis-by-lesio (?lesio)
-    "Delete exercises based on the muscle or muscle group specified by ?lesio"
+
+(deffunction erase-exercicis-by-lesio (?lesio) "Elimina els exercicis basats en lesió"
     (bind ?exercicis-to-erase
           (find-all-instances ((?exercici Exercicis))
                               (member$ ?lesio (send ?exercici get-treballa_Musc))))
