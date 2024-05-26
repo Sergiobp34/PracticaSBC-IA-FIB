@@ -215,10 +215,9 @@
 )
 
 (definstances instances
-    ([Abdomen] of Musculs
-    )
+    (Abdomen of Musculs)
 
-    ([Abdominals_Tisora_x10] of De_Terra
+    (Abdominals_Tisora_x10 of De_Terra
          (complementa_Exerc  [Dominades_en_Pronacio_x5] [Elevacio_de_Cames_x10])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen])
@@ -229,10 +228,9 @@
          (kcal/min  8)
     )
 
-    ([Baixar_Pes] of Objectius
-    )
+    (Baixar_Pes of Objectius)
 
-    ([Bicicleta] of Amb_Aparells
+    (Bicicleta of Amb_Aparells
          (complementa_Exerc  [Crunches_x10] [Esquats_x10] [Flexions_al_Pla_x10])
          (serveix_Obj  [Baixar_Pes] [Manteniment] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Tors])
@@ -243,13 +241,11 @@
          (kcal/min  7)
     )
 
-    ([Bracos] of Musculs
-    )
+    (Bracos of Musculs)
 
-    ([Cames] of Musculs
-    )
+    (Cames of Musculs)
 
-    ([Cinta] of Amb_Aparells
+    (Cinta of Amb_Aparells
          (complementa_Exerc  [Elevacio_de_Bessons] [Esquats_x10])
          (serveix_Obj  [Baixar_Pes] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -260,7 +256,7 @@
          (kcal/min  9)
     )
 
-    ([Crunches_x10] of De_Terra
+    (Crunches_x10 of De_Terra
          (complementa_Exerc  [Bicicleta] [Elevacio_de_Cames_x10] [Estirament_Abdominal])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Cames])
@@ -271,7 +267,7 @@
          (kcal/min  7)
     )
 
-    ([Curl_de_Biceps] of Amb_Peses
+    (Curl_de_Biceps of Amb_Peses
          (complementa_Exerc  [Estirament_de_Biceps] [Lat_Pulldown] [Planxa])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos])
@@ -282,7 +278,7 @@
          (kcal/min  4)
     )
 
-    ([Curl_de_Biceps_Femoral] of Amb_Peses
+    (Curl_de_Biceps_Femoral of Amb_Peses
          (complementa_Exerc  [Elevacio_de_Quadriceps] [Estirament_de_Biceps_Femoral] [Press_de_Cames])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -293,7 +289,7 @@
          (kcal/min  4)
     )
 
-    ([Dominades_Australianes_x10] of Sense_Peses
+    (Dominades_Australianes_x10 of Sense_Peses
          (complementa_Exerc  [Estirament_de_Dorsals] [Flexions_al_Pla_x10] [Lat_Pulldown])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos] [Esquena] [Tors])
@@ -304,7 +300,7 @@
          (kcal/min  6)
     )
 
-    ([Dominades_en_Pronacio_x5] of Sense_Peses
+    (Dominades_en_Pronacio_x5 of Sense_Peses
          (complementa_Exerc  [Abdominals_Tisora_x10] [Dominades_en_Supinacio_x5] [Estirament_de_Triceps])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Bracos] [Esquena] [Tors])
@@ -315,7 +311,7 @@
          (kcal/min  8)
     )
 
-    ([Dominades_en_Supinacio_x5] of Sense_Peses
+    (Dominades_en_Supinacio_x5 of Sense_Peses
          (complementa_Exerc  [Dominades_en_Pronacio_x5] [Estirament_de_Triceps] [Twists_Russos_x10])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Bracos] [Esquena] [Tors])
@@ -326,7 +322,7 @@
          (kcal/min  8)
     )
 
-    ([Elevacio_Lateral] of Amb_Peses
+    (Elevacio_Lateral of Amb_Peses
          (complementa_Exerc  [Flexions_al_Pla_x10] [Natacio] [Press_de_Banca])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos])
@@ -337,7 +333,7 @@
          (kcal/min  4)
     )
 
-    ([Elevacio_de_Bessons] of Amb_Peses
+    (Elevacio_de_Bessons of Amb_Peses
          (complementa_Exerc  [Cinta] [Eliptica] [Postura_de_Arbre])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -348,7 +344,7 @@
          (kcal/min  4)
     )
 
-    ([Elevacio_de_Cames_x10] of De_Terra
+    (Elevacio_de_Cames_x10 of De_Terra
          (complementa_Exerc  [Abdominals_Tisora_x10] [Estirament_Abdominal])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Cames])
@@ -359,7 +355,7 @@
          (kcal/min  5)
     )
 
-    ([Elevacio_de_Quadriceps] of Amb_Peses
+    (Elevacio_de_Quadriceps of Amb_Peses
          (complementa_Exerc  [Curl_de_Biceps_Femoral] [Estirament_de_Quadriceps])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -370,7 +366,7 @@
          (kcal/min  4)
     )
 
-    ([Eliptica] of Amb_Aparells
+    (Eliptica of Amb_Aparells
          (complementa_Exerc  [Elevacio_de_Bessons] [Saltar_a_la_Corda])
          (serveix_Obj  [Baixar_Pes] [Manteniment] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -381,10 +377,9 @@
          (kcal/min  8)
     )
 
-    ([Equilibri] of Objectius
-    )
+    (Equilibri of Objectius)
 
-    ([Esquats_Bulgars_x10] of Sense_Peses
+    (Esquats_Bulgars_x10 of Sense_Peses
          (complementa_Exerc  [Esquats_x10] [Penjar-se_en_Barra])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Cames] [Esquena])
@@ -395,7 +390,7 @@
          (kcal/min  6)
     )
 
-    ([Esquats_x10] of Sense_Peses
+    (Esquats_x10 of Sense_Peses
          (complementa_Exerc  [Bicicleta] [Cinta] [Natacio])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Cames] [Esquena])
@@ -406,10 +401,9 @@
          (kcal/min  5)
     )
 
-    ([Esquena] of Musculs
-    )
+    (Esquena of Musculs)
 
-    ([Estirament_Abdominal] of Estiraments
+    (Estirament_Abdominal of Estiraments
          (complementa_Exerc  [Crunches_x10] [Elevacio_de_Cames_x10] [Saltar_a_la_Corda])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen])
@@ -420,7 +414,7 @@
          (kcal/min  0)
     )
 
-    ([Estirament_de_Bessons] of Estiraments
+    (Estirament_de_Bessons of Estiraments
          (complementa_Exerc  [Elevacio_de_Bessons] [Estirament_de_Biceps_Femoral])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -431,7 +425,7 @@
          (kcal/min  0)
     )
 
-    ([Estirament_de_Biceps] of Estiraments
+    (Estirament_de_Biceps of Estiraments
          (complementa_Exerc  [Curl_de_Biceps] [Estirament_de_Triceps])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos])
@@ -442,7 +436,7 @@
          (kcal/min  0)
     )
 
-    ([Estirament_de_Biceps_Femoral] of Estiraments
+    (Estirament_de_Biceps_Femoral of Estiraments
          (complementa_Exerc  [Curl_de_Biceps_Femoral] [Estirament_de_Bessons] [Estirament_de_Quadriceps])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -453,7 +447,7 @@
          (kcal/min  0)
     )
 
-    ([Estirament_de_Deltoides] of Estiraments
+    (Estirament_de_Deltoides of Estiraments
          (complementa_Exerc  [Estirament_de_Dorsals])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Esquena])
@@ -464,7 +458,7 @@
          (kcal/min  0)
     )
 
-    ([Estirament_de_Dorsals] of Estiraments
+    (Estirament_de_Dorsals of Estiraments
          (complementa_Exerc  [Dominades_Australianes_x10] [Estirament_de_Deltoides])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Esquena])
@@ -475,7 +469,7 @@
          (kcal/min  0)
     )
 
-    ([Estirament_de_Pectorals] of Estiraments
+    (Estirament_de_Pectorals of Estiraments
          (complementa_Exerc  [Flexions_amb_Inclinacio_Negativa_x10] [Flexions_amb_Inclinacio_x10])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Tors])
@@ -486,7 +480,7 @@
          (kcal/min  0)
     )
 
-    ([Estirament_de_Quadriceps] of Estiraments
+    (Estirament_de_Quadriceps of Estiraments
          (complementa_Exerc  [Elevacio_de_Quadriceps] [Estirament_de_Quadriceps])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -497,7 +491,7 @@
          (kcal/min  0)
     )
 
-    ([Estirament_de_Triceps] of Estiraments
+    (Estirament_de_Triceps of Estiraments
          (complementa_Exerc  [Dominades_en_Pronacio_x5] [Estirament_de_Biceps])
          (serveix_Obj  [Flexibilitat] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos])
@@ -508,10 +502,9 @@
          (kcal/min  0)
     )
 
-    ([Flexibilitat] of Objectius
-    )
+    (Flexibilitat of Objectius)
 
-    ([Flexions_al_Pla_x10] of De_Terra
+    (Flexions_al_Pla_x10 of De_Terra
          (complementa_Exerc  [Bicicleta] [Dominades_Australianes_x10] [Elevacio_Lateral])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos] [Tors])
@@ -522,7 +515,7 @@
          (kcal/min  8)
     )
 
-    ([Flexions_amb_Inclinacio_Negativa_x10] of De_Terra
+    (Flexions_amb_Inclinacio_Negativa_x10 of De_Terra
          (complementa_Exerc  [Estirament_de_Pectorals] [Flexions_amb_Inclinacio_x10] [Press_de_Banca_Inclinat])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos] [Tors])
@@ -533,7 +526,7 @@
          (kcal/min  10)
     )
 
-    ([Flexions_amb_Inclinacio_x10] of De_Terra
+    (Flexions_amb_Inclinacio_x10 of De_Terra
          (complementa_Exerc  [Estirament_de_Pectorals] [Flexions_amb_Inclinacio_Negativa_x10] [Natacio])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos] [Tors])
@@ -544,7 +537,7 @@
          (kcal/min  6)
     )
 
-    ([Lat_Pulldown] of Amb_Peses
+    (Lat_Pulldown of Amb_Peses
          (complementa_Exerc  [Curl_de_Biceps] [Dominades_Australianes_x10] [Rem])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos] [Esquena] [Tors])
@@ -555,13 +548,11 @@
          (kcal/min  4)
     )
 
-    ([Manteniment] of Objectius
-    )
+    (Manteniment of Objectius)
 
-    ([Musculacio] of Objectius
-    )
+    (Musculacio of Objectius)
 
-    ([Natacio] of Amb_Aparells
+    (Natacio of Amb_Aparells
          (complementa_Exerc  [Elevacio_Lateral] [Esquats_x10] [Flexions_amb_Inclinacio_x10])
          (serveix_Obj  [Baixar_Pes] [Manteniment] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Esquena] [Tors])
@@ -572,7 +563,7 @@
          (kcal/min  11)
     )
 
-    ([Penjar-se_en_Barra] of Sense_Peses
+    (Penjar-se_en_Barra of Sense_Peses
          (complementa_Exerc  [Esquats_Bulgars_x10] [Press_de_Banca] [Salts_Aerobics])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Bracos] [Esquena] [Tors])
@@ -583,7 +574,7 @@
          (kcal/min  2)
     )
 
-    ([Planxa] of De_Terra
+    (Planxa of De_Terra
          (complementa_Exerc  [Curl_de_Biceps] [Elevacio_de_Cames_x10] [Twists_Russos_x10])
          (serveix_Obj  [Equilibri] [Manteniment] [Musculacio])
          (treballa_Musc  [Abdomen] [Bracos])
@@ -594,7 +585,7 @@
          (kcal/min  3)
     )
 
-    ([Planxa_Lateral] of De_Terra
+    (Planxa_Lateral of De_Terra
          (complementa_Exerc  [Postura_de_la_Mitja_Lluna] [Press_de_Banca_Inclinat] [Twists_Russos_x10])
          (serveix_Obj  [Equilibri] [Manteniment] [Musculacio])
          (treballa_Musc  [Abdomen] [Bracos])
@@ -605,10 +596,9 @@
          (kcal/min  3)
     )
 
-    ([Posar-se_en_Forma] of Objectius
-    )
+    (Posar-se_en_Forma of Objectius)
 
-    ([Postura_de_Aguila] of Equilibris
+    (Postura_de_Aguila of Equilibris
          (complementa_Exerc  [Postura_de_Arbre] [Postura_de_la_Muntanya] [Postura_del_Ballari])
          (serveix_Obj  [Equilibri] [Flexibilitat])
          (treballa_Musc  [Bracos] [Cames] [Esquena])
@@ -619,7 +609,7 @@
          (kcal/min  0)
     )
 
-    ([Postura_de_Arbre] of Equilibris
+    (Postura_de_Arbre of Equilibris
          (complementa_Exerc  [Elevacio_de_Bessons] [Postura_de_Aguila] [Postura_del_Corb])
          (serveix_Obj  [Equilibri])
          (treballa_Musc  [Bracos] [Cames] [Esquena])
@@ -630,7 +620,7 @@
          (kcal/min  0)
     )
 
-    ([Postura_de_la_Mitja_Lluna] of Equilibris
+    (Postura_de_la_Mitja_Lluna of Equilibris
          (complementa_Exerc  [Planxa_Lateral] [Postura_de_la_Muntanya] [Postura_del_Pao])
          (serveix_Obj  [Equilibri])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Esquena])
@@ -641,7 +631,7 @@
          (kcal/min  0)
     )
 
-    ([Postura_de_la_Muntanya] of Equilibris
+    (Postura_de_la_Muntanya of Equilibris
          (complementa_Exerc  [Postura_de_Aguila] [Postura_de_la_Mitja_Lluna])
          (serveix_Obj  [Equilibri] [Flexibilitat])
          (treballa_Musc  [Bracos] [Esquena] [Tors])
@@ -652,18 +642,18 @@
          (kcal/min  0)
     )
 
-    ([Postura_del_Ballari] of Equilibris
+    (Postura_del_Ballari of Equilibris
          (complementa_Exerc  [Postura_de_Aguila] [Postura_del_Corb] [Postura_del_Guerrer_I])
          (serveix_Obj  [Equilibri] [Flexibilitat])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Esquena] [Tors])
          (DuracioMax  5)
-	 (DuracioMin  1)
+         (DuracioMin  1)
          (RepsMax  4)
          (RepsMin  2)
          (kcal/min  0)
     )
 
-    ([Postura_del_Corb] of Equilibris
+    (Postura_del_Corb of Equilibris
          (complementa_Exerc  [Postura_de_Arbre] [Postura_del_Ballari] [Postura_del_Pao])
          (serveix_Obj  [Equilibri] [Flexibilitat])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Esquena])
@@ -674,7 +664,7 @@
          (kcal/min  0)
     )
 
-    ([Postura_del_Guerrer_I] of Equilibris
+    (Postura_del_Guerrer_I of Equilibris
          (complementa_Exerc  [Postura_del_Ballari] [Postura_del_Pao])
          (serveix_Obj  [Equilibri] [Flexibilitat])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Esquena] [Tors])
@@ -685,7 +675,7 @@
          (kcal/min  0)
     )
 
-    ([Postura_del_Pao] of Equilibris
+    (Postura_del_Pao of Equilibris
          (complementa_Exerc  [Postura_de_la_Mitja_Lluna] [Postura_del_Corb] [Postura_del_Guerrer_I])
          (serveix_Obj  [Equilibri])
          (treballa_Musc  [Bracos] [Cames] [Esquena])
@@ -696,9 +686,8 @@
          (kcal/min  0)
     )
 
-    ([Press_de_Banca] of Amb_Peses
-         (complementa_Exerc
-  [Elevacio_Lateral] [Penjar-se_en_Barra] [Press_de_Banca_Inclinat])
+    (Press_de_Banca of Amb_Peses
+         (complementa_Exerc  [Elevacio_Lateral] [Penjar-se_en_Barra] [Press_de_Banca_Inclinat])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos] [Tors])
          (DuracioMax  5)
@@ -708,7 +697,7 @@
          (kcal/min  4)
     )
 
-    ([Press_de_Banca_Inclinat] of Amb_Peses
+    (Press_de_Banca_Inclinat of Amb_Peses
          (complementa_Exerc  [Flexions_amb_Inclinacio_Negativa_x10] [Planxa_Lateral] [Press_de_Banca])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Bracos] [Tors])
@@ -719,7 +708,7 @@
          (kcal/min  4)
     )
 
-    ([Press_de_Cames] of Amb_Peses
+    (Press_de_Cames of Amb_Peses
          (complementa_Exerc  [Curl_de_Biceps_Femoral] [Rem])
          (serveix_Obj  [Manteniment] [Musculacio] [Posar-se_en_Forma])
          (treballa_Musc  [Cames])
@@ -730,7 +719,7 @@
          (kcal/min  5)
     )
 
-    ([Rem] of Amb_Aparells
+    (Rem of Amb_Aparells
          (complementa_Exerc  [Lat_Pulldown] [Press_de_Cames] [Salts_Aerobics])
          (serveix_Obj  [Baixar_Pes] [Manteniment] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Esquena] [Tors])
@@ -741,7 +730,7 @@
          (kcal/min  12)
     )
 
-    ([Saltar_a_la_Corda] of Sense_Peses
+    (Saltar_a_la_Corda of Sense_Peses
          (complementa_Exerc  [Eliptica] [Estirament_Abdominal] [Salts_Aerobics])
          (serveix_Obj  [Baixar_Pes] [Manteniment] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Bracos] [Cames])
@@ -752,7 +741,7 @@
          (kcal/min  11)
     )
 
-    ([Salts_Aerobics] of Sense_Peses
+    (Salts_Aerobics of Sense_Peses
          (complementa_Exerc  [Penjar-se_en_Barra] [Rem] [Saltar_a_la_Corda])
          (serveix_Obj  [Baixar_Pes] [Manteniment] [Posar-se_en_Forma])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Esquena])
@@ -763,10 +752,9 @@
          (kcal/min  10)
     )
 
-    ([Tors] of Musculs
-    )
+    (Tors of Musculs)
 
-    ([Twists_Russos_x10] of De_Terra
+    (Twists_Russos_x10 of De_Terra
          (complementa_Exerc  [Dominades_en_Supinacio_x5] [Planxa] [Planxa_Lateral])
          (serveix_Obj  [Manteniment] [Musculacio])
          (treballa_Musc  [Abdomen])
@@ -776,7 +764,6 @@
          (RepsMin  1)
          (kcal/min  7)
     )
-
 )
 
 ;;; #########################################
@@ -857,6 +844,7 @@
 	(printout t"Benvolgut client, respongui les preguntes i li generem un programa d'entrenament setmanal." crlf)
 	(printout t crlf)
 	(assert (lector_data))
+	(assert (instances-loaded TRUE))
 	(focus imprimir)
 	(focus recomanacions)
 	(focus preguntes)
@@ -1545,20 +1533,23 @@
 
 
 (defrule recomanacions::crear-lista-exercicis "Crea la lista de opcions"
+   (declare (salience 5))
    (test (eq (length$ ?*llista-exercicis*) 0))
+   (instances-loaded TRUE)
    =>
    (bind ?lista (find-all-instances ((?inst Exercicis)) TRUE))
    (bind ?*llista-exercicis* (create$))
 
+   ;; Iterate through ?lista and add each item to ?*llista-exercicis*
+   (bind ?index 0)
    (progn$ (?fact ?lista)
-      (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* (length$ ?*llista-exercicis*) ?fact))
+      (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* ?index ?fact))
+      (bind ?index (+ ?index 1))
    )
    (printout t "Llista d'exercicis: " ?*llista-exercicis* crlf)
 )
 
-
 ;;; Descartar exercicis que no interessen segons objectiu i les lesions
-
 (deffunction erase-exercicis-by-objectiu (?objectiu ?gMusc) "Elimina els exercicis basat en l'objectiu"
     ;; If the objective is "Musculacio", find and delete exercises not working the specified muscle group
     (if (eq ?objectiu "Musculacio")
@@ -1581,8 +1572,6 @@
             (send ?exercici delete)))
 )
 
-
-
 (deffunction erase-exercicis-by-lesio (?lesio) "Elimina els exercicis basats en lesió"
     (bind ?exercicis-to-erase
           (find-all-instances ((?exercici Exercicis))
@@ -1602,7 +1591,6 @@
    (erase-exercicis-by-lesio ?lesio)
 )
 
-
 (defrule imprimir::imprimir-rutina "Imprimeix els exercicis de la rutina de l'usuari"
    (declare (salience -100))
    (test (neq (length$ ?*llista-exercicis*) 0))
@@ -1621,6 +1609,14 @@
    =>
    (printout t "No s'ha pogut trobar una rutina per a voste." crlf)
 )
+
+
+
+
+
+
+
+
 
 
 
