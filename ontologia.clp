@@ -824,7 +824,7 @@
 	(slot objectiu (type STRING)(default "null")) ;objectiu de la persona
 	(slot gMusc (type STRING)(default "null")) ;grup muscular de la persona en cas que l'objectiu sigui musculacio
 	(slot temps (type INTEGER)(default 0)) ;temps d'entrenament per dia de la persona
-	(slot intensitat (type INTEGER)) ;intensitat dels exercicis de la persona
+	(slot intensitat (type INTEGER) (default 5)) ;intensitat dels exercicis de la persona
 	(slot salut (type STRING)(default "null")) ;informa sobre si la salut de la persona està bé
 	(slot lesio (type STRING)(default "ok")) ;informa sobre si la persona te lesions
 	(slot dieta (type STRING)(default "ok")) ;informa sobre si la persona te problemes amb la dieta
@@ -917,8 +917,8 @@
 	=>
 	(printout t "Quin és la seva presió sanguinea màxima?" crlf)
     	(bind ?num (read))
-    	(while (not(and (>= ?num 110) (<= ?num 150))) do 
-    		(printout t "Sisplau, respongui entre els rangs de 110 i 150. Quina és la seva sanguinea màxima?" crlf)
+    	(while (not(and (>= ?num 100) (<= ?num 150))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 100 i 150. Quina és la seva sanguinea màxima?" crlf)
     		(bind ?num (read))
     	)
     	(modify ?g (psMax ?num))
@@ -930,8 +930,8 @@
 	=>
 	(printout t "Quin és la seva presió sanguinea mínima?" crlf)
     	(bind ?num (read))
-    	(while (not(and (>= ?num 60) (<= ?num 90))) do 
-    		(printout t "Sisplau, respongui entre els rangs de 60 i 90. Quina és la seva sanguinea mínima?" crlf)
+    	(while (not(and (>= ?num 50) (<= ?num 90))) do 
+    		(printout t "Sisplau, respongui entre els rangs de 50 i 90. Quina és la seva sanguinea mínima?" crlf)
     		(bind ?num (read))
     	)
     	(modify ?g (psMin ?num))
@@ -1380,21 +1380,171 @@
 
 
 
+(defrule preguntes::obtenir-intensitat
+   "Calcula la intensitat del usuari"
+   ?g <- (lector_data (habit ?habit) 
+                      (edat ?edat) 
+                      (imc ?imc) 
+                      (psMax ?psMax) 
+                      (psMin ?psMin) 
+                      (parAd ?parAd) 
+                      (bpm ?bpm) 
+                      (cansanci ?cansanci) 
+                      (mareig ?mareig) 
+                      (fatiga ?fatiga)
+		      (dieta ?dieta)
+		      (laboral ?laboral)
+		      (fLaboralW ?fLaboralW)
+		      (fLaboralD ?fLaboralD)
+		      (fEstaticW ?fEstaticW)
+		      (fEstaticD ?fEstaticD)
+		      (domestic ?domestic)
+		      (fDomesticW ?fDomesticW)
+		      (fDomesticD ?fDomesticD)
+		      (desplacament ?desplacament)
+		      (fDesplacamentW ?fDesplacamentW)
+		      (fDesplacamentD ?fDesplacamentD)
+                      (intensitat ?intensitat))
+   (test (eq ?habit "DONE"))
+   =>
+   ;; Update intensitat based on edat
+   (if (< ?edat 30)
+       then (bind ?intensitat (+ ?intensitat 1))
+       else 
+           (if (> ?edat 65)
+               then (bind ?intensitat (- ?intensitat 1))))
+
+   ;; Update intensitat based on imc
+   (if (< ?imc 20.0)
+       then (bind ?intensitat (- ?intensitat 1))
+       else 
+           (if (> ?imc 25.0)
+               then (bind ?intensitat (- ?intensitat 1))
+               else 
+                   (if (and (> ?imc 21.0) (< ?imc 24.0))
+                       then (bind ?intensitat (+ ?intensitat 1)))))
+
+   ;; Update intensitat based on psMax
+   (if (< ?psMax 120)
+       then (bind ?intensitat (- ?intensitat 1))
+       else 
+           (if (> ?psMax 140)
+               then (bind ?intensitat (- ?intensitat 1))))
+
+   ;; Update intensitat based on psMin
+   (if (< ?psMin 60)
+       then (bind ?intensitat (- ?intensitat 1))
+       else 
+           (if (> ?psMin 80)
+               then (bind ?intensitat (- ?intensitat 1))))
+
+   ;; Comprovar si s'ha modificat parAd
+   (if (eq ?parAd "cert")
+       then
+           ;; Update intensitat per bpm
+           (if (< ?bpm 120)
+               then (bind ?intensitat (+ ?intensitat 1))
+               else 
+                   (if (> ?bpm 135)
+                       then (bind ?intensitat (- ?intensitat 1))))
+
+           ;; Update intensitat per cansanci
+           (if (eq ?cansanci "SI")
+               then (bind ?intensitat (- ?intensitat 1)))
+
+           ;; Update intensitat per mareig
+           (if (eq ?mareig "SI")
+               then (bind ?intensitat (- ?intensitat 1)))
+
+           ;; Update intensitat per fatiga
+           (if (eq ?fatiga "SI")
+               then (bind ?intensitat (- ?intensitat 1))))
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Crec que no cal
-;
-;  (defrule recomanacions::crear-llista-exercicis "Crea la llista de exercicis"
-;  (test (eq (length$ ?*llista-exercicis*) 0))
-;   =>
-;    (bind ?llista (find-all-instances ((?inst Libro)) TRUE))
-;    (progn$ (?ex $?llista)
-;        (make-instance (gensym) of Exercicis (Nom ?ex) (ponderacion 0))
-;        (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* (+ (length$ ?*llista-exercicis*) 1) (find-instance ((?inst Opcion)) (eq ?inst:nombre_libro ?act))))
-;    )
-;   )
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Update intensitat per dieta
+(if (eq ?dieta "surplus")
+    then (bind ?intensitat (+ ?intensitat 1))
+    else 
+        (if (eq ?dieta "deficit")
+            then (bind ?intensitat (- ?intensitat 1))))
+
+
+   ;; Intensitat per hàbits
+
+	;;Hàbits laborals
+   (if (or (eq ?laboral "CAP") (eq ?laboral "SIT"))
+       then 
+           (bind ?intensitat (- ?intensitat 1))
+       else 
+           (bind ?resultL (* ?fLaboralW ?fLaboralD))
+           (if (> ?resultL 15)
+               then (bind ?intensitat (+ ?intensitat 1)))
+           (if (> ?resultL 30)
+               then (bind ?intensitat (+ ?intensitat 1)))
+   )
+
+	;;Hàbits Estàtics
+	(bind ?resultE (* ?fEstaticW ?fEstaticD))
+	(if (> ?resultE 30)
+		then (bind ?intensitat (- ?intensitat 1)))
+	(if (> ?resultE 40)
+		then (bind ?intensitat (- ?intensitat 1)))
+	(if (> ?resultE 50)
+		then (bind ?intensitat (- ?intensitat 1)))
+   
+
+	;;Hàbits Domèstics
+   (if (eq ?domestic "CAP")
+       then 
+           (bind ?intensitat (- ?intensitat 1))
+       else 
+           (bind ?resultD (* ?fDomesticW ?fDomesticD))
+           (if (> ?resultD 10)
+               then (bind ?intensitat (+ ?intensitat 1)))
+           (if (> ?resultD 15)
+               then (bind ?intensitat (+ ?intensitat 1)))
+           (if (> ?resultD 30)
+               then (bind ?intensitat (+ ?intensitat 1)))
+
+   )
+
+	;;Hàbits Desplaçament
+   (if (eq ?desplacament "CAP")
+       then 
+           (bind ?intensitat (- ?intensitat 1))
+       else 
+           (bind ?resultM (* ?fDesplacamentW ?fDesplacamentD))
+           (if (> ?resultM 10)
+               then (bind ?intensitat (+ ?intensitat 1)))
+           (if (> ?resultM 15)
+               then (bind ?intensitat (+ ?intensitat 1)))
+   )
+
+
+
+   ;; Modify the fact with the new intensitat value
+   
+;; Ponderar la intensitat
+(if (< ?intensitat 1)
+    then (modify ?g (intensitat 1))
+    else (if (> ?intensitat 10)
+        then (modify ?g (intensitat 10))
+        else (modify ?g (intensitat ?intensitat))))
+
+
+
+   (modify ?g (habit "FINISH"))
+
+   ;; Print the updated intensitat
+   (printout t "La seva intensitat és de " ?intensitat crlf)
+)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
 
 ;;; Descartar exercicis que no interessen segons objectiu i les lesions
 
@@ -1477,78 +1627,6 @@
     )
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-;;; Descartar exercicis que no interessen segons objectiu i les lesions
-
-(deffunction erase-exercicis-by-objectiu (?objectiu)
-    (bind ?exercicis-to-erase
-    (find-all-instances ((?exercici Exercicis))
-        (not (member$ ?objectiu (send ?exercici get-Objectius)))))
-    (if (> (length$ ?exercicis-to-erase) 0)
-        then
-        (progn$ (?exercici ?exercicis-to-erase) (send ?exercici delete))
-    )
-)
-
-(deffunction erase-exercicis-by-lesio (?muscul) "muscul es el muscul o grup muscular que hem d'eliminar per la lesio"
-    (bind ?exercicis-to-erase
-    (find-all-instances ((?exercici Exercicis))
-        (member$ ?muscul (send ?exercici get-Musculs))))
-    (if (> (length$ ?exercicis-to-erase) 0)
-        then
-        (progn$ (?exercici ?exercicis-to-erase) (send ?exercici delete))
-    )
-)
-
-
-;;; suma dels temps dels exercicis restants i mirar si canvia molt respecte el que ens diu l'usuari (+/- 10%)
-
-;;; ATENCIO: si hi ha problema amb el temps crec que hauriem d'eliminar (com a criteri pensat ara mateix) els x exercicis
-;;; que fan que es pasi del temps, si es queda curt doncs o be li donem la rutina curta o be allarguem els temps dels exercicis
-
-
-
-;;; si tens més temps aleshores pots implementar lo de la intensitat
 
 
 
