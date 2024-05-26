@@ -657,6 +657,7 @@
          (serveix_Obj  [Equilibri] [Flexibilitat])
          (treballa_Musc  [Abdomen] [Bracos] [Cames] [Esquena] [Tors])
          (DuracioMax  "5")
+	 (DuracioMin  "1")
          (RepsMax  "4")
          (RepsMin  "2")
          (kcal/min  "0")
@@ -1542,7 +1543,7 @@
 
 
 
-(defrule recomanacions::crear-lista-exercicis "Crea la lista de opciones"
+(defrule recomanacions::crear-lista-exercicis "Crea la lista de opcions"
    (test (eq (length$ ?*llista-exercicis*) 0))
    =>
    (bind ?lista (find-all-instances ((?inst Exercicis)) TRUE))
