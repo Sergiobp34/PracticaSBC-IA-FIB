@@ -830,13 +830,17 @@
 	(slot dieta (type STRING)(default "ok")) ;informa sobre si la persona te problemes amb la dieta
 	(slot habit (type STRING)) ;informa sobre quins habits tindrà la persona
 	(slot laboral (type STRING)(default "null")) ;informa sobre quins habits laborals tindrà la persona
-	(slot fLaboral (type INTEGER)(default -1)) ;informa sobre la freqüència¨de l'hàbit laboral
+	(slot fLaboralW (type INTEGER)(default -1)) ;informa sobre la freqüència de l'hàbit laboral per setmana
+	(slot fLaboralD (type INTEGER)(default -1)) ;informa sobre la duració de l'hàbit laboral per dia
 	(slot estatic (type STRING)(default "null")) ;informa sobre quins habits estàtics tindrà la persona
-	(slot fEstatic (type INTEGER)(default -1)) ;informa sobre la freqüència¨dels habits estatics
+	(slot fEstaticW (type INTEGER)(default -1)) ;informa sobre la freqüència dels habits estatics per setmana
+	(slot fEstaticD (type INTEGER)(default -1)) ;informa sobre la duració dels habits estatics per dia
 	(slot domestic (type STRING)(default "null")) ;informa sobre quins habits domèstics tindrà la persona
-	(slot fDomestic (type INTEGER)(default -1)) ;informa sobre la freqüència dels habits domèstics
+	(slot fDomesticW (type INTEGER)(default -1)) ;informa sobre la freqüència dels habits domèstics per setmana
+	(slot fDomesticD (type INTEGER)(default -1)) ;informa sobre la duració dels habits domèstics per dia
 	(slot desplacament (type STRING)(default "null")) ;informa sobre quins desplaçaments fa la persona
-	(slot fDesplacament (type INTEGER)(default -1)) ;informa sobre la freqüència¨de l'hàbit de desplaçament
+	(slot fDesplacamentW (type INTEGER)(default -1)) ;informa sobre la freqüència de l'hàbit de desplaçament per setmana
+	(slot fDesplacamentD (type INTEGER)(default -1)) ;informa sobre la duracio de l'hàbit de desplaçament per dia
 	
     )
 
@@ -1182,20 +1186,33 @@
         (bind ?num (read))
     )
     (switch ?num
-        (case 1 then (modify ?g (laboral "SIT")))
-        (case 2 then (modify ?g (laboral "STAND")))
-        (case 3 then (modify ?g (laboral "MOVE")))
-	(case 4 then (modify ?g (laboral "LIFT")))
-	(case 5 then (modify ?g (laboral "REPEAT")))
-	(case 6 then (modify ?g (laboral "CAP")))
+        (case 1 then (modify ?g (laboral "SIT")) (modify ?g (habit "filling")))
+        (case 2 then (modify ?g (laboral "STAND")) (modify ?g (habit "filling")))
+        (case 3 then (modify ?g (laboral "MOVE")) (modify ?g (habit "filling")))
+	(case 4 then (modify ?g (laboral "LIFT")) (modify ?g (habit "filling")))
+	(case 5 then (modify ?g (laboral "REPEAT")) (modify ?g (habit "filling")))
+	(case 6 then (modify ?g (laboral "CAP"))(modify ?g (habit "filling3")))
         (default (printout t "Opció no vàlida." crlf))
     )
-	(modify ?g (habit "filling"))
     )
 
-(defrule preguntes::obtenir-fLaboral "Obté la freqüència d'activitat laboral de la persona"
+(defrule preguntes::obtenir-fLaboralW "Obté la freqüència d'activitat laboral de la persona"
     ?g <- (lector_data (habit ?habit))
     (test (eq ?habit "filling"))
+    =>
+    (printout t "Amb quina freqüència de dies/setmana realitza dita activitat laboral?" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 7))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 7. Amb quina freqüència de dies/setmana realitza dita activitat laboral?" crlf)
+        (bind ?num (read))
+    )
+    (modify ?g (fLaboralW ?num))
+    (modify ?g (habit "filling2"))
+)
+
+(defrule preguntes::obtenir-fLaboralD "Obté la duració d'activitat laboral de la persona al dia"
+    ?g <- (lector_data (habit ?habit))
+    (test (eq ?habit "filling2"))
     =>
     (printout t "Amb quina freqüència de hores/dia realitza dita activitat laboral?" crlf)
     (bind ?num (read))
@@ -1203,12 +1220,12 @@
         (printout t "Sisplau, respongui entre els rangs de 1 i 24. Amb quina freqüència de hores/dia realitza dita activitat laboral?" crlf)
         (bind ?num (read))
     )
-    (modify ?g (fLaboral ?num))
-    (modify ?g (habit "filling2"))
+    (modify ?g (fLaboralD ?num))
+    (modify ?g (habit "filling3"))
 )
 
     (defrule preguntes::obtenir-estatic "Obte els hàbits estàtics de la persona"
-    ?g <- (lector_data (habit "filling2"))
+    ?g <- (lector_data (habit "filling3"))
     =>
     (printout t "Quina d'aquestes activitats estàtiques fa més a casa?" crlf)
     (printout t "1- Mirar la tele" crlf)
@@ -1225,12 +1242,26 @@
         (case 3 then (modify ?g (estatic "GAMER")))
         (default (printout t "Opció no vàlida." crlf))
     )
-	(modify ?g (habit "filling3"))
+	(modify ?g (habit "filling4"))
     )
 
-(defrule preguntes::obtenir-fEstatic "Obté la freqüència d'activitat estàtica de la persona"
+(defrule preguntes::obtenir-fEstaticW "Obté la freqüència d'activitat estàtica de la persona"
     ?g <- (lector_data (habit ?habit))
-    (test (eq ?habit "filling3"))
+    (test (eq ?habit "filling4"))
+    =>
+    (printout t "Amb quina freqüència de dies/setmana realitza dita activitat estàtica?" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 7))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 7. Amb quina freqüència de dies/setmana realitza dita activitat estàtica?" crlf)
+        (bind ?num (read))
+    )
+    (modify ?g (fEstaticW ?num))
+    (modify ?g (habit "filling5"))
+)
+
+(defrule preguntes::obtenir-fEstaticD "Obté la duració d'activitat estàtica de la persona al dia"
+    ?g <- (lector_data (habit ?habit))
+    (test (eq ?habit "filling5"))
     =>
     (printout t "Amb quina freqüència de hores/dia realitza dita activitat estàtica?" crlf)
     (bind ?num (read))
@@ -1238,36 +1269,51 @@
         (printout t "Sisplau, respongui entre els rangs de 1 i 24. Amb quina freqüència de hores/dia realitza dita activitat estàtica?" crlf)
         (bind ?num (read))
     )
-    (modify ?g (fEstatic ?num))
-    (modify ?g (habit "filling4"))
+    (modify ?g (fEstaticD ?num))
+    (modify ?g (habit "filling6"))
 )
 
     (defrule preguntes::obtenir-domestic "Obte els hàbits domèstics de la persona"
-    ?g <- (lector_data (habit "filling4"))
+    ?g <- (lector_data (habit "filling6"))
     =>
     (printout t "Quina d'aquestes activitats domèstiques fa més a casa?" crlf)
     (printout t "1- Escombrar" crlf)
     (printout t "2- Fregar" crlf)
     (printout t "3- Bugada" crlf)
     (printout t "4- Fregar plats" crlf)
+    (printout t "5- Cap" crlf)
     (bind ?num (read))
-    (while (not (and (>= ?num 1) (<= ?num 4))) do 
-        (printout t "Sisplau, respongui entre els rangs de 1 i 4. Quina d'aquestes activitats domèstiques fa més a casa?" crlf)
+    (while (not (and (>= ?num 1) (<= ?num 5))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 5. Quina d'aquestes activitats domèstiques fa més a casa?" crlf)
         (bind ?num (read))
     )
     (switch ?num
-        (case 1 then (modify ?g (domestic "BROOM")))
-        (case 2 then (modify ?g (domestic "MOP")))
-        (case 3 then (modify ?g (domestic "LAUNDRY")))
-	(case 4 then (modify ?g (domestic "DISHWASHER")))
+        (case 1 then (modify ?g (domestic "BROOM")) (modify ?g (habit "filling7")))
+        (case 2 then (modify ?g (domestic "MOP")) (modify ?g (habit "filling7")))
+        (case 3 then (modify ?g (domestic "LAUNDRY")) (modify ?g (habit "filling7")))
+	(case 4 then (modify ?g (domestic "DISHWASHER")) (modify ?g (habit "filling7")))
+	(case 5 then (modify ?g (domestic "CAP")) (modify ?g (habit "filling9")))
         (default (printout t "Opció no vàlida." crlf))
     )
-	(modify ?g (habit "filling5"))
     )
 
-(defrule preguntes::obtenir-fDomestic "Obté la freqüència d'activitat domèstica de la persona"
+(defrule preguntes::obtenir-fDomesticW "Obté la freqüència d'activitat domèstica de la persona"
     ?g <- (lector_data (habit ?habit))
-    (test (eq ?habit "filling5"))
+    (test (eq ?habit "filling7"))
+    =>
+    (printout t "Amb quina freqüència de dies/setmana realitza dita activitat domèstica?" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 7))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 7. Amb quina freqüència de dies/setmana realitza dita activitat domèstica?" crlf)
+        (bind ?num (read))
+    )
+    (modify ?g (fDomesticW ?num))
+    (modify ?g (habit "filling8"))
+)
+
+(defrule preguntes::obtenir-fDomesticD "Obté la duració d'activitat domèstica de la persona al dia"
+    ?g <- (lector_data (habit ?habit))
+    (test (eq ?habit "filling8"))
     =>
     (printout t "Amb quina freqüència de hores/dia realitza dita activitat domèstica?" crlf)
     (bind ?num (read))
@@ -1275,36 +1321,51 @@
         (printout t "Sisplau, respongui entre els rangs de 1 i 24. Amb quina freqüència de hores/dia realitza dita activitat domèstica?" crlf)
         (bind ?num (read))
     )
-    (modify ?g (fDomestic ?num))
-    (modify ?g (habit "filling6"))
+    (modify ?g (fDomesticD ?num))
+    (modify ?g (habit "filling9"))
 )
 
     (defrule preguntes::obtenir-desplacament "Obte els hàbits de desplaçament de la persona"
-    ?g <- (lector_data (habit "filling6"))
+    ?g <- (lector_data (habit "filling9"))
     =>
     (printout t "Quina d'aquestes activitats de desplaçament fa més?" crlf)
     (printout t "1- Comprar a peu" crlf)
     (printout t "2- Passejar el gos" crlf)
     (printout t "3- Donar un tomb" crlf)
     (printout t "4- Fer encàrrecs" crlf)
+    (printout t "5- Cap" crlf)
     (bind ?num (read))
-    (while (not (and (>= ?num 1) (<= ?num 4))) do 
-        (printout t "Sisplau, respongui entre els rangs de 1 i 4. Quina d'aquestes activitats de desplaçament fa més?" crlf)
+    (while (not (and (>= ?num 1) (<= ?num 5))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 5. Quina d'aquestes activitats de desplaçament fa més?" crlf)
         (bind ?num (read))
     )
     (switch ?num
-        (case 1 then (modify ?g (desplacament "SHOP")))
-        (case 2 then (modify ?g (desplacament "PET")))
-        (case 3 then (modify ?g (desplacament "WALKER")))
-	(case 4 then (modify ?g (desplacament "ERRAND")))
+        (case 1 then (modify ?g (desplacament "SHOP")) (modify ?g (habit "filling10")))
+        (case 2 then (modify ?g (desplacament "PET")) (modify ?g (habit "filling10")))
+        (case 3 then (modify ?g (desplacament "WALKER")) (modify ?g (habit "filling10")))
+	(case 4 then (modify ?g (desplacament "ERRAND")) (modify ?g (habit "filling10")))
+	(case 5 then (modify ?g (desplacament "CAP")) (modify ?g (habit "DONE")))
         (default (printout t "Opció no vàlida." crlf))
     )
-	(modify ?g (habit "filling7"))
     )
 
-(defrule preguntes::obtenir-fDesplacament "Obté la freqüència d'activitat laboral de la persona"
+(defrule preguntes::obtenir-fDesplacamentW "Obté la freqüència d'activitat de desplaçament de la persona"
     ?g <- (lector_data (habit ?habit))
-    (test (eq ?habit "filling7"))
+    (test (eq ?habit "filling10"))
+    =>
+    (printout t "Amb quina freqüència de dies/setmana realitza dita activitat domèstica?" crlf)
+    (bind ?num (read))
+    (while (not (and (>= ?num 1) (<= ?num 7))) do 
+        (printout t "Sisplau, respongui entre els rangs de 1 i 7. Amb quina freqüència de dies/setmana realitza dita activitat domèstica?" crlf)
+        (bind ?num (read))
+    )
+    (modify ?g (fDesplacamentW ?num))
+    (modify ?g (habit "filling11"))
+)
+
+(defrule preguntes::obtenir-fDesplacamentD "Obté la duració d'activitat de desplaçament de la persona al dia"
+    ?g <- (lector_data (habit ?habit))
+    (test (eq ?habit "filling11"))
     =>
     (printout t "Amb quina freqüència de hores/dia realitza dita activitat domèstica?" crlf)
     (bind ?num (read))
@@ -1312,9 +1373,11 @@
         (printout t "Sisplau, respongui entre els rangs de 1 i 24. Amb quina freqüència de hores/dia realitza dita activitat domèstica?" crlf)
         (bind ?num (read))
     )
-    (modify ?g (fDesplacament ?num))
-    (modify ?g (habit "filling8"))
+    (modify ?g (fDesplacamentD ?num))
+    (modify ?g (habit "DONE"))
 )
+
+
 
 
 
@@ -1412,5 +1475,83 @@
             )
         )
     )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;; Descartar exercicis que no interessen segons objectiu i les lesions
+
+(deffunction erase-exercicis-by-objectiu (?objectiu)
+    (bind ?exercicis-to-erase
+    (find-all-instances ((?exercici Exercicis))
+        (not (member$ ?objectiu (send ?exercici get-Objectius)))))
+    (if (> (length$ ?exercicis-to-erase) 0)
+        then
+        (progn$ (?exercici ?exercicis-to-erase) (send ?exercici delete))
+    )
+)
+
+(deffunction erase-exercicis-by-lesio (?muscul) "muscul es el muscul o grup muscular que hem d'eliminar per la lesio"
+    (bind ?exercicis-to-erase
+    (find-all-instances ((?exercici Exercicis))
+        (member$ ?muscul (send ?exercici get-Musculs))))
+    (if (> (length$ ?exercicis-to-erase) 0)
+        then
+        (progn$ (?exercici ?exercicis-to-erase) (send ?exercici delete))
+    )
+)
+
+
+;;; suma dels temps dels exercicis restants i mirar si canvia molt respecte el que ens diu l'usuari (+/- 10%)
+
+;;; ATENCIO: si hi ha problema amb el temps crec que hauriem d'eliminar (com a criteri pensat ara mateix) els x exercicis
+;;; que fan que es pasi del temps, si es queda curt doncs o be li donem la rutina curta o be allarguem els temps dels exercicis
+
+
+
+;;; si tens més temps aleshores pots implementar lo de la intensitat
+
+
+
+
 
 
