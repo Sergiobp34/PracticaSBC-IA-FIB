@@ -1565,7 +1565,7 @@
         then
         (bind ?exercicis-to-erase
               (find-all-instances ((?exercici Exercicis))
-                                  (not (eq ?gMusc (send ?exercici get-treballa_Musc)))))
+                                  (not (member$ ?gMusc (send ?exercici get-treballa_Musc)))))
         (if (> (length$ ?exercicis-to-erase) 0)
             then
             (progn$ (?exercici ?exercicis-to-erase)
@@ -1586,7 +1586,7 @@
     "Delete exercises based on the muscle or muscle group specified by ?lesio"
     (bind ?exercicis-to-erase
           (find-all-instances ((?exercici Exercicis))
-                              (eq ?lesio (send ?exercici get-treballa_Musc))))
+                              (member$ ?lesio (send ?exercici get-treballa_Musc))))
     (if (> (length$ ?exercicis-to-erase) 0)
         then
         (progn$ (?exercici ?exercicis-to-erase)
