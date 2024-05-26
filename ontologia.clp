@@ -1551,9 +1551,9 @@
    (bind ?*llista-exercicis* (create$))
 
    (progn$ (?fact ?lista)
-      (bind ?exercici (fact-slot-value ?fact Nom))
-      (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* (length$ ?*llista-exercicis*) ?exercici))
+      (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* (length$ ?*llista-exercicis*) ?fact))
    )
+   (printout t "Llista d'exercicis: " ?*llista-exercicis* crlf)
 )
 
 
@@ -1580,8 +1580,6 @@
         (progn$ (?exercici ?exercicis-to-erase)
             (send ?exercici delete)))
 )
-
-
 
 
 
@@ -1623,14 +1621,6 @@
    =>
    (printout t "No s'ha pogut trobar una rutina per a voste." crlf)
 )
-
-
-
-
-
-
-
-
 
 
 
