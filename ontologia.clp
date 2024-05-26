@@ -1545,87 +1545,54 @@
 
 
 
+(defrule recomanacions::crear-lista-exercicis "Crea la lista de opciones"
+   (test (eq (length$ ?*llista-exercicis*) 0))
+   =>
+   (bind ?lista (find-all-instances ((?inst Exercicis)) TRUE))
+   (bind ?*llista-exercicis* (create$))
+
+   (progn$ (?fact ?lista)
+      (bind ?exercici (fact-slot-value ?fact Nom))
+      (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* (length$ ?*llista-exercicis*) ?exercici))
+   )
+)
+
 
 ;;; Descartar exercicis que no interessen segons objectiu i les lesions
 
-(deffunction erase-exercicis-by-objectiu (?objectiu)
-    (bind ?exercicis-to-erase
-    (find-all-instances ((?exercici Exercicis))
-        (not (member$ ?objectiu (send ?exercici get-serveix_Obj)))))
-    (if (> (length$ ?exercicis-to-erase) 0)
+(deffunction erase-exercicis-by-objectiu (?objectiu ?gMusc)
+    (if (eq ?objectiu "Musculacio")
         then
-        (progn$ (?exercici ?exercicis-to-erase) (send ?exercici delete))
-    )
-)
-
-(deffunction erase-exercicis-by-lesio (?lesio) "$lesio es el muscul o grup muscular que hem d'eliminar per la lesio"
-    (bind ?exercicis-to-erase
-    (find-all-instances ((?exercici Exercicis))
-        (member$ ?lesio (send ?exercici get-treballa_Musc))))
-    (if (> (length$ ?exercicis-to-erase) 0)
-        then
-        (progn$ (?exercici ?exercicis-to-erase) (send ?exercici delete))
-    )
-)
-
-
-;; Calcul intensitats
-
-;(deffunction calcul_intensitats
-;    return 1
-;  )
-
-
-;;; suma dels temps dels exercicis restants i mirar si canvia molt respecte el que ens diu l'usuari (+/- 10%)
-
-(deffunction quadra_suma (?intensitat)
-    (bind ?tim 0)
-    (loop-for-count (?i 1 (length$ Exercicis)) do
-        (if (> ?tim temps)
+        (bind ?exercicis-to-erase
+              (find-all-instances ((?exercici Exercicis))
+                                  (not (eq ?gMusc (send ?exercici get-treballa_Musc)))))
+        (if (> (length$ ?exercicis-to-erase) 0)
             then
-            (progn$ (?libro ?libros-to-erase) (send ?libro delete))
-        )
-        (else
-            (bind ?current-exercici (nth$ ?i Exercicis))        ; sumar/restar el temps segons intensitat
-            (if (eq 1 ?current-exercici-RepsMax)
-                (bind ?tim (add ?tim (* ?current-exercici-DuracioMin ?intensitat)))
-            )
-            (else               ; mateix temps perque sumar/restar reps
-                (bind ?tim (add ?tim ?current-exercici-DuracioMax))
-            )
-        )   
-    ) 
-)
-
-;;; RECOMANADOR
-
-(defrule recomanacions:tria_e   "elimina i tria els exercicis segons persona (intensitat, objectiu i lesions)"
-    (declare (salience 1))
-    (erase-exercicis-by-objectiu ?te_Obj)
-    (erase-exercicis-by-lesio ?g-lesio)
-    (quadra_suma 1);(quadra_suma (calcul_intensitats))
-)      
-
-
-
-;;; imprimir rutina
-
-(defrule imprimir::imprimir "Imprimeix els exercicis de la rutina calculada amb els seus temps i repeticions"
-        (declare (salience -100))
-    =>
-        (printout t "Rutina adequada per a tu: " crlf)
-
-        (if (eq (length$ ?*llista-exercicis*) 0) then 
-            (printout t "No s'ha pogut crear una rutina per a tu" crlf)
+            (progn$ (?exercici ?exercicis-to-erase)
+                (send ?exercici delete)))
         else
-            (bind ?printNum (length$ ?*llista-exercicis*))
-            (loop-for-count (?i ?printNum)
-            (bind ?exercici (nth$ ?i ?*llista-exercicis*))
-            (printout t "Exercici: " (send ?exercici get-Nom) crlf)
-            )
-        )
-    )
+            (bind ?exercicis-to-erase
+                  (find-all-instances ((?exercici Exercicis))
+                                      (not (member$ ?objectiu (send ?exercici get-serveix_Obj)))))
+            (if (> (length$ ?exercicis-to-erase) 0)
+                then
+                (progn$ (?exercici ?exercicis-to-erase)
+                    (send ?exercici delete)))))
 
+
+
+
+(deffunction erase-exercicis-by-lesio (?lesio)
+    "Delete exercises based on the muscle or muscle group specified by ?lesio"
+    (bind ?exercicis-to-erase
+          (find-all-instances ((?exercici Exercicis))
+                              (eq ?lesio (send ?exercici get-treballa_Musc))))
+    (if (> (length$ ?exercicis-to-erase) 0)
+        then
+        (progn$ (?exercici ?exercicis-to-erase)
+            (send ?exercici delete))
+    )
+)
 
 
 
