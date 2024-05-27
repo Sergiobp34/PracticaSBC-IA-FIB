@@ -1541,12 +1541,10 @@
    (bind ?*llista-exercicis* (create$))
 
    ;; Iterate through ?lista and add each item to ?*llista-exercicis*
-   (bind ?index 0)
    (progn$ (?fact ?lista)
-      (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* ?index ?fact))
-      (bind ?index (+ ?index 1))
-   )
-   (printout t "Llista d'exercicis: " ?*llista-exercicis* crlf)
+    (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* (+ 1 (length$ ?*llista-exercicis*)) ?fact))
+    )
+   ;(printout t "Llista d'exercicis: " ?*llista-exercicis* crlf)
 )
 
 ;;; Descartar exercicis que no interessen segons objectiu i les lesions
