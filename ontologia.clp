@@ -1546,14 +1546,25 @@
    (printout t "Llista d'exercicis: " ?*llista-exercicis* crlf)
 )
 
+
+(deffunction instances-to-names (?instances)
+    (bind ?names (create$))
+    (progn$ (?instance ?instances)
+        (bind ?names (insert$ ?names (+ 1 (length$ ?names)) (instance-name ?instance)))
+    )
+    ?names
+)
+
 ;;; Descartar exercicis que no interessen segons objectiu i les lesions
 (deffunction erase-exercicis-by-objectiu (?objectiu ?gMusc) "Elimina els exercicis basat en l'objectiu"
+    (printout t "gMusc: " ?gMusc crlf)
     ;; If the objective is "Musculacio", find and delete exercises not working the specified muscle group
     (if (eq ?objectiu "Musculacio")
         then
         (bind ?exercicis-to-erase
               (find-all-instances ((?exercici Exercicis))
-                                  (not (member$ ?gMusc (send ?exercici get-treballa_Musc)))))
+                                   (member$ ?gMusc (instances-to-names (send ?exercici get-treballa_Musc)))))
+        (printout t "Exercicis a eliminar1: " ?exercicis-to-erase crlf)
         (if (> (length$ ?exercicis-to-erase) 0)
             then
             (progn$ (?exercici ?exercicis-to-erase)
@@ -1562,7 +1573,8 @@
     ;; Find and delete exercises not serving the specified objective
     (bind ?exercicis-to-erase
           (find-all-instances ((?exercici Exercicis))
-                              (not (member$ ?objectiu (send ?exercici get-serveix_Obj)))))
+                              (member$ ?objectiu (send ?exercici get-serveix_Obj))))
+    (printout t "Exercicis a eliminar2: " ?exercicis-to-erase crlf)
     (if (> (length$ ?exercicis-to-erase) 0)
         then
         (progn$ (?exercici ?exercicis-to-erase)
@@ -1573,6 +1585,7 @@
     (bind ?exercicis-to-erase
           (find-all-instances ((?exercici Exercicis))
                               (member$ ?lesio (send ?exercici get-treballa_Musc))))
+    (printout t "Exercicis a eliminar3: " ?exercicis-to-erase crlf)
     (if (> (length$ ?exercicis-to-erase) 0)
         then
         (progn$ (?exercici ?exercicis-to-erase)
@@ -1591,7 +1604,7 @@
 
 (defrule imprimir::imprimir-rutina "Imprimeix els exercicis de la rutina de l'usuari"
    (declare (salience -100))
-   (test (neq (length$ ?*llista-exercicis*) 0))
+   (test (> (length$ ?*llista-exercicis*) 0))
    =>
    (printout t "Aquesta es la seva rutina: " crlf)
    (bind ?printNum (length$ ?*llista-exercicis*))
@@ -1603,7 +1616,7 @@
 
 (defrule imprimir::no-exercicis "No s'ha pogut trobar una rutina per a voste."
    (declare (salience -100))
-   (test (eq (length$ ?*llista-exercicis*) 0))
+   (test (= (length$ ?*llista-exercicis*) 0))
    =>
    (printout t "No s'ha pogut trobar una rutina per a voste." crlf)
 )
