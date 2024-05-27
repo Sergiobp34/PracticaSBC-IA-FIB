@@ -1540,11 +1540,10 @@
    (bind ?lista (find-all-instances ((?inst Exercicis)) TRUE))
    (bind ?*llista-exercicis* (create$))
 
-   ;; Iterate through ?lista and add each item to ?*llista-exercicis*
    (progn$ (?fact ?lista)
     (bind ?*llista-exercicis* (insert$ ?*llista-exercicis* (+ 1 (length$ ?*llista-exercicis*)) ?fact))
     )
-   ;(printout t "Llista d'exercicis: " ?*llista-exercicis* crlf)
+   (printout t "Llista d'exercicis: " ?*llista-exercicis* crlf)
 )
 
 ;;; Descartar exercicis que no interessen segons objectiu i les lesions
@@ -1582,9 +1581,10 @@
 )
 
 (defrule recomanacions::podar-llista-exercicis "Crea la lista de opciones"
-   (declare (salience 1))
+   (declare (salience 6))
    ?g <- (lector_data (objectiu ?objectiu) (gMusc ?gMusc) (lesio ?lesio))
    =>
+   (printout t "Podant la llista d'exercicis" crlf)
    (erase-exercicis-by-objectiu ?objectiu ?gMusc)
    (erase-exercicis-by-lesio ?lesio)
 )
@@ -1607,14 +1607,3 @@
    =>
    (printout t "No s'ha pogut trobar una rutina per a voste." crlf)
 )
-
-
-
-
-
-
-
-
-
-
-
